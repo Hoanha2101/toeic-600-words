@@ -44,6 +44,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.middleware("http")
+async def vercel_rewrite_path_middleware(request: Request, call_next):
+    matched_path = request.headers.get("x-matched-path")
+    if matched_path and matched_path != request.scope.get("path"):
+        path_only = matched_path.split("?")[0]
+        request.scope["path"] = path_only
+    return await call_next(request)
+
 # Register routers with /api prefix
 app.include_router(health.router, prefix=settings.API_V1_STR, tags=["Health"])
 app.include_router(me.router, prefix=settings.API_V1_STR, tags=["User State"])
