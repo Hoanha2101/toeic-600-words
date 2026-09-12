@@ -1,0 +1,9 @@
+{
+  "name": "600-essential-words-toeic",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && pnpm install && pnpm run build",
+    "dev": "cd frontend && pnpm run dev"
+  }
+}

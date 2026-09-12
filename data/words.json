@@ -1,0 +1,4544 @@
+{
+    "title": "600 Essential Words for the TOEIC Test",
+    "source": "Made by Binh Do, Hoan Pham and Nhat Nguyen - Vietnam Maritime University",
+    "total_lessons": 50,
+    "total_words": 598,
+    "lessons": [
+        {
+            "lesson_number": 1,
+            "title_en": "Contracts",
+            "title_vi": "Hợp đồng",
+            "words": [
+                {
+                    "word": "Abide by",
+                    "part_of_speech": "v.",
+                    "definition": "to comply with, to conform",
+                    "related_forms": "",
+                    "meaning_vi": "Tuân theo, chấp hành"
+                },
+                {
+                    "word": "Agreement",
+                    "part_of_speech": "n.",
+                    "definition": "a mutual arrangement, a contract",
+                    "related_forms": "Agree v., agreeable adj.",
+                    "meaning_vi": "Sự thỏa thuận"
+                },
+                {
+                    "word": "Assurance",
+                    "part_of_speech": "n.",
+                    "definition": "a guarantee, confidence",
+                    "related_forms": "",
+                    "meaning_vi": "Sự bảo đảm, chắc chắn"
+                },
+                {
+                    "word": "Cancel",
+                    "part_of_speech": "v.",
+                    "definition": "to annul, to call off",
+                    "related_forms": "",
+                    "meaning_vi": "Hủy bỏ"
+                },
+                {
+                    "word": "Determine",
+                    "part_of_speech": "v.",
+                    "definition": "to find out, to influence",
+                    "related_forms": "",
+                    "meaning_vi": "Xác định, quyết định"
+                },
+                {
+                    "word": "Engage",
+                    "part_of_speech": "v.",
+                    "definition": "to hire, to involve",
+                    "related_forms": "",
+                    "meaning_vi": "Thuê, mướn; tham gia vào"
+                },
+                {
+                    "word": "Establish",
+                    "part_of_speech": "v.",
+                    "definition": "to institute permanently, to bring about",
+                    "related_forms": "",
+                    "meaning_vi": "Thành lập, thiết lập"
+                },
+                {
+                    "word": "Obligate",
+                    "part_of_speech": "v.",
+                    "definition": "to bind legally or morally",
+                    "related_forms": "Obligation n., obligatory adj.",
+                    "meaning_vi": "Bắt buộc, ràng buộc"
+                },
+                {
+                    "word": "Party",
+                    "part_of_speech": "n.",
+                    "definition": "a person or group participating in an action or plan, the persons or sides concerned in a legal matter",
+                    "related_forms": "",
+                    "meaning_vi": "Bên (trong hợp đồng), nhóm"
+                },
+                {
+                    "word": "Provision",
+                    "part_of_speech": "n.",
+                    "definition": "a measure taken beforehand, a stipulation",
+                    "related_forms": "Provider n.",
+                    "meaning_vi": "Sự cung cấp, điều khoản"
+                },
+                {
+                    "word": "Resolve",
+                    "part_of_speech": "v.",
+                    "definition": "to deal with successfully, to declare",
+                    "related_forms": "",
+                    "meaning_vi": "Giải quyết, quyết tâm"
+                },
+                {
+                    "word": "Specify",
+                    "part_of_speech": "v.",
+                    "definition": "to mention explicitly",
+                    "related_forms": "Specification n., specific adj.",
+                    "meaning_vi": "Định rõ, ghi rõ"
+                }
+            ]
+        },
+        {
+            "lesson_number": 2,
+            "title_en": "Marketing",
+            "title_vi": "Tiếp thị",
+            "words": [
+                {
+                    "word": "Attract",
+                    "part_of_speech": "v.",
+                    "definition": "to draw by appeal",
+                    "related_forms": "Attraction n., attractive adj.",
+                    "meaning_vi": "Thu hút, lôi cuốn"
+                },
+                {
+                    "word": "Compare",
+                    "part_of_speech": "v.",
+                    "definition": "to examine similarities and differences",
+                    "related_forms": "Comparison n., comparable adj.",
+                    "meaning_vi": "So sánh"
+                },
+                {
+                    "word": "Compete",
+                    "part_of_speech": "v.",
+                    "definition": "to strive against a rival",
+                    "related_forms": "",
+                    "meaning_vi": "Cạnh tranh, tranh đua"
+                },
+                {
+                    "word": "Consume",
+                    "part_of_speech": "v.",
+                    "definition": "to absorb, to use up",
+                    "related_forms": "Consumer n., consumable adj.",
+                    "meaning_vi": "Tiêu dùng, sử dụng"
+                },
+                {
+                    "word": "Convince",
+                    "part_of_speech": "v.",
+                    "definition": "to bring to believe by argument, to persuade",
+                    "related_forms": "",
+                    "meaning_vi": "Thuyết phục"
+                },
+                {
+                    "word": "Current",
+                    "part_of_speech": "adj.",
+                    "definition": "happening or existing at the present time; adv. to be on top of things",
+                    "related_forms": "",
+                    "meaning_vi": "Đang thịnh hành, hiện tại"
+                },
+                {
+                    "word": "Fad",
+                    "part_of_speech": "n.",
+                    "definition": "a practice followed enthusiastically for a short time, a craze",
+                    "related_forms": "",
+                    "meaning_vi": "Mốt nhất thời"
+                },
+                {
+                    "word": "Inspire",
+                    "part_of_speech": "v.",
+                    "definition": "to spur on, to stimulate imagination or emotion",
+                    "related_forms": "",
+                    "meaning_vi": "Truyền cảm hứng"
+                },
+                {
+                    "word": "Market",
+                    "part_of_speech": "v./n.",
+                    "definition": "the course of buying and selling a product; the demand for a product",
+                    "related_forms": "Marketing n., marketable adj.",
+                    "meaning_vi": "Thị trường; tiếp thị"
+                },
+                {
+                    "word": "Persuade",
+                    "part_of_speech": "v.",
+                    "definition": "to move by argument or logic",
+                    "related_forms": "",
+                    "meaning_vi": "Thuyết phục"
+                },
+                {
+                    "word": "Productive",
+                    "part_of_speech": "adj.",
+                    "definition": "constructive, high yield",
+                    "related_forms": "",
+                    "meaning_vi": "Có năng suất, hiệu quả"
+                },
+                {
+                    "word": "Satisfy",
+                    "part_of_speech": "v.",
+                    "definition": "to make happy",
+                    "related_forms": "",
+                    "meaning_vi": "Làm hài lòng, thỏa mãn"
+                }
+            ]
+        },
+        {
+            "lesson_number": 3,
+            "title_en": "Warranties",
+            "title_vi": "Sự bảo đảm, bảo hành",
+            "words": [
+                {
+                    "word": "Characteristic",
+                    "part_of_speech": "adj.",
+                    "definition": "revealing of individual traits",
+                    "related_forms": "",
+                    "meaning_vi": "Nét đặc trưng, đặc điểm"
+                },
+                {
+                    "word": "Consequence",
+                    "part_of_speech": "n.",
+                    "definition": "that which follows necessarily",
+                    "related_forms": "",
+                    "meaning_vi": "Hậu quả, kết quả"
+                },
+                {
+                    "word": "Consider",
+                    "part_of_speech": "v.",
+                    "definition": "to think about carefully",
+                    "related_forms": "Consideration n.",
+                    "meaning_vi": "Cân nhắc, suy nghĩ"
+                },
+                {
+                    "word": "Cover",
+                    "part_of_speech": "v.",
+                    "definition": "to provide protection against",
+                    "related_forms": "",
+                    "meaning_vi": "Bảo hộ, kiểm soát, bao phủ"
+                },
+                {
+                    "word": "Expire",
+                    "part_of_speech": "v.",
+                    "definition": "to come to an end",
+                    "related_forms": "",
+                    "meaning_vi": "Hết hạn, hết hiệu lực"
+                },
+                {
+                    "word": "Frequently",
+                    "part_of_speech": "adv.",
+                    "definition": "occurring commonly, widespread",
+                    "related_forms": "",
+                    "meaning_vi": "Thường xuyên"
+                },
+                {
+                    "word": "Imply",
+                    "part_of_speech": "v.",
+                    "definition": "to indicate by inference",
+                    "related_forms": "",
+                    "meaning_vi": "Hàm ý, nói bóng gió"
+                },
+                {
+                    "word": "Promise",
+                    "part_of_speech": "v./n.",
+                    "definition": "to pledge to do, bring about, or provide",
+                    "related_forms": "",
+                    "meaning_vi": "Lời hứa, hứa hẹn"
+                },
+                {
+                    "word": "Protect",
+                    "part_of_speech": "v.",
+                    "definition": "to guard",
+                    "related_forms": "Protection n., protective adj.",
+                    "meaning_vi": "Bảo vệ"
+                },
+                {
+                    "word": "Reputation",
+                    "part_of_speech": "n.",
+                    "definition": "the overall quality of character",
+                    "related_forms": "Reputable adj., reputed adj.",
+                    "meaning_vi": "Danh tiếng"
+                },
+                {
+                    "word": "Require",
+                    "part_of_speech": "v.",
+                    "definition": "to deem necessary or essential",
+                    "related_forms": "Requirement n., requisite adj.",
+                    "meaning_vi": "Yêu cầu, đòi hỏi"
+                },
+                {
+                    "word": "Vary",
+                    "part_of_speech": "v.",
+                    "definition": "to be different from another, to change",
+                    "related_forms": "",
+                    "meaning_vi": "Thay đổi, khác biệt"
+                }
+            ]
+        },
+        {
+            "lesson_number": 4,
+            "title_en": "Business planning",
+            "title_vi": "Kế hoạch kinh doanh",
+            "words": [
+                {
+                    "word": "Address",
+                    "part_of_speech": "v.",
+                    "definition": "to direct to the attention of",
+                    "related_forms": "",
+                    "meaning_vi": "Giải quyết, chú tâm đến"
+                },
+                {
+                    "word": "Avoid",
+                    "part_of_speech": "v.",
+                    "definition": "to stay clear of, to keep from happening",
+                    "related_forms": "",
+                    "meaning_vi": "Tránh, ngăn ngừa"
+                },
+                {
+                    "word": "Demonstrate",
+                    "part_of_speech": "v.",
+                    "definition": "to show clearly and deliberately, to present by example",
+                    "related_forms": "Demonstration n., demonstrative adj.",
+                    "meaning_vi": "Chứng minh, giải thích"
+                },
+                {
+                    "word": "Develop",
+                    "part_of_speech": "v.",
+                    "definition": "to expand, progress, or improve",
+                    "related_forms": "Development n., developer n.",
+                    "meaning_vi": "Phát triển"
+                },
+                {
+                    "word": "Evaluate",
+                    "part_of_speech": "v.",
+                    "definition": "to determine the value or impact of",
+                    "related_forms": "Evaluation n., evaluator n.",
+                    "meaning_vi": "Định giá, đánh giá"
+                },
+                {
+                    "word": "Gather",
+                    "part_of_speech": "v.",
+                    "definition": "to accumulate, to conclude",
+                    "related_forms": "",
+                    "meaning_vi": "Tổng kết, thu thập ý kiến"
+                },
+                {
+                    "word": "Offer",
+                    "part_of_speech": "v.",
+                    "definition": "to propose, to present in order to meet a need or satisfy a requirement",
+                    "related_forms": "",
+                    "meaning_vi": "Đề nghị, gợi ý"
+                },
+                {
+                    "word": "Primary",
+                    "part_of_speech": "adj.",
+                    "definition": "most important, first in a list, series, or sequence",
+                    "related_forms": "",
+                    "meaning_vi": "Quan trọng nhất, hàng đầu"
+                },
+                {
+                    "word": "Risk",
+                    "part_of_speech": "n.",
+                    "definition": "the chance of loss or damage",
+                    "related_forms": "",
+                    "meaning_vi": "Rủi ro"
+                },
+                {
+                    "word": "Strategy",
+                    "part_of_speech": "n.",
+                    "definition": "a plan of action",
+                    "related_forms": "Strategize v., strategic adj.",
+                    "meaning_vi": "Chiến lược, kế hoạch"
+                },
+                {
+                    "word": "Strong",
+                    "part_of_speech": "adj.",
+                    "definition": "powerful, economically or financially sound",
+                    "related_forms": "",
+                    "meaning_vi": "Vững mạnh (về kinh tế/tài chính)"
+                },
+                {
+                    "word": "Substitute",
+                    "part_of_speech": "v.",
+                    "definition": "to take the place of another",
+                    "related_forms": "",
+                    "meaning_vi": "Lựa chọn thay thế"
+                }
+            ]
+        },
+        {
+            "lesson_number": 5,
+            "title_en": "Conferences",
+            "title_vi": "Hội nghị",
+            "words": [
+                {
+                    "word": "Accommodate",
+                    "part_of_speech": "v.",
+                    "definition": "to fit, to provide with something needed",
+                    "related_forms": "Accommodation n., accommodating adj.",
+                    "meaning_vi": "Cung cấp cho sự cần thiết, đáp ứng"
+                },
+                {
+                    "word": "Arrangement",
+                    "part_of_speech": "n.",
+                    "definition": "the plan or organization",
+                    "related_forms": "",
+                    "meaning_vi": "Sự tổ chức, sắp xếp"
+                },
+                {
+                    "word": "Association",
+                    "part_of_speech": "n.",
+                    "definition": "an organization of persons or groups having a common interest",
+                    "related_forms": "",
+                    "meaning_vi": "Hiệp hội, liên kết"
+                },
+                {
+                    "word": "Attend",
+                    "part_of_speech": "v.",
+                    "definition": "to go to, to pay attention to",
+                    "related_forms": "Attendee n., attendance n.",
+                    "meaning_vi": "Tham dự, rất chú tâm"
+                },
+                {
+                    "word": "Get in touch",
+                    "part_of_speech": "v.",
+                    "definition": "to make contact with",
+                    "related_forms": "",
+                    "meaning_vi": "Liên lạc với"
+                },
+                {
+                    "word": "Hold",
+                    "part_of_speech": "v.",
+                    "definition": "to accommodate; to conduct",
+                    "related_forms": "",
+                    "meaning_vi": "Tổ chức, dàn xếp"
+                },
+                {
+                    "word": "Location",
+                    "part_of_speech": "n.",
+                    "definition": "a position or site",
+                    "related_forms": "",
+                    "meaning_vi": "Vị trí, địa điểm"
+                },
+                {
+                    "word": "Overcrowded",
+                    "part_of_speech": "adj.",
+                    "definition": "too crowded",
+                    "related_forms": "",
+                    "meaning_vi": "Chật ních, đông nghịt"
+                },
+                {
+                    "word": "Register",
+                    "part_of_speech": "v.",
+                    "definition": "to record",
+                    "related_forms": "Registration n.",
+                    "meaning_vi": "Ghi vào sổ, đăng ký"
+                },
+                {
+                    "word": "Select",
+                    "part_of_speech": "v.",
+                    "definition": "to choose from a group",
+                    "related_forms": "Selection n., selective adj.",
+                    "meaning_vi": "Lựa chọn"
+                },
+                {
+                    "word": "Session",
+                    "part_of_speech": "n.",
+                    "definition": "a meeting",
+                    "related_forms": "",
+                    "meaning_vi": "Buổi họp, phiên họp"
+                },
+                {
+                    "word": "Take part in",
+                    "part_of_speech": "v.",
+                    "definition": "to join or participate",
+                    "related_forms": "",
+                    "meaning_vi": "Tham dự, tham gia"
+                }
+            ]
+        },
+        {
+            "lesson_number": 6,
+            "title_en": "Computers",
+            "title_vi": "Máy tính",
+            "words": [
+                {
+                    "word": "Access",
+                    "part_of_speech": "v./n.",
+                    "definition": "to obtain, to gain entry",
+                    "related_forms": "Accessible adj.",
+                    "meaning_vi": "Truy cập"
+                },
+                {
+                    "word": "Allocate",
+                    "part_of_speech": "v.",
+                    "definition": "to designate for a specific purpose",
+                    "related_forms": "",
+                    "meaning_vi": "Chỉ định, phân bổ"
+                },
+                {
+                    "word": "Compatible",
+                    "part_of_speech": "adj.",
+                    "definition": "able to function together",
+                    "related_forms": "",
+                    "meaning_vi": "Tương thích"
+                },
+                {
+                    "word": "Delete",
+                    "part_of_speech": "v.",
+                    "definition": "to remove; to erase",
+                    "related_forms": "",
+                    "meaning_vi": "Xóa bỏ"
+                },
+                {
+                    "word": "Display",
+                    "part_of_speech": "n./v.",
+                    "definition": "what is visible on a monitor; to show",
+                    "related_forms": "",
+                    "meaning_vi": "Hiển thị"
+                },
+                {
+                    "word": "Duplicate",
+                    "part_of_speech": "v./n.",
+                    "definition": "to produce something equal; to make identical",
+                    "related_forms": "Duplication n.",
+                    "meaning_vi": "Tạo bản sao, nhân bản"
+                },
+                {
+                    "word": "Fail",
+                    "part_of_speech": "v.",
+                    "definition": "not to succeed; not to work correctly",
+                    "related_forms": "Failure n., fallible adj.",
+                    "meaning_vi": "Thất bại, hỏng"
+                },
+                {
+                    "word": "Figure out",
+                    "part_of_speech": "v.",
+                    "definition": "to understand, to solve",
+                    "related_forms": "",
+                    "meaning_vi": "Suy ra, hiểu ra"
+                },
+                {
+                    "word": "Ignore",
+                    "part_of_speech": "v.",
+                    "definition": "not to notice; to disregard",
+                    "related_forms": "",
+                    "meaning_vi": "Lờ đi, không để ý"
+                },
+                {
+                    "word": "Search",
+                    "part_of_speech": "v./n.",
+                    "definition": "to look for; investigation",
+                    "related_forms": "",
+                    "meaning_vi": "Tìm kiếm"
+                },
+                {
+                    "word": "Shut down",
+                    "part_of_speech": "v.",
+                    "definition": "to turn off; to cease operation",
+                    "related_forms": "",
+                    "meaning_vi": "Tắt, ngừng hoạt động"
+                },
+                {
+                    "word": "Warn",
+                    "part_of_speech": "v.",
+                    "definition": "to alert; to tell about a danger or problem",
+                    "related_forms": "Warning n., warning adj.",
+                    "meaning_vi": "Cảnh báo"
+                }
+            ]
+        },
+        {
+            "lesson_number": 7,
+            "title_en": "Office Technology",
+            "title_vi": "Văn phòng",
+            "words": [
+                {
+                    "word": "Affordable",
+                    "part_of_speech": "adj.",
+                    "definition": "able to be paid for; not too expensive",
+                    "related_forms": "",
+                    "meaning_vi": "Phải chăng, vừa phải"
+                },
+                {
+                    "word": "As needed",
+                    "part_of_speech": "adv.",
+                    "definition": "as necessary",
+                    "related_forms": "",
+                    "meaning_vi": "Khi cần thiết"
+                },
+                {
+                    "word": "Be in charge of",
+                    "part_of_speech": "v.",
+                    "definition": "to be in control or command of",
+                    "related_forms": "",
+                    "meaning_vi": "Đứng đầu, phụ trách"
+                },
+                {
+                    "word": "Capacity",
+                    "part_of_speech": "n.",
+                    "definition": "the ability to contain or hold; the maximum that something can hold",
+                    "related_forms": "",
+                    "meaning_vi": "Sức chứa, khả năng"
+                },
+                {
+                    "word": "Durable",
+                    "part_of_speech": "adj.",
+                    "definition": "sturdy, strong, lasting",
+                    "related_forms": "",
+                    "meaning_vi": "Bền bỉ"
+                },
+                {
+                    "word": "Initiative",
+                    "part_of_speech": "n.",
+                    "definition": "the first step; an active role",
+                    "related_forms": "Initiate v., initiation n.",
+                    "meaning_vi": "Sáng kiến, làm đầu tàu"
+                },
+                {
+                    "word": "Physical",
+                    "part_of_speech": "adj.",
+                    "definition": "perceived by the senses",
+                    "related_forms": "",
+                    "meaning_vi": "Vật chất, thuộc thể chất"
+                },
+                {
+                    "word": "Provider",
+                    "part_of_speech": "n.",
+                    "definition": "a supplier",
+                    "related_forms": "Provide v., provision n.",
+                    "meaning_vi": "Nhà cung cấp"
+                },
+                {
+                    "word": "Recur",
+                    "part_of_speech": "v.",
+                    "definition": "to occur again or repeatedly",
+                    "related_forms": "Recurrence n., recurring adj.",
+                    "meaning_vi": "Lặp lại, tái diễn"
+                },
+                {
+                    "word": "Reduction",
+                    "part_of_speech": "n.",
+                    "definition": "a lessening, a decrease",
+                    "related_forms": "Reduce v., reducible adj.",
+                    "meaning_vi": "Sự thu nhỏ, giảm"
+                },
+                {
+                    "word": "Stay on top of",
+                    "part_of_speech": "v.",
+                    "definition": "to know what is going on; to know the latest information",
+                    "related_forms": "",
+                    "meaning_vi": "Nắm rõ, đứng đầu"
+                },
+                {
+                    "word": "Stock",
+                    "part_of_speech": "n./v.",
+                    "definition": "a supply; to keep on hand",
+                    "related_forms": "",
+                    "meaning_vi": "Kho dự trữ"
+                }
+            ]
+        },
+        {
+            "lesson_number": 8,
+            "title_en": "Office Procedures",
+            "title_vi": "Thủ tục lễ nghi",
+            "words": [
+                {
+                    "word": "Appreciate",
+                    "part_of_speech": "v.",
+                    "definition": "to recognize, understand the importance of; to be thankful for",
+                    "related_forms": "Appreciation n., appreciated adj.",
+                    "meaning_vi": "Cảm kích, thông cảm, đánh giá cao"
+                },
+                {
+                    "word": "Be exposed to",
+                    "part_of_speech": "v.",
+                    "definition": "to become aware of; to gain experience in",
+                    "related_forms": "",
+                    "meaning_vi": "Bị phơi bày, tiếp xúc với"
+                },
+                {
+                    "word": "Bring in",
+                    "part_of_speech": "v.",
+                    "definition": "to hire or recruit; to cause to appear",
+                    "related_forms": "",
+                    "meaning_vi": "Thuê, mướn; đưa vào"
+                },
+                {
+                    "word": "Casual",
+                    "part_of_speech": "adj.",
+                    "definition": "informal",
+                    "related_forms": "",
+                    "meaning_vi": "Tình cờ, ngẫu nhiên; không trang trọng"
+                },
+                {
+                    "word": "Code",
+                    "part_of_speech": "n.",
+                    "definition": "rules of behavior",
+                    "related_forms": "",
+                    "meaning_vi": "Luật, quy tắc ứng xử"
+                },
+                {
+                    "word": "Glimpse",
+                    "part_of_speech": "n.",
+                    "definition": "a quick look",
+                    "related_forms": "",
+                    "meaning_vi": "Cái nhìn lướt qua"
+                },
+                {
+                    "word": "Made up of",
+                    "part_of_speech": "v.",
+                    "definition": "to consist of",
+                    "related_forms": "",
+                    "meaning_vi": "Bao gồm"
+                },
+                {
+                    "word": "Out of",
+                    "part_of_speech": "adj.",
+                    "definition": "no longer having, missing",
+                    "related_forms": "",
+                    "meaning_vi": "Hết, cạn kiệt"
+                },
+                {
+                    "word": "Outdated",
+                    "part_of_speech": "adj.",
+                    "definition": "obsolete; not currently in use",
+                    "related_forms": "",
+                    "meaning_vi": "Hết hạn sử dụng, lỗi thời"
+                },
+                {
+                    "word": "Practice",
+                    "part_of_speech": "n./v.",
+                    "definition": "method of doing something",
+                    "related_forms": "Practical adj.",
+                    "meaning_vi": "Sự thực hành, phương pháp"
+                },
+                {
+                    "word": "Reinforce",
+                    "part_of_speech": "v.",
+                    "definition": "to strengthen, support",
+                    "related_forms": "Reinforcement n.",
+                    "meaning_vi": "Tăng cường, củng cố"
+                },
+                {
+                    "word": "Verbal",
+                    "part_of_speech": "adj.",
+                    "definition": "oral",
+                    "related_forms": "Verbalize v., verbally adv.",
+                    "meaning_vi": "Bằng lời nói"
+                }
+            ]
+        },
+        {
+            "lesson_number": 9,
+            "title_en": "Electronics",
+            "title_vi": "Điện tử",
+            "words": [
+                {
+                    "word": "Disk",
+                    "part_of_speech": "n.",
+                    "definition": "an object used to store digital information",
+                    "related_forms": "",
+                    "meaning_vi": "Đĩa lưu trữ"
+                },
+                {
+                    "word": "Facilitate",
+                    "part_of_speech": "v.",
+                    "definition": "to make easier",
+                    "related_forms": "",
+                    "meaning_vi": "Tạo điều kiện, đơn giản hóa"
+                },
+                {
+                    "word": "Network",
+                    "part_of_speech": "n.",
+                    "definition": "an interconnected group or system",
+                    "related_forms": "",
+                    "meaning_vi": "Mạng lưới"
+                },
+                {
+                    "word": "Popularity",
+                    "part_of_speech": "n.",
+                    "definition": "the state of being widely admired, sought",
+                    "related_forms": "Popularize v., popular adj.",
+                    "meaning_vi": "Sự phổ biến"
+                },
+                {
+                    "word": "Process",
+                    "part_of_speech": "n.",
+                    "definition": "a series of operations or actions to bring about a result",
+                    "related_forms": "",
+                    "meaning_vi": "Quá trình"
+                },
+                {
+                    "word": "Replace",
+                    "part_of_speech": "v.",
+                    "definition": "to put back in a former place or position",
+                    "related_forms": "Replacement n., replaceable adj.",
+                    "meaning_vi": "Thay thế"
+                },
+                {
+                    "word": "Revolution",
+                    "part_of_speech": "n.",
+                    "definition": "a sudden or momentous change in a situation",
+                    "related_forms": "Revolutionized v., revolutionary adj.",
+                    "meaning_vi": "Sự thay đổi lớn, cách mạng hóa"
+                },
+                {
+                    "word": "Sharp",
+                    "part_of_speech": "adj.",
+                    "definition": "abrupt or acute; smart",
+                    "related_forms": "",
+                    "meaning_vi": "Sắc bén, thông minh"
+                },
+                {
+                    "word": "Skills",
+                    "part_of_speech": "n.",
+                    "definition": "developed ability",
+                    "related_forms": "",
+                    "meaning_vi": "Kỹ năng, kỹ xảo"
+                },
+                {
+                    "word": "Software",
+                    "part_of_speech": "n.",
+                    "definition": "the programs for a computer",
+                    "related_forms": "",
+                    "meaning_vi": "Phần mềm"
+                },
+                {
+                    "word": "Storage",
+                    "part_of_speech": "n.",
+                    "definition": "the safekeeping of goods or information",
+                    "related_forms": "Store v./n.",
+                    "meaning_vi": "Sự lưu trữ"
+                },
+                {
+                    "word": "Technical",
+                    "part_of_speech": "adj.",
+                    "definition": "special skill or knowledge",
+                    "related_forms": "",
+                    "meaning_vi": "Chuyên môn, kỹ thuật"
+                }
+            ]
+        },
+        {
+            "lesson_number": 10,
+            "title_en": "Correspondence",
+            "title_vi": "Quan hệ thư từ",
+            "words": [
+                {
+                    "word": "Assemble",
+                    "part_of_speech": "v.",
+                    "definition": "to put together; to bring together",
+                    "related_forms": "",
+                    "meaning_vi": "Tập hợp, thu thập"
+                },
+                {
+                    "word": "Beforehand",
+                    "part_of_speech": "adv.",
+                    "definition": "early, in advance",
+                    "related_forms": "",
+                    "meaning_vi": "Trước, sớm"
+                },
+                {
+                    "word": "Complicated",
+                    "part_of_speech": "adj.",
+                    "definition": "not easy to understand",
+                    "related_forms": "Complication n.",
+                    "meaning_vi": "Phức tạp"
+                },
+                {
+                    "word": "Courier",
+                    "part_of_speech": "n.",
+                    "definition": "a messenger",
+                    "related_forms": "",
+                    "meaning_vi": "Người đưa thư"
+                },
+                {
+                    "word": "Express",
+                    "part_of_speech": "adj.",
+                    "definition": "fast and direct",
+                    "related_forms": "",
+                    "meaning_vi": "Nhanh chóng"
+                },
+                {
+                    "word": "Fold",
+                    "part_of_speech": "v.",
+                    "definition": "to bend paper",
+                    "related_forms": "",
+                    "meaning_vi": "Gấp lại"
+                },
+                {
+                    "word": "Layout",
+                    "part_of_speech": "n.",
+                    "definition": "a format; the organization of material on a page",
+                    "related_forms": "",
+                    "meaning_vi": "Sự bố trí trang giấy"
+                },
+                {
+                    "word": "Mention",
+                    "part_of_speech": "v./n.",
+                    "definition": "to refer to; something read or written",
+                    "related_forms": "Mentionable adj.",
+                    "meaning_vi": "Đề cập, nhắc đến"
+                },
+                {
+                    "word": "Petition",
+                    "part_of_speech": "n./v.",
+                    "definition": "a formal, written request; to make a formal request",
+                    "related_forms": "",
+                    "meaning_vi": "Đơn xin, kiến nghị"
+                },
+                {
+                    "word": "Proof",
+                    "part_of_speech": "v.",
+                    "definition": "to look for errors",
+                    "related_forms": "Proofreader n., proofing gerund",
+                    "meaning_vi": "Chứng minh, kiểm tra lỗi"
+                },
+                {
+                    "word": "Registered",
+                    "part_of_speech": "adj.",
+                    "definition": "recorded and tracked",
+                    "related_forms": "Registration n.",
+                    "meaning_vi": "Đã đăng ký"
+                },
+                {
+                    "word": "Revise",
+                    "part_of_speech": "v.",
+                    "definition": "to rewrite",
+                    "related_forms": "",
+                    "meaning_vi": "Sửa lại"
+                }
+            ]
+        },
+        {
+            "lesson_number": 11,
+            "title_en": "Job Advertising and Recruiting",
+            "title_vi": "Quảng cáo & Tuyển dụng",
+            "words": [
+                {
+                    "word": "Abundant",
+                    "part_of_speech": "adj./n.",
+                    "definition": "plentiful, in large quantities; a large number",
+                    "related_forms": "",
+                    "meaning_vi": "Nhiều, dồi dào"
+                },
+                {
+                    "word": "Accomplishment",
+                    "part_of_speech": "n.",
+                    "definition": "an achievement, a success",
+                    "related_forms": "Accomplish v., accomplished adj.",
+                    "meaning_vi": "Sự hoàn thành, đạt được"
+                },
+                {
+                    "word": "Bring together",
+                    "part_of_speech": "v.",
+                    "definition": "to join, to gather",
+                    "related_forms": "",
+                    "meaning_vi": "Nhóm lại, họp lại"
+                },
+                {
+                    "word": "Candidate",
+                    "part_of_speech": "n.",
+                    "definition": "one being considered for a position, office",
+                    "related_forms": "",
+                    "meaning_vi": "Ứng cử viên"
+                },
+                {
+                    "word": "Come up with",
+                    "part_of_speech": "v.",
+                    "definition": "to plan, to invent, to think of",
+                    "related_forms": "",
+                    "meaning_vi": "Nghĩ ra, đưa ra"
+                },
+                {
+                    "word": "Commensurate",
+                    "part_of_speech": "adj.",
+                    "definition": "in proportion to, corresponding, equal to",
+                    "related_forms": "",
+                    "meaning_vi": "Bằng, tương xứng với"
+                },
+                {
+                    "word": "Match",
+                    "part_of_speech": "n.",
+                    "definition": "a fit, a similarity",
+                    "related_forms": "",
+                    "meaning_vi": "Sự phù hợp"
+                },
+                {
+                    "word": "Profile",
+                    "part_of_speech": "n.",
+                    "definition": "a group of characteristics or traits",
+                    "related_forms": "",
+                    "meaning_vi": "Hồ sơ, đặc điểm"
+                },
+                {
+                    "word": "Qualifications",
+                    "part_of_speech": "n.",
+                    "definition": "requirements, qualities, or abilities needed for something",
+                    "related_forms": "Qualify v., qualified adj.",
+                    "meaning_vi": "Bằng cấp, năng lực"
+                },
+                {
+                    "word": "Recruit",
+                    "part_of_speech": "v.",
+                    "definition": "to attract people to join an organization or a cause",
+                    "related_forms": "Recruitment n., recruiter n.",
+                    "meaning_vi": "Tuyển dụng"
+                },
+                {
+                    "word": "Submit",
+                    "part_of_speech": "v.",
+                    "definition": "to present for consideration",
+                    "related_forms": "Submission n., submittal n.",
+                    "meaning_vi": "Đệ trình, nộp"
+                },
+                {
+                    "word": "Time-consuming",
+                    "part_of_speech": "adj.",
+                    "definition": "taking up a lot of time",
+                    "related_forms": "",
+                    "meaning_vi": "Tốn nhiều thời gian"
+                }
+            ]
+        },
+        {
+            "lesson_number": 12,
+            "title_en": "Applying and Interviewing",
+            "title_vi": "Xin việc và phỏng vấn",
+            "words": [
+                {
+                    "word": "Ability",
+                    "part_of_speech": "n.",
+                    "definition": "a skill, a competence",
+                    "related_forms": "",
+                    "meaning_vi": "Khả năng"
+                },
+                {
+                    "word": "Apply",
+                    "part_of_speech": "v.",
+                    "definition": "to look for",
+                    "related_forms": "Applicant n., application n.",
+                    "meaning_vi": "Xin việc, đăng ký"
+                },
+                {
+                    "word": "Background",
+                    "part_of_speech": "n.",
+                    "definition": "a person's experience",
+                    "related_forms": "",
+                    "meaning_vi": "Kinh nghiệm, quá trình"
+                },
+                {
+                    "word": "Be ready for",
+                    "part_of_speech": "v.",
+                    "definition": "to be prepared",
+                    "related_forms": "",
+                    "meaning_vi": "Sẵn sàng cho"
+                },
+                {
+                    "word": "Call in",
+                    "part_of_speech": "v.",
+                    "definition": "to request",
+                    "related_forms": "",
+                    "meaning_vi": "Gọi đến, yêu cầu"
+                },
+                {
+                    "word": "Confidence",
+                    "part_of_speech": "n.",
+                    "definition": "a belief in one's ability",
+                    "related_forms": "Confident adj., confidently adv.",
+                    "meaning_vi": "Sự tự tin"
+                },
+                {
+                    "word": "Constantly",
+                    "part_of_speech": "adv.",
+                    "definition": "on a continual basis, happening all the time",
+                    "related_forms": "",
+                    "meaning_vi": "Luôn luôn, không đổi"
+                },
+                {
+                    "word": "Expert",
+                    "part_of_speech": "n.",
+                    "definition": "a specialist",
+                    "related_forms": "Expertise n., expert adj.",
+                    "meaning_vi": "Chuyên gia; thành thạo, tinh thông"
+                },
+                {
+                    "word": "Follow up",
+                    "part_of_speech": "v.",
+                    "definition": "to take additional steps, to continue",
+                    "related_forms": "",
+                    "meaning_vi": "Tiếp tục, theo dõi thêm"
+                },
+                {
+                    "word": "Hesitate",
+                    "part_of_speech": "v.",
+                    "definition": "to pause, to be reluctant",
+                    "related_forms": "",
+                    "meaning_vi": "Do dự, lưỡng lự"
+                },
+                {
+                    "word": "Present",
+                    "part_of_speech": "v.",
+                    "definition": "to introduce, to show, to offer for consideration",
+                    "related_forms": "Presentation n., presentable adj.",
+                    "meaning_vi": "Đưa ra, bày tỏ, giới thiệu"
+                },
+                {
+                    "word": "Weakness",
+                    "part_of_speech": "n.",
+                    "definition": "a fault, a quality lacking strength",
+                    "related_forms": "",
+                    "meaning_vi": "Nhược điểm, điểm yếu"
+                }
+            ]
+        },
+        {
+            "lesson_number": 13,
+            "title_en": "Hiring and Training",
+            "title_vi": "Thuê mướn & đào tạo",
+            "words": [
+                {
+                    "word": "Conduct",
+                    "part_of_speech": "v.",
+                    "definition": "to hold, to take place, to behave",
+                    "related_forms": "",
+                    "meaning_vi": "Tiến hành, cư xử"
+                },
+                {
+                    "word": "Generate",
+                    "part_of_speech": "v.",
+                    "definition": "to create, to produce",
+                    "related_forms": "",
+                    "meaning_vi": "Tạo ra, sinh ra"
+                },
+                {
+                    "word": "Hire",
+                    "part_of_speech": "v./n.",
+                    "definition": "to employ, to offer a job or position",
+                    "related_forms": "Hiring gerund",
+                    "meaning_vi": "Thuê, mướn"
+                },
+                {
+                    "word": "Keep up with",
+                    "part_of_speech": "v.",
+                    "definition": "to stay equal with",
+                    "related_forms": "",
+                    "meaning_vi": "Theo kịp, ngang hàng với"
+                },
+                {
+                    "word": "Look up to",
+                    "part_of_speech": "v.",
+                    "definition": "to admire, to think highly of",
+                    "related_forms": "",
+                    "meaning_vi": "Khâm phục, ngưỡng mộ"
+                },
+                {
+                    "word": "Mentor",
+                    "part_of_speech": "n.",
+                    "definition": "a person who guides",
+                    "related_forms": "",
+                    "meaning_vi": "Người cố vấn"
+                },
+                {
+                    "word": "On track",
+                    "part_of_speech": "adj.",
+                    "definition": "on schedule",
+                    "related_forms": "",
+                    "meaning_vi": "Theo đúng tiến độ"
+                },
+                {
+                    "word": "Reject",
+                    "part_of_speech": "v.",
+                    "definition": "to turn down, to say no",
+                    "related_forms": "Rejection n.",
+                    "meaning_vi": "Từ chối, loại bỏ"
+                },
+                {
+                    "word": "Set up",
+                    "part_of_speech": "v./adj.",
+                    "definition": "to establish, to arrange; arranged",
+                    "related_forms": "",
+                    "meaning_vi": "Thiết lập, định trước"
+                },
+                {
+                    "word": "Success",
+                    "part_of_speech": "n.",
+                    "definition": "reaching a goal",
+                    "related_forms": "Succeed v., successful adj.",
+                    "meaning_vi": "Sự thành công"
+                },
+                {
+                    "word": "Training",
+                    "part_of_speech": "n.",
+                    "definition": "the preparation or education for a specific job",
+                    "related_forms": "Trainer n., trainee n.",
+                    "meaning_vi": "Đào tạo, huấn luyện"
+                },
+                {
+                    "word": "Update",
+                    "part_of_speech": "v./n.",
+                    "definition": "to make current; the latest information",
+                    "related_forms": "",
+                    "meaning_vi": "Cập nhật"
+                }
+            ]
+        },
+        {
+            "lesson_number": 14,
+            "title_en": "Salaries and benefits",
+            "title_vi": "Lương & trợ cấp",
+            "words": [
+                {
+                    "word": "Basis",
+                    "part_of_speech": "n.",
+                    "definition": "the main reason for something, a base or foundation",
+                    "related_forms": "",
+                    "meaning_vi": "Nền tảng, cơ sở"
+                },
+                {
+                    "word": "Be aware of",
+                    "part_of_speech": "v.",
+                    "definition": "to be conscious of, to be knowledgeable about",
+                    "related_forms": "",
+                    "meaning_vi": "Am hiểu về, nhận biết"
+                },
+                {
+                    "word": "Benefits",
+                    "part_of_speech": "n.",
+                    "definition": "the advantages provided to an employee in addition to salary",
+                    "related_forms": "Benefit v., beneficial adj.",
+                    "meaning_vi": "Tiền trợ cấp, phúc lợi"
+                },
+                {
+                    "word": "Compensate",
+                    "part_of_speech": "v.",
+                    "definition": "to pay, to make up for",
+                    "related_forms": "Compensation n., compensatory adj.",
+                    "meaning_vi": "Đền bù, bồi thường"
+                },
+                {
+                    "word": "Delicate",
+                    "part_of_speech": "adj.",
+                    "definition": "sensitive; with sensitivity",
+                    "related_forms": "",
+                    "meaning_vi": "Nhạy bén, khéo léo"
+                },
+                {
+                    "word": "Eligible",
+                    "part_of_speech": "adj.",
+                    "definition": "able to participate in something, qualified",
+                    "related_forms": "",
+                    "meaning_vi": "Đủ tư cách, đủ điều kiện"
+                },
+                {
+                    "word": "Flexible",
+                    "part_of_speech": "adj.",
+                    "definition": "not rigid, able to change easily",
+                    "related_forms": "",
+                    "meaning_vi": "Linh hoạt, dễ uốn nắn"
+                },
+                {
+                    "word": "Negotiate",
+                    "part_of_speech": "v.",
+                    "definition": "to talk for the purpose of reaching an agreement, especially on prices or contracts",
+                    "related_forms": "Negotiation n., negotiator n.",
+                    "meaning_vi": "Đàm phán, thương lượng"
+                },
+                {
+                    "word": "Raise",
+                    "part_of_speech": "n.",
+                    "definition": "an increase in salary",
+                    "related_forms": "",
+                    "meaning_vi": "Sự tăng lương"
+                },
+                {
+                    "word": "Retire",
+                    "part_of_speech": "v.",
+                    "definition": "to stop working, to withdraw from a business or profession",
+                    "related_forms": "Retirement n., retired adj.",
+                    "meaning_vi": "Nghỉ hưu"
+                },
+                {
+                    "word": "Vested",
+                    "part_of_speech": "adj.",
+                    "definition": "absolute, authorized",
+                    "related_forms": "",
+                    "meaning_vi": "Được quyền, được phép"
+                },
+                {
+                    "word": "Wage",
+                    "part_of_speech": "n.",
+                    "definition": "the money paid for work done, usually hourly",
+                    "related_forms": "",
+                    "meaning_vi": "Tiền công"
+                }
+            ]
+        },
+        {
+            "lesson_number": 15,
+            "title_en": "Promotions, Pensions and Awards",
+            "title_vi": "Thăng chức, hưu trí & phần thưởng",
+            "words": [
+                {
+                    "word": "Achieve",
+                    "part_of_speech": "v.",
+                    "definition": "to succeed, to reach a goal",
+                    "related_forms": "Achievement n., achiever n.",
+                    "meaning_vi": "Đạt được, giành được"
+                },
+                {
+                    "word": "Contribute",
+                    "part_of_speech": "v.",
+                    "definition": "to add to, to donate, to give",
+                    "related_forms": "Contribution n., contributor n.",
+                    "meaning_vi": "Đóng góp, góp phần"
+                },
+                {
+                    "word": "Dedication",
+                    "part_of_speech": "n.",
+                    "definition": "a commitment to something",
+                    "related_forms": "Dedicate v., dedicated adj.",
+                    "meaning_vi": "Sự cống hiến"
+                },
+                {
+                    "word": "Look forward to",
+                    "part_of_speech": "v.",
+                    "definition": "to anticipate, to be eager for something to happen",
+                    "related_forms": "",
+                    "meaning_vi": "Háo hức chờ mong"
+                },
+                {
+                    "word": "Looked to",
+                    "part_of_speech": "v.",
+                    "definition": "to depend on, to rely on",
+                    "related_forms": "",
+                    "meaning_vi": "Nhờ vào, trông cậy vào"
+                },
+                {
+                    "word": "Loyal",
+                    "part_of_speech": "adj.",
+                    "definition": "faithful, believing in something or somebody",
+                    "related_forms": "",
+                    "meaning_vi": "Trung thành"
+                },
+                {
+                    "word": "Merit",
+                    "part_of_speech": "n.",
+                    "definition": "experience, high quality",
+                    "related_forms": "",
+                    "meaning_vi": "Công lao, giá trị"
+                },
+                {
+                    "word": "Obvious",
+                    "part_of_speech": "adj.",
+                    "definition": "easy to see or understand",
+                    "related_forms": "",
+                    "meaning_vi": "Rõ ràng, rành mạch"
+                },
+                {
+                    "word": "Productive",
+                    "part_of_speech": "adj.",
+                    "definition": "useful, getting a lot done",
+                    "related_forms": "",
+                    "meaning_vi": "Hữu ích, có hiệu quả"
+                },
+                {
+                    "word": "Promote",
+                    "part_of_speech": "v.",
+                    "definition": "to give someone a better job; to support, to make known",
+                    "related_forms": "Promotion n., promoter n.",
+                    "meaning_vi": "Thăng chức, xúc tiến"
+                },
+                {
+                    "word": "Recognition",
+                    "part_of_speech": "n.",
+                    "definition": "credit, praise for doing something well",
+                    "related_forms": "",
+                    "meaning_vi": "Sự công nhận, khen ngợi"
+                },
+                {
+                    "word": "Value",
+                    "part_of_speech": "n.",
+                    "definition": "worth",
+                    "related_forms": "",
+                    "meaning_vi": "Giá trị"
+                }
+            ]
+        },
+        {
+            "lesson_number": 16,
+            "title_en": "Shopping",
+            "title_vi": "Mua sắm",
+            "words": [
+                {
+                    "word": "Bargain",
+                    "part_of_speech": "n.",
+                    "definition": "something offered or acquired at a price advantageous to the buyer",
+                    "related_forms": "",
+                    "meaning_vi": "Sự mặc cả, món hời"
+                },
+                {
+                    "word": "Bear",
+                    "part_of_speech": "v.",
+                    "definition": "to have a tolerance for, to endure",
+                    "related_forms": "",
+                    "meaning_vi": "Chịu đựng, cam chịu"
+                },
+                {
+                    "word": "Behavior",
+                    "part_of_speech": "n.",
+                    "definition": "the manner of one's action",
+                    "related_forms": "",
+                    "meaning_vi": "Cách cư xử"
+                },
+                {
+                    "word": "Checkout",
+                    "part_of_speech": "n.",
+                    "definition": "the act, time, or place of checking out, as at a hotel or a supermarket",
+                    "related_forms": "",
+                    "meaning_vi": "Sự thanh toán tiền"
+                },
+                {
+                    "word": "Comfort",
+                    "part_of_speech": "n.",
+                    "definition": "a condition or feeling of pleasurable ease, well-being, and contentment",
+                    "related_forms": "Comfortable adj., comfortably adv.",
+                    "meaning_vi": "Sự thoải mái, tiện nghi"
+                },
+                {
+                    "word": "Expand",
+                    "part_of_speech": "v.",
+                    "definition": "to increase the size, volume, quantity, or scope of; to enlarge",
+                    "related_forms": "Expansion n., expanded adj.",
+                    "meaning_vi": "Mở rộng"
+                },
+                {
+                    "word": "Explore",
+                    "part_of_speech": "v.",
+                    "definition": "to investigate systematically",
+                    "related_forms": "Exploration n., exploratory adj.",
+                    "meaning_vi": "Thăm dò, khảo sát"
+                },
+                {
+                    "word": "Item",
+                    "part_of_speech": "n.",
+                    "definition": "a single article or unit",
+                    "related_forms": "",
+                    "meaning_vi": "Mặt hàng, món đồ"
+                },
+                {
+                    "word": "Mandatory",
+                    "part_of_speech": "adj.",
+                    "definition": "required or commanded, obligatory",
+                    "related_forms": "",
+                    "meaning_vi": "Bắt buộc, thiết yếu"
+                },
+                {
+                    "word": "Merchandise",
+                    "part_of_speech": "n.",
+                    "definition": "items available in stores",
+                    "related_forms": "",
+                    "meaning_vi": "Hàng hóa"
+                },
+                {
+                    "word": "Strict",
+                    "part_of_speech": "adj.",
+                    "definition": "precise, exact",
+                    "related_forms": "Strictness n., strictly adv.",
+                    "meaning_vi": "Nghiêm khắc, chính xác"
+                },
+                {
+                    "word": "Trend",
+                    "part_of_speech": "n.",
+                    "definition": "the current style",
+                    "related_forms": "",
+                    "meaning_vi": "Xu hướng"
+                }
+            ]
+        },
+        {
+            "lesson_number": 17,
+            "title_en": "Ordering Supplies",
+            "title_vi": "Đặt mua vật tư",
+            "words": [
+                {
+                    "word": "Diverse",
+                    "part_of_speech": "adj.",
+                    "definition": "different; made up of distinct qualities",
+                    "related_forms": "Diversify v., diversity n.",
+                    "meaning_vi": "Đa dạng"
+                },
+                {
+                    "word": "Enterprise",
+                    "part_of_speech": "n.",
+                    "definition": "a business; a large project",
+                    "related_forms": "",
+                    "meaning_vi": "Doanh nghiệp, công trình lớn"
+                },
+                {
+                    "word": "Essential",
+                    "part_of_speech": "adj.",
+                    "definition": "indispensable, necessary",
+                    "related_forms": "",
+                    "meaning_vi": "Cần thiết, thiết yếu"
+                },
+                {
+                    "word": "Everyday",
+                    "part_of_speech": "adj.",
+                    "definition": "common, ordinary",
+                    "related_forms": "",
+                    "meaning_vi": "Hàng ngày"
+                },
+                {
+                    "word": "Function",
+                    "part_of_speech": "v./n.",
+                    "definition": "to perform tasks",
+                    "related_forms": "Functional adj.",
+                    "meaning_vi": "Hoạt động, chức năng"
+                },
+                {
+                    "word": "Maintain",
+                    "part_of_speech": "v.",
+                    "definition": "to continue, to support, to sustain",
+                    "related_forms": "Maintainability n., maintainable adj.",
+                    "meaning_vi": "Duy trì"
+                },
+                {
+                    "word": "Obtain",
+                    "part_of_speech": "v.",
+                    "definition": "to acquire",
+                    "related_forms": "",
+                    "meaning_vi": "Đạt được, giành được"
+                },
+                {
+                    "word": "Prerequisite",
+                    "part_of_speech": "n.",
+                    "definition": "something that is required or necessary as a prior condition",
+                    "related_forms": "",
+                    "meaning_vi": "Điều kiện tiên quyết, ưu tiên"
+                },
+                {
+                    "word": "Quality",
+                    "part_of_speech": "n.",
+                    "definition": "a distinguishing characteristic",
+                    "related_forms": "",
+                    "meaning_vi": "Chất lượng"
+                },
+                {
+                    "word": "Smooth",
+                    "part_of_speech": "adj.",
+                    "definition": "without difficulties; deliberately polite and agreeable in order to win favor",
+                    "related_forms": "Smooth out v., smoothly adv.",
+                    "meaning_vi": "Êm thấm, suôn sẻ"
+                },
+                {
+                    "word": "Source",
+                    "part_of_speech": "n.",
+                    "definition": "the origin",
+                    "related_forms": "",
+                    "meaning_vi": "Nguồn, nguồn gốc"
+                },
+                {
+                    "word": "Stationery",
+                    "part_of_speech": "n.",
+                    "definition": "writing paper and envelopes",
+                    "related_forms": "",
+                    "meaning_vi": "Đồ dùng văn phòng"
+                }
+            ]
+        },
+        {
+            "lesson_number": 18,
+            "title_en": "Shipping",
+            "title_vi": "Vận tải (đường thủy)",
+            "words": [
+                {
+                    "word": "Accurate",
+                    "part_of_speech": "adj.",
+                    "definition": "exact; errorless",
+                    "related_forms": "Accuracy n., accurately adv.",
+                    "meaning_vi": "Đúng, chính xác"
+                },
+                {
+                    "word": "Carrier",
+                    "part_of_speech": "n.",
+                    "definition": "a person or business that transports passengers or goods",
+                    "related_forms": "",
+                    "meaning_vi": "Người hoặc vật chở hàng"
+                },
+                {
+                    "word": "Catalog",
+                    "part_of_speech": "n./v.",
+                    "definition": "a list or itemized display; to make an itemized list of",
+                    "related_forms": "",
+                    "meaning_vi": "Sách danh mục chi tiết"
+                },
+                {
+                    "word": "Fulfill",
+                    "part_of_speech": "v.",
+                    "definition": "to finish completely",
+                    "related_forms": "Fulfilling gerund, fulfillment n.",
+                    "meaning_vi": "Hoàn thành (nhiệm vụ)"
+                },
+                {
+                    "word": "Integral",
+                    "part_of_speech": "adj.",
+                    "definition": "necessary for completion",
+                    "related_forms": "",
+                    "meaning_vi": "Cần thiết (để hoàn thành)"
+                },
+                {
+                    "word": "Inventory",
+                    "part_of_speech": "n.",
+                    "definition": "goods in stock; an itemized record of these goods",
+                    "related_forms": "",
+                    "meaning_vi": "Kiểm kê hàng hóa"
+                },
+                {
+                    "word": "Minimize",
+                    "part_of_speech": "v.",
+                    "definition": "to reduce, to give less importance to",
+                    "related_forms": "Minimal adj., minimum n.",
+                    "meaning_vi": "Giảm bớt, hạn chế"
+                },
+                {
+                    "word": "On hand",
+                    "part_of_speech": "adj.",
+                    "definition": "available",
+                    "related_forms": "",
+                    "meaning_vi": "Có sẵn"
+                },
+                {
+                    "word": "Remember",
+                    "part_of_speech": "v.",
+                    "definition": "to think of again",
+                    "related_forms": "",
+                    "meaning_vi": "Nhớ, nhớ lại"
+                },
+                {
+                    "word": "Ship",
+                    "part_of_speech": "v.",
+                    "definition": "to transport; to send",
+                    "related_forms": "Shipper n., shipment n.",
+                    "meaning_vi": "Vận chuyển"
+                },
+                {
+                    "word": "Sufficient",
+                    "part_of_speech": "adj.",
+                    "definition": "as much as is needed",
+                    "related_forms": "",
+                    "meaning_vi": "Đủ"
+                },
+                {
+                    "word": "Supply",
+                    "part_of_speech": "v.",
+                    "definition": "to make available for use",
+                    "related_forms": "",
+                    "meaning_vi": "Cung cấp"
+                }
+            ]
+        },
+        {
+            "lesson_number": 19,
+            "title_en": "Invoices",
+            "title_vi": "Hóa đơn",
+            "words": [
+                {
+                    "word": "Charge",
+                    "part_of_speech": "n./v.",
+                    "definition": "an expense or a cost; to demand payment",
+                    "related_forms": "",
+                    "meaning_vi": "Phí tổn"
+                },
+                {
+                    "word": "Compile",
+                    "part_of_speech": "v.",
+                    "definition": "to gather together from several sources",
+                    "related_forms": "",
+                    "meaning_vi": "Thu thập, tập hợp"
+                },
+                {
+                    "word": "Customer",
+                    "part_of_speech": "n.",
+                    "definition": "one who purchases a commodity or service",
+                    "related_forms": "",
+                    "meaning_vi": "Khách hàng"
+                },
+                {
+                    "word": "Discount",
+                    "part_of_speech": "n./v.",
+                    "definition": "a reduction in price; to reduce in price",
+                    "related_forms": "",
+                    "meaning_vi": "Phần tiền giảm giá"
+                },
+                {
+                    "word": "Efficient",
+                    "part_of_speech": "adj.",
+                    "definition": "acting or producing effectively with a minimum of waste",
+                    "related_forms": "",
+                    "meaning_vi": "Có năng suất cao, hiệu quả"
+                },
+                {
+                    "word": "Estimate",
+                    "part_of_speech": "v.",
+                    "definition": "to approximate the amount or value of something; to form an opinion about something",
+                    "related_forms": "Estimation n., estimating gerund",
+                    "meaning_vi": "Ước lượng, định giá"
+                },
+                {
+                    "word": "Impose",
+                    "part_of_speech": "v.",
+                    "definition": "to establish or apply as compulsory; to force upon others",
+                    "related_forms": "Imposition n., imposing adj.",
+                    "meaning_vi": "Bắt buộc, đánh thuế"
+                },
+                {
+                    "word": "Mistake",
+                    "part_of_speech": "n.",
+                    "definition": "an error or a fault",
+                    "related_forms": "Mistaken v./adj.",
+                    "meaning_vi": "Lỗi"
+                },
+                {
+                    "word": "Order",
+                    "part_of_speech": "n./v.",
+                    "definition": "a request made to purchase something; to command or direct",
+                    "related_forms": "",
+                    "meaning_vi": "Đơn đặt hàng"
+                },
+                {
+                    "word": "Prompt",
+                    "part_of_speech": "adj./n.",
+                    "definition": "being on time or punctual, carried out without delay; a reminder or a cue",
+                    "related_forms": "Promptness n.",
+                    "meaning_vi": "Ngay lập tức, không chậm trễ"
+                },
+                {
+                    "word": "Rectify",
+                    "part_of_speech": "v.",
+                    "definition": "to set right or correct",
+                    "related_forms": "",
+                    "meaning_vi": "Sửa lại, hiệu chỉnh"
+                },
+                {
+                    "word": "Terms",
+                    "part_of_speech": "n.",
+                    "definition": "conditions",
+                    "related_forms": "",
+                    "meaning_vi": "Điều khoản"
+                }
+            ]
+        },
+        {
+            "lesson_number": 20,
+            "title_en": "Inventory",
+            "title_vi": "Kiểm kê hàng hóa",
+            "words": [
+                {
+                    "word": "Adjust",
+                    "part_of_speech": "v.",
+                    "definition": "to change in order to match or fit, to cause to correspond",
+                    "related_forms": "Adjustment n., adjustable adj.",
+                    "meaning_vi": "Điều chỉnh, dàn xếp"
+                },
+                {
+                    "word": "Automatic",
+                    "part_of_speech": "adj.",
+                    "definition": "operating independently",
+                    "related_forms": "Automation n., automatically adv.",
+                    "meaning_vi": "Tự động"
+                },
+                {
+                    "word": "Crucial",
+                    "part_of_speech": "adj.",
+                    "definition": "extremely significant or important",
+                    "related_forms": "",
+                    "meaning_vi": "Cốt yếu, chủ yếu"
+                },
+                {
+                    "word": "Discrepancy",
+                    "part_of_speech": "n.",
+                    "definition": "a divergence or disagreement",
+                    "related_forms": "",
+                    "meaning_vi": "Sự bất đồng, bất hòa"
+                },
+                {
+                    "word": "Disturb",
+                    "part_of_speech": "v.",
+                    "definition": "to interfere with, to interrupt",
+                    "related_forms": "Disturbance n., disturbingly adv.",
+                    "meaning_vi": "Làm rối loạn, gây cản trở"
+                },
+                {
+                    "word": "Liability",
+                    "part_of_speech": "n.",
+                    "definition": "an obligation, a responsibility",
+                    "related_forms": "",
+                    "meaning_vi": "Nghĩa vụ, trách nhiệm"
+                },
+                {
+                    "word": "Reflect",
+                    "part_of_speech": "v.",
+                    "definition": "to give back a likeness",
+                    "related_forms": "Reflection n., reflector n.",
+                    "meaning_vi": "Phản ánh, tương ứng với"
+                },
+                {
+                    "word": "Run",
+                    "part_of_speech": "v.",
+                    "definition": "to operate",
+                    "related_forms": "",
+                    "meaning_vi": "Chạy, hoạt động"
+                },
+                {
+                    "word": "Scan",
+                    "part_of_speech": "v.",
+                    "definition": "to look over quickly",
+                    "related_forms": "",
+                    "meaning_vi": "Kiểm tra nhanh"
+                },
+                {
+                    "word": "Subtract",
+                    "part_of_speech": "v.",
+                    "definition": "to take away, to deduct",
+                    "related_forms": "",
+                    "meaning_vi": "Trừ đi, khấu trừ"
+                },
+                {
+                    "word": "Tedious",
+                    "part_of_speech": "adj.",
+                    "definition": "tiresome by reason of length, slowness, or dullness, boring",
+                    "related_forms": "",
+                    "meaning_vi": "Chán ngắt, buồn tẻ"
+                },
+                {
+                    "word": "Verify",
+                    "part_of_speech": "v.",
+                    "definition": "to prove the truth of",
+                    "related_forms": "",
+                    "meaning_vi": "Xác minh, kiểm lại"
+                }
+            ]
+        },
+        {
+            "lesson_number": 21,
+            "title_en": "Banking",
+            "title_vi": "Ngành ngân hàng",
+            "words": [
+                {
+                    "word": "Accept",
+                    "part_of_speech": "v.",
+                    "definition": "to receive, to respond favorably",
+                    "related_forms": "Acceptance n., acceptable adj.",
+                    "meaning_vi": "Nhận, chấp nhận"
+                },
+                {
+                    "word": "Balance",
+                    "part_of_speech": "n./v.",
+                    "definition": "the remainder; to compute the difference between credits and debits of an account",
+                    "related_forms": "",
+                    "meaning_vi": "Số dư (tài khoản)"
+                },
+                {
+                    "word": "Borrow",
+                    "part_of_speech": "v.",
+                    "definition": "to use temporarily",
+                    "related_forms": "",
+                    "meaning_vi": "Vay, mượn"
+                },
+                {
+                    "word": "Cautious",
+                    "part_of_speech": "adj.",
+                    "definition": "careful, wary",
+                    "related_forms": "",
+                    "meaning_vi": "Thận trọng"
+                },
+                {
+                    "word": "Deduct",
+                    "part_of_speech": "v.",
+                    "definition": "to take away from a total, to subtract",
+                    "related_forms": "Deductible n., deduction n.",
+                    "meaning_vi": "Trừ đi, khấu trừ"
+                },
+                {
+                    "word": "Dividend",
+                    "part_of_speech": "n.",
+                    "definition": "a share in a distribution",
+                    "related_forms": "",
+                    "meaning_vi": "Tiền lãi cổ phần"
+                },
+                {
+                    "word": "Down payment",
+                    "part_of_speech": "n.",
+                    "definition": "an initial partial payment",
+                    "related_forms": "",
+                    "meaning_vi": "Sự trả trước một phần khi mua hàng"
+                },
+                {
+                    "word": "Mortgage",
+                    "part_of_speech": "n./v.",
+                    "definition": "the amount due on a property; to borrow money with your house as collateral",
+                    "related_forms": "",
+                    "meaning_vi": "Tiền thế chấp"
+                },
+                {
+                    "word": "Restriction",
+                    "part_of_speech": "n.",
+                    "definition": "a limitation",
+                    "related_forms": "Restrict v., restricted adj.",
+                    "meaning_vi": "Hạn chế, giới hạn"
+                },
+                {
+                    "word": "Signature",
+                    "part_of_speech": "n.",
+                    "definition": "the name of a person written by the person",
+                    "related_forms": "Sign v.",
+                    "meaning_vi": "Chữ ký"
+                },
+                {
+                    "word": "Take out",
+                    "part_of_speech": "v.",
+                    "definition": "to withdraw, to remove",
+                    "related_forms": "",
+                    "meaning_vi": "Rút (tiền)"
+                },
+                {
+                    "word": "Transaction",
+                    "part_of_speech": "n.",
+                    "definition": "a business deal",
+                    "related_forms": "",
+                    "meaning_vi": "Giao dịch"
+                }
+            ]
+        },
+        {
+            "lesson_number": 22,
+            "title_en": "Accounting",
+            "title_vi": "Kế toán / thanh toán",
+            "words": [
+                {
+                    "word": "Accounting",
+                    "part_of_speech": "n.",
+                    "definition": "the recording and gathering of financial information for a company",
+                    "related_forms": "Accountant n., account n.",
+                    "meaning_vi": "Kế toán"
+                },
+                {
+                    "word": "Accumulate",
+                    "part_of_speech": "v.",
+                    "definition": "to gather, to collect",
+                    "related_forms": "Accumulation n., accumulated adj.",
+                    "meaning_vi": "Tích lũy"
+                },
+                {
+                    "word": "Asset",
+                    "part_of_speech": "n.",
+                    "definition": "something of value",
+                    "related_forms": "",
+                    "meaning_vi": "Tài sản"
+                },
+                {
+                    "word": "Audit",
+                    "part_of_speech": "n./v.",
+                    "definition": "a formal examination of financial records; to examine the financial records",
+                    "related_forms": "",
+                    "meaning_vi": "Kiểm toán"
+                },
+                {
+                    "word": "Budget",
+                    "part_of_speech": "n./v.",
+                    "definition": "a list of probable expenses and income for a given period",
+                    "related_forms": "Budgetary adj.",
+                    "meaning_vi": "Ngân sách, ngân quỹ"
+                },
+                {
+                    "word": "Build up",
+                    "part_of_speech": "v.",
+                    "definition": "to increase over time",
+                    "related_forms": "",
+                    "meaning_vi": "Sự tăng cường, tích lũy"
+                },
+                {
+                    "word": "Client",
+                    "part_of_speech": "n.",
+                    "definition": "a customer",
+                    "related_forms": "",
+                    "meaning_vi": "Khách hàng"
+                },
+                {
+                    "word": "Debt",
+                    "part_of_speech": "n.",
+                    "definition": "something owed, as in money or goods",
+                    "related_forms": "",
+                    "meaning_vi": "Món nợ"
+                },
+                {
+                    "word": "Outstanding",
+                    "part_of_speech": "adj.",
+                    "definition": "still due, not paid or settled",
+                    "related_forms": "",
+                    "meaning_vi": "Chưa trả nợ, còn tồn đọng"
+                },
+                {
+                    "word": "Profitable",
+                    "part_of_speech": "adj.",
+                    "definition": "advantageous, beneficial",
+                    "related_forms": "Profit v./n.",
+                    "meaning_vi": "Có sinh lợi"
+                },
+                {
+                    "word": "Reconcile",
+                    "part_of_speech": "v.",
+                    "definition": "to make consistent",
+                    "related_forms": "",
+                    "meaning_vi": "Đành chấp nhận, làm cho nhất quán"
+                },
+                {
+                    "word": "Turnover",
+                    "part_of_speech": "n.",
+                    "definition": "the number of times a product is sold and replaced, or an employee leaves and another is hired",
+                    "related_forms": "",
+                    "meaning_vi": "Doanh số, doanh thu"
+                }
+            ]
+        },
+        {
+            "lesson_number": 23,
+            "title_en": "Investments",
+            "title_vi": "Đầu tư",
+            "words": [
+                {
+                    "word": "Aggressive",
+                    "part_of_speech": "adj.",
+                    "definition": "competitive, assertive",
+                    "related_forms": "",
+                    "meaning_vi": "Có sức cạnh tranh, quyết liệt"
+                },
+                {
+                    "word": "Attitude",
+                    "part_of_speech": "n.",
+                    "definition": "a feeling about something or someone",
+                    "related_forms": "",
+                    "meaning_vi": "Thái độ"
+                },
+                {
+                    "word": "Commitment",
+                    "part_of_speech": "n.",
+                    "definition": "a promise",
+                    "related_forms": "Commit v., noncommittal adj.",
+                    "meaning_vi": "Lời cam kết"
+                },
+                {
+                    "word": "Conservative",
+                    "part_of_speech": "adj.",
+                    "definition": "cautious, restrained",
+                    "related_forms": "",
+                    "meaning_vi": "Thận trọng, cẩn thận"
+                },
+                {
+                    "word": "Fund",
+                    "part_of_speech": "n./v.",
+                    "definition": "an amount of money for something specific; to provide money for",
+                    "related_forms": "",
+                    "meaning_vi": "Quỹ"
+                },
+                {
+                    "word": "Invest",
+                    "part_of_speech": "v.",
+                    "definition": "to put money into a business or activity with the hope of making more money, to put effort into something",
+                    "related_forms": "Investment n., investor n.",
+                    "meaning_vi": "Đầu tư"
+                },
+                {
+                    "word": "Long-term",
+                    "part_of_speech": "adj.",
+                    "definition": "involving or extending over a long period",
+                    "related_forms": "",
+                    "meaning_vi": "Dài hạn"
+                },
+                {
+                    "word": "Portfolio",
+                    "part_of_speech": "n.",
+                    "definition": "a list of investments",
+                    "related_forms": "",
+                    "meaning_vi": "Danh mục vốn đầu tư"
+                },
+                {
+                    "word": "Pull out",
+                    "part_of_speech": "v./n.",
+                    "definition": "to withdraw, to stop participating; a withdrawal, removal",
+                    "related_forms": "",
+                    "meaning_vi": "Sự rút lui"
+                },
+                {
+                    "word": "Resource",
+                    "part_of_speech": "n.",
+                    "definition": "assets, valuable things",
+                    "related_forms": "",
+                    "meaning_vi": "Tài sản, nguồn lực"
+                },
+                {
+                    "word": "Return",
+                    "part_of_speech": "n.",
+                    "definition": "the amount of money gained as profit",
+                    "related_forms": "Returns n., returnable adj.",
+                    "meaning_vi": "Tiền thu về, lợi nhuận"
+                },
+                {
+                    "word": "Wise",
+                    "part_of_speech": "adj.",
+                    "definition": "knowledgeable, able to offer advice based on experience",
+                    "related_forms": "Wisdom n., wisely adv.",
+                    "meaning_vi": "Từng trải, hiểu biết nhiều"
+                }
+            ]
+        },
+        {
+            "lesson_number": 24,
+            "title_en": "Taxes",
+            "title_vi": "Thuế",
+            "words": [
+                {
+                    "word": "Calculate",
+                    "part_of_speech": "v.",
+                    "definition": "to figure out, to compute",
+                    "related_forms": "Calculation n., calculator n.",
+                    "meaning_vi": "Tính toán"
+                },
+                {
+                    "word": "Deadline",
+                    "part_of_speech": "n.",
+                    "definition": "a time by which something must be finished",
+                    "related_forms": "",
+                    "meaning_vi": "Đường giới hạn, hạn chót"
+                },
+                {
+                    "word": "File",
+                    "part_of_speech": "v./n.",
+                    "definition": "to enter into public record; a group of documents or information about a person or an event",
+                    "related_forms": "",
+                    "meaning_vi": "Hồ sơ, tài liệu"
+                },
+                {
+                    "word": "Fill out",
+                    "part_of_speech": "v.",
+                    "definition": "to complete",
+                    "related_forms": "",
+                    "meaning_vi": "Điền đầy đủ, toàn bộ"
+                },
+                {
+                    "word": "Give up",
+                    "part_of_speech": "v.",
+                    "definition": "to quit, to stop",
+                    "related_forms": "",
+                    "meaning_vi": "Đầu hàng, từ bỏ"
+                },
+                {
+                    "word": "Joint",
+                    "part_of_speech": "adj.",
+                    "definition": "together, shared",
+                    "related_forms": "",
+                    "meaning_vi": "Chung, liên kết"
+                },
+                {
+                    "word": "Owe",
+                    "part_of_speech": "v.",
+                    "definition": "to have a debt, to be obligated to pay",
+                    "related_forms": "Owner n., owing gerund",
+                    "meaning_vi": "Nợ"
+                },
+                {
+                    "word": "Penalty",
+                    "part_of_speech": "n.",
+                    "definition": "a punishment, a consequence",
+                    "related_forms": "Penalize v., penal adj.",
+                    "meaning_vi": "Sự trừng phạt, tiền phạt"
+                },
+                {
+                    "word": "Prepare",
+                    "part_of_speech": "v.",
+                    "definition": "to make ready",
+                    "related_forms": "Preparation n., preparatory adj.",
+                    "meaning_vi": "Chuẩn bị"
+                },
+                {
+                    "word": "Refund",
+                    "part_of_speech": "n./v.",
+                    "definition": "the amount paid back; to give back",
+                    "related_forms": "",
+                    "meaning_vi": "Sự trả lại tiền"
+                },
+                {
+                    "word": "Spouse",
+                    "part_of_speech": "n.",
+                    "definition": "a husband or wife",
+                    "related_forms": "",
+                    "meaning_vi": "Chồng, vợ"
+                },
+                {
+                    "word": "Withhold",
+                    "part_of_speech": "v.",
+                    "definition": "to keep from, to refrain from",
+                    "related_forms": "",
+                    "meaning_vi": "Ngăn cản, giữ lại"
+                }
+            ]
+        },
+        {
+            "lesson_number": 25,
+            "title_en": "Financial Statements",
+            "title_vi": "Báo cáo tài chính",
+            "words": [
+                {
+                    "word": "Desired",
+                    "part_of_speech": "adj.",
+                    "definition": "wished or longed for",
+                    "related_forms": "Desire n./v.",
+                    "meaning_vi": "Mong muốn"
+                },
+                {
+                    "word": "Detail",
+                    "part_of_speech": "v.",
+                    "definition": "to report or relate minutely or in particulars",
+                    "related_forms": "",
+                    "meaning_vi": "Chi tiết hóa"
+                },
+                {
+                    "word": "Forecast",
+                    "part_of_speech": "n./v.",
+                    "definition": "a prediction of a future event; to estimate or calculate in advance",
+                    "related_forms": "",
+                    "meaning_vi": "Dự đoán, dự báo"
+                },
+                {
+                    "word": "Level",
+                    "part_of_speech": "n.",
+                    "definition": "a relative position or rank on a scale",
+                    "related_forms": "",
+                    "meaning_vi": "Mức độ"
+                },
+                {
+                    "word": "Overall",
+                    "part_of_speech": "adj.",
+                    "definition": "regarded as a whole, general",
+                    "related_forms": "",
+                    "meaning_vi": "Toàn bộ, toàn diện"
+                },
+                {
+                    "word": "Perspective",
+                    "part_of_speech": "n.",
+                    "definition": "a mental view or outlook",
+                    "related_forms": "",
+                    "meaning_vi": "Quan điểm, cách nhìn"
+                },
+                {
+                    "word": "Projected",
+                    "part_of_speech": "adj.",
+                    "definition": "estimated, or predicted based on present data",
+                    "related_forms": "Project n./v.",
+                    "meaning_vi": "Có kế hoạch, dự kiến"
+                },
+                {
+                    "word": "Realistic",
+                    "part_of_speech": "adj.",
+                    "definition": "tending to or expressing an awareness of things as they really are",
+                    "related_forms": "Reality n.",
+                    "meaning_vi": "Có óc thực tế"
+                },
+                {
+                    "word": "Target",
+                    "part_of_speech": "v./n.",
+                    "definition": "to establish as a goal; a goal",
+                    "related_forms": "",
+                    "meaning_vi": "Mục tiêu"
+                },
+                {
+                    "word": "Translation",
+                    "part_of_speech": "n.",
+                    "definition": "the act or process of translating",
+                    "related_forms": "Translate v., translatable adj.",
+                    "meaning_vi": "Sự chuyển đổi, dịch"
+                },
+                {
+                    "word": "Typical",
+                    "part_of_speech": "adj.",
+                    "definition": "conforming to a type",
+                    "related_forms": "",
+                    "meaning_vi": "Đặc thù, đặc trưng"
+                },
+                {
+                    "word": "Yield",
+                    "part_of_speech": "n./v.",
+                    "definition": "an amount produced; to produce a profit",
+                    "related_forms": "",
+                    "meaning_vi": "Lợi nhuận, lợi tức"
+                }
+            ]
+        },
+        {
+            "lesson_number": 26,
+            "title_en": "Property and department",
+            "title_vi": "Tài sản và bộ phận",
+            "words": [
+                {
+                    "word": "Adjacent",
+                    "part_of_speech": "adj.",
+                    "definition": "next to",
+                    "related_forms": "",
+                    "meaning_vi": "Kế liền, sát ngay"
+                },
+                {
+                    "word": "Collaboration",
+                    "part_of_speech": "n.",
+                    "definition": "the act of working with someone",
+                    "related_forms": "Collaborate v.",
+                    "meaning_vi": "Sự cộng tác"
+                },
+                {
+                    "word": "Concentrate",
+                    "part_of_speech": "v.",
+                    "definition": "to focus, to think about",
+                    "related_forms": "",
+                    "meaning_vi": "Tập trung"
+                },
+                {
+                    "word": "Conducive",
+                    "part_of_speech": "adj.",
+                    "definition": "contributing to, leading to",
+                    "related_forms": "",
+                    "meaning_vi": "Có ích, có lợi, góp phần"
+                },
+                {
+                    "word": "Disrupt",
+                    "part_of_speech": "v.",
+                    "definition": "to interrupt, to disturb",
+                    "related_forms": "Disruption n., disruptive adj.",
+                    "meaning_vi": "Quấy rối, phá vỡ"
+                },
+                {
+                    "word": "Hamper",
+                    "part_of_speech": "v.",
+                    "definition": "to impede or interfere",
+                    "related_forms": "",
+                    "meaning_vi": "Cản trở"
+                },
+                {
+                    "word": "Inconsiderate",
+                    "part_of_speech": "adj.",
+                    "definition": "rude, impolite",
+                    "related_forms": "",
+                    "meaning_vi": "Thiếu quan tâm, bất lịch sự"
+                },
+                {
+                    "word": "Lobby",
+                    "part_of_speech": "n.",
+                    "definition": "an anteroom, foyer, or waiting room",
+                    "related_forms": "",
+                    "meaning_vi": "Phòng ngoài, hành lang"
+                },
+                {
+                    "word": "Move up",
+                    "part_of_speech": "v.",
+                    "definition": "to advance, improve position",
+                    "related_forms": "",
+                    "meaning_vi": "Tiến lên"
+                },
+                {
+                    "word": "Open to",
+                    "part_of_speech": "adj.",
+                    "definition": "receptive to, vulnerable",
+                    "related_forms": "",
+                    "meaning_vi": "Cởi mở, dễ chấp nhận"
+                },
+                {
+                    "word": "Opt",
+                    "part_of_speech": "v.",
+                    "definition": "to choose, to decide on",
+                    "related_forms": "Option n., optimal adj.",
+                    "meaning_vi": "Chọn lựa, chọn"
+                },
+                {
+                    "word": "Scrutinize",
+                    "part_of_speech": "v.",
+                    "definition": "to look at carefully and closely",
+                    "related_forms": "Scrutiny n., inscrutable adj.",
+                    "meaning_vi": "Nhìn kỹ, chăm chú"
+                }
+            ]
+        },
+        {
+            "lesson_number": 27,
+            "title_en": "Board Meetings and committees",
+            "title_vi": "Họp hội đồng quản trị và ủy ban",
+            "words": [
+                {
+                    "word": "Adhere to",
+                    "part_of_speech": "v.",
+                    "definition": "to follow, to pay attention to",
+                    "related_forms": "",
+                    "meaning_vi": "Tuân thủ"
+                },
+                {
+                    "word": "Agenda",
+                    "part_of_speech": "n.",
+                    "definition": "a list of topics to be discussed",
+                    "related_forms": "",
+                    "meaning_vi": "Những vấn đề cần bàn trong cuộc họp"
+                },
+                {
+                    "word": "Bring up",
+                    "part_of_speech": "v.",
+                    "definition": "to introduce a topic",
+                    "related_forms": "",
+                    "meaning_vi": "Đưa ra (chủ đề)"
+                },
+                {
+                    "word": "Conclude",
+                    "part_of_speech": "v.",
+                    "definition": "to stop, to come to a decision",
+                    "related_forms": "Conclusion n., conclusive adj.",
+                    "meaning_vi": "Kết thúc, chấm dứt"
+                },
+                {
+                    "word": "Go ahead",
+                    "part_of_speech": "v./n.",
+                    "definition": "to proceed with; permission to do something",
+                    "related_forms": "",
+                    "meaning_vi": "Cho phép, tiến hành"
+                },
+                {
+                    "word": "Goal",
+                    "part_of_speech": "n.",
+                    "definition": "objective, purpose",
+                    "related_forms": "",
+                    "meaning_vi": "Mục tiêu, mục đích"
+                },
+                {
+                    "word": "Lengthy",
+                    "part_of_speech": "adj.",
+                    "definition": "long in time, duration, or distance",
+                    "related_forms": "",
+                    "meaning_vi": "Dài dòng"
+                },
+                {
+                    "word": "Matter",
+                    "part_of_speech": "n.",
+                    "definition": "an item, issue, topic of interest",
+                    "related_forms": "",
+                    "meaning_vi": "Chủ đề, vấn đề"
+                },
+                {
+                    "word": "Periodically",
+                    "part_of_speech": "adv.",
+                    "definition": "from time to time",
+                    "related_forms": "Period n., periodic adj.",
+                    "meaning_vi": "Một cách định kỳ"
+                },
+                {
+                    "word": "Priority",
+                    "part_of_speech": "n.",
+                    "definition": "something of importance, something that should be done before other things",
+                    "related_forms": "Prioritize v., prior adj.",
+                    "meaning_vi": "Quyền ưu tiên"
+                },
+                {
+                    "word": "Progress",
+                    "part_of_speech": "n./v.",
+                    "definition": "a movement forward; to move forward on something, especially work or a project",
+                    "related_forms": "Progression n., progressive adj.",
+                    "meaning_vi": "Sự tiến tới, tiến bộ"
+                },
+                {
+                    "word": "Waste",
+                    "part_of_speech": "v./n.",
+                    "definition": "not to use wisely; not worthwhile",
+                    "related_forms": "",
+                    "meaning_vi": "Không giá trị, lãng phí"
+                }
+            ]
+        },
+        {
+            "lesson_number": 28,
+            "title_en": "Quality control",
+            "title_vi": "Quản lý chất lượng",
+            "words": [
+                {
+                    "word": "Brand",
+                    "part_of_speech": "n.",
+                    "definition": "an identifying mark or label, a trademark",
+                    "related_forms": "",
+                    "meaning_vi": "Nhãn hiệu (hàng hóa)"
+                },
+                {
+                    "word": "Conform",
+                    "part_of_speech": "v.",
+                    "definition": "to match specifications or qualities",
+                    "related_forms": "",
+                    "meaning_vi": "Làm cho phù hợp"
+                },
+                {
+                    "word": "Defect",
+                    "part_of_speech": "n.",
+                    "definition": "an imperfection or flaw",
+                    "related_forms": "Defect v., defective adj.",
+                    "meaning_vi": "Nhược điểm, khuyết điểm"
+                },
+                {
+                    "word": "Enhance",
+                    "part_of_speech": "v.",
+                    "definition": "to make more attractive or valuable",
+                    "related_forms": "",
+                    "meaning_vi": "Làm tăng, nâng cao"
+                },
+                {
+                    "word": "Garment",
+                    "part_of_speech": "n.",
+                    "definition": "an article of clothing",
+                    "related_forms": "",
+                    "meaning_vi": "Áo quần"
+                },
+                {
+                    "word": "Inspect",
+                    "part_of_speech": "v.",
+                    "definition": "to look at closely, to examine carefully or officially",
+                    "related_forms": "Inspection n., inspector n.",
+                    "meaning_vi": "Xem xét kỹ, kiểm tra"
+                },
+                {
+                    "word": "Perceive",
+                    "part_of_speech": "v.",
+                    "definition": "to notice, to become aware of, to see",
+                    "related_forms": "Perception n., perceptive adj.",
+                    "meaning_vi": "Nhận thấy, nhận biết"
+                },
+                {
+                    "word": "Repel",
+                    "part_of_speech": "v.",
+                    "definition": "to keep away, to fight against",
+                    "related_forms": "Repellent n./adj.",
+                    "meaning_vi": "Đẩy đi xa, chống lại"
+                },
+                {
+                    "word": "Take back",
+                    "part_of_speech": "v.",
+                    "definition": "to return something, to withdraw or retract",
+                    "related_forms": "",
+                    "meaning_vi": "Lấy lại"
+                },
+                {
+                    "word": "Throw out",
+                    "part_of_speech": "v.",
+                    "definition": "to dispose of",
+                    "related_forms": "",
+                    "meaning_vi": "Vứt bỏ"
+                },
+                {
+                    "word": "Uniform",
+                    "part_of_speech": "adj.",
+                    "definition": "consistent in form or appearance",
+                    "related_forms": "",
+                    "meaning_vi": "Không thay đổi về hình thức"
+                },
+                {
+                    "word": "Wrinkle",
+                    "part_of_speech": "n.",
+                    "definition": "a crease, ridge, or furrow, especially in skin or fabric",
+                    "related_forms": "",
+                    "meaning_vi": "Vết nhăn, nếp nhăn"
+                }
+            ]
+        },
+        {
+            "lesson_number": 29,
+            "title_en": "Product Development",
+            "title_vi": "Phát triển sản phẩm",
+            "words": [
+                {
+                    "word": "Anxious",
+                    "part_of_speech": "adj.",
+                    "definition": "worried",
+                    "related_forms": "Anxiety n., anxiously adv.",
+                    "meaning_vi": "Lo âu, băn khoăn"
+                },
+                {
+                    "word": "Ascertain",
+                    "part_of_speech": "v.",
+                    "definition": "to discover, to find out for certain",
+                    "related_forms": "",
+                    "meaning_vi": "Xác định"
+                },
+                {
+                    "word": "Assume",
+                    "part_of_speech": "v.",
+                    "definition": "to take upon oneself, to believe to be true",
+                    "related_forms": "Assumed adj., assumption n.",
+                    "meaning_vi": "Cho rằng, thừa nhận"
+                },
+                {
+                    "word": "Decade",
+                    "part_of_speech": "n.",
+                    "definition": "a period of ten years",
+                    "related_forms": "",
+                    "meaning_vi": "Thập kỷ"
+                },
+                {
+                    "word": "Examine",
+                    "part_of_speech": "v.",
+                    "definition": "to interrogate, to scrutinize",
+                    "related_forms": "",
+                    "meaning_vi": "Xem xét chi tiết"
+                },
+                {
+                    "word": "Experiment",
+                    "part_of_speech": "v./n.",
+                    "definition": "to try out a new procedure or idea; a test or trial",
+                    "related_forms": "Experimentation n., experimental adj.",
+                    "meaning_vi": "Làm thí nghiệm"
+                },
+                {
+                    "word": "Logical",
+                    "part_of_speech": "adj.",
+                    "definition": "formally valid, using orderly reasoning",
+                    "related_forms": "",
+                    "meaning_vi": "Hợp logic, hợp lý"
+                },
+                {
+                    "word": "Research",
+                    "part_of_speech": "n.",
+                    "definition": "the act of collecting information about a particular subject",
+                    "related_forms": "",
+                    "meaning_vi": "Nghiên cứu"
+                },
+                {
+                    "word": "Responsibility",
+                    "part_of_speech": "n.",
+                    "definition": "task",
+                    "related_forms": "Responsible adj., responsibly adv.",
+                    "meaning_vi": "Trách nhiệm"
+                },
+                {
+                    "word": "Solve",
+                    "part_of_speech": "v.",
+                    "definition": "to find a solution, explanation, or answer",
+                    "related_forms": "",
+                    "meaning_vi": "Giải quyết"
+                },
+                {
+                    "word": "Supervisor",
+                    "part_of_speech": "n.",
+                    "definition": "an administrator in charge",
+                    "related_forms": "",
+                    "meaning_vi": "Người giám sát"
+                },
+                {
+                    "word": "Systematic",
+                    "part_of_speech": "adj.",
+                    "definition": "methodical in procedure, organized",
+                    "related_forms": "",
+                    "meaning_vi": "Có hệ thống"
+                }
+            ]
+        },
+        {
+            "lesson_number": 30,
+            "title_en": "Renting and Leasing",
+            "title_vi": "Thuê và cho thuê",
+            "words": [
+                {
+                    "word": "Apprehensive",
+                    "part_of_speech": "adj.",
+                    "definition": "anxious about the future",
+                    "related_forms": "Apprehend v., apprehension n.",
+                    "meaning_vi": "Sợ hãi, e sợ (về tương lai)"
+                },
+                {
+                    "word": "Circumstance",
+                    "part_of_speech": "n.",
+                    "definition": "a condition, a situation",
+                    "related_forms": "",
+                    "meaning_vi": "Hoàn cảnh, tình huống"
+                },
+                {
+                    "word": "Condition",
+                    "part_of_speech": "n.",
+                    "definition": "the state of something, a requirement",
+                    "related_forms": "Conditional adj.",
+                    "meaning_vi": "Điều kiện"
+                },
+                {
+                    "word": "Due to",
+                    "part_of_speech": "prep.",
+                    "definition": "because of",
+                    "related_forms": "",
+                    "meaning_vi": "Bởi vì"
+                },
+                {
+                    "word": "Fluctuate",
+                    "part_of_speech": "v.",
+                    "definition": "to go up and down, to change",
+                    "related_forms": "Fluctuation n., fluctuating gerund",
+                    "meaning_vi": "Dao động, thay đổi bất thường"
+                },
+                {
+                    "word": "Get out of",
+                    "part_of_speech": "v.",
+                    "definition": "to escape, to exit",
+                    "related_forms": "",
+                    "meaning_vi": "Rời khỏi, thoát khỏi"
+                },
+                {
+                    "word": "Indicator",
+                    "part_of_speech": "n.",
+                    "definition": "a sign, a signal",
+                    "related_forms": "Indicate v., indication n.",
+                    "meaning_vi": "Người/vật chỉ dấu, dấu hiệu"
+                },
+                {
+                    "word": "Lease",
+                    "part_of_speech": "n./v.",
+                    "definition": "a contract to pay to use property for an amount of time; to make a contract to use property",
+                    "related_forms": "",
+                    "meaning_vi": "Hợp đồng cho thuê"
+                },
+                {
+                    "word": "Lock into",
+                    "part_of_speech": "v.",
+                    "definition": "to commit, to be unable to change",
+                    "related_forms": "",
+                    "meaning_vi": "Ràng buộc vào, không thể thay đổi"
+                },
+                {
+                    "word": "Occupancy",
+                    "part_of_speech": "n.",
+                    "definition": "the state of being or living in a certain place",
+                    "related_forms": "",
+                    "meaning_vi": "Sự cư ngụ"
+                },
+                {
+                    "word": "Option",
+                    "part_of_speech": "n.",
+                    "definition": "a choice, an alternative",
+                    "related_forms": "",
+                    "meaning_vi": "Sự chọn lựa"
+                },
+                {
+                    "word": "Subject to",
+                    "part_of_speech": "adj.",
+                    "definition": "under legal power, dependent",
+                    "related_forms": "",
+                    "meaning_vi": "Tùy thuộc vào"
+                }
+            ]
+        },
+        {
+            "lesson_number": 31,
+            "title_en": "Selecting a Restaurant",
+            "title_vi": "Lựa chọn quán ăn",
+            "words": [
+                {
+                    "word": "Appeal",
+                    "part_of_speech": "v.",
+                    "definition": "to be attractive or interesting",
+                    "related_forms": "",
+                    "meaning_vi": "Hấp dẫn"
+                },
+                {
+                    "word": "Arrive",
+                    "part_of_speech": "v.",
+                    "definition": "to reach a destination",
+                    "related_forms": "",
+                    "meaning_vi": "Tới (một nơi)"
+                },
+                {
+                    "word": "Compromise",
+                    "part_of_speech": "n.",
+                    "definition": "a settlement of differences in which each side makes concessions",
+                    "related_forms": "",
+                    "meaning_vi": "Thỏa hiệp"
+                },
+                {
+                    "word": "Daring",
+                    "part_of_speech": "adj.",
+                    "definition": "to have the courage required",
+                    "related_forms": "",
+                    "meaning_vi": "Táo bạo, cả gan"
+                },
+                {
+                    "word": "Familiar",
+                    "part_of_speech": "adj.",
+                    "definition": "often encountered or seen; common",
+                    "related_forms": "",
+                    "meaning_vi": "Quen thuộc, thường thấy"
+                },
+                {
+                    "word": "Guide",
+                    "part_of_speech": "n.",
+                    "definition": "one who leads, directs, or gives advice",
+                    "related_forms": "Guidance n., guidable adj.",
+                    "meaning_vi": "Người chỉ dẫn"
+                },
+                {
+                    "word": "Majority",
+                    "part_of_speech": "n.",
+                    "definition": "the greater number or part",
+                    "related_forms": "",
+                    "meaning_vi": "Phần lớn, đa số"
+                },
+                {
+                    "word": "Mix",
+                    "part_of_speech": "v./n.",
+                    "definition": "to combine or blend into one mass; a combination",
+                    "related_forms": "Mixture n., mixable adj.",
+                    "meaning_vi": "Trộn, pha lẫn"
+                },
+                {
+                    "word": "Rely",
+                    "part_of_speech": "v.",
+                    "definition": "to have confidence in; to depend on",
+                    "related_forms": "Reliability n., reliable adj.",
+                    "meaning_vi": "Tin vào, dựa vào"
+                },
+                {
+                    "word": "Secure",
+                    "part_of_speech": "v.",
+                    "definition": "to get possession of; to obtain",
+                    "related_forms": "",
+                    "meaning_vi": "Tìm được, đạt được"
+                },
+                {
+                    "word": "Subjective",
+                    "part_of_speech": "adj.",
+                    "definition": "particular to a given person; highly personal; not objective",
+                    "related_forms": "",
+                    "meaning_vi": "Chủ quan"
+                },
+                {
+                    "word": "Suggest",
+                    "part_of_speech": "v.",
+                    "definition": "to offer for consideration or action",
+                    "related_forms": "Suggestion n., suggestible adj.",
+                    "meaning_vi": "Đề nghị, giới thiệu"
+                }
+            ]
+        },
+        {
+            "lesson_number": 32,
+            "title_en": "Eating out",
+            "title_vi": "Đi ăn tiệm",
+            "words": [
+                {
+                    "word": "Basic",
+                    "part_of_speech": "adj.",
+                    "definition": "serving as a starting point or basis",
+                    "related_forms": "",
+                    "meaning_vi": "Cơ bản"
+                },
+                {
+                    "word": "Complete",
+                    "part_of_speech": "adj.",
+                    "definition": "having all necessary or normal parts, components, or steps",
+                    "related_forms": "Completion n., completely adv.",
+                    "meaning_vi": "Đầy đủ, trọn vẹn"
+                },
+                {
+                    "word": "Excite",
+                    "part_of_speech": "v.",
+                    "definition": "to arouse an emotion",
+                    "related_forms": "Excitement n., exciting adj.",
+                    "meaning_vi": "Gây hứng thú"
+                },
+                {
+                    "word": "Flavor",
+                    "part_of_speech": "n.",
+                    "definition": "a distinctive taste",
+                    "related_forms": "",
+                    "meaning_vi": "Vị ngon, mùi vị"
+                },
+                {
+                    "word": "Forget",
+                    "part_of_speech": "v.",
+                    "definition": "to be unable to remember",
+                    "related_forms": "Forgetful adj., forgettable adj.",
+                    "meaning_vi": "Hay quên"
+                },
+                {
+                    "word": "Ingredient",
+                    "part_of_speech": "n.",
+                    "definition": "an element in a mixture",
+                    "related_forms": "",
+                    "meaning_vi": "Thành phần"
+                },
+                {
+                    "word": "Judge",
+                    "part_of_speech": "v.",
+                    "definition": "to form an opinion",
+                    "related_forms": "",
+                    "meaning_vi": "Đánh giá"
+                },
+                {
+                    "word": "Mix-up",
+                    "part_of_speech": "n./v.",
+                    "definition": "a confusion; to confuse",
+                    "related_forms": "",
+                    "meaning_vi": "Sự lộn xộn, nhầm lẫn"
+                },
+                {
+                    "word": "Patron",
+                    "part_of_speech": "n.",
+                    "definition": "a customer, especially a regular customer",
+                    "related_forms": "",
+                    "meaning_vi": "Khách hàng quen"
+                },
+                {
+                    "word": "Predict",
+                    "part_of_speech": "v.",
+                    "definition": "to state, tell about, or make known in advance",
+                    "related_forms": "Prediction n., predictable adv.",
+                    "meaning_vi": "Báo trước, nói trước"
+                },
+                {
+                    "word": "Random",
+                    "part_of_speech": "adj.",
+                    "definition": "having no specific pattern, purpose, or objective",
+                    "related_forms": "",
+                    "meaning_vi": "Ngẫu nhiên"
+                },
+                {
+                    "word": "Remind",
+                    "part_of_speech": "v.",
+                    "definition": "to cause to remember",
+                    "related_forms": "",
+                    "meaning_vi": "Nhắc nhở"
+                }
+            ]
+        },
+        {
+            "lesson_number": 33,
+            "title_en": "Ordering Lunch",
+            "title_vi": "Đặt bữa trưa",
+            "words": [
+                {
+                    "word": "Burdensome",
+                    "part_of_speech": "adj.",
+                    "definition": "of or like a burden; onerous",
+                    "related_forms": "",
+                    "meaning_vi": "Khó nhọc, phiền hà"
+                },
+                {
+                    "word": "Common",
+                    "part_of_speech": "adj.",
+                    "definition": "widespread, frequent, usual",
+                    "related_forms": "In common, commonly",
+                    "meaning_vi": "Thông thường, phổ biến"
+                },
+                {
+                    "word": "Delivery",
+                    "part_of_speech": "n.",
+                    "definition": "the act of conveying or delivering",
+                    "related_forms": "",
+                    "meaning_vi": "Sự phân phát, giao hàng"
+                },
+                {
+                    "word": "Elegant",
+                    "part_of_speech": "adj.",
+                    "definition": "exhibiting refined, tasteful beauty",
+                    "related_forms": "Elegance n., elegantly adv.",
+                    "meaning_vi": "Thanh lịch, tao nhã"
+                },
+                {
+                    "word": "Fall to",
+                    "part_of_speech": "v.",
+                    "definition": "to become one's responsibility",
+                    "related_forms": "",
+                    "meaning_vi": "Trở thành trách nhiệm của (ai)"
+                },
+                {
+                    "word": "Impress",
+                    "part_of_speech": "v.",
+                    "definition": "to affect strongly, often favorably",
+                    "related_forms": "Impression n., impressionable adj.",
+                    "meaning_vi": "Gây ấn tượng"
+                },
+                {
+                    "word": "Individual",
+                    "part_of_speech": "adj.",
+                    "definition": "by or for one person; special; particular",
+                    "related_forms": "Individualize v., individually adv.",
+                    "meaning_vi": "Thuộc về hoặc cho một người; riêng biệt"
+                },
+                {
+                    "word": "List",
+                    "part_of_speech": "n./v.",
+                    "definition": "a series of names, words, or other items; to make a list",
+                    "related_forms": "",
+                    "meaning_vi": "Danh sách"
+                },
+                {
+                    "word": "Multiple",
+                    "part_of_speech": "adj.",
+                    "definition": "having, relating to, or consisting of more than one part",
+                    "related_forms": "",
+                    "meaning_vi": "Nhiều, phức tạp"
+                },
+                {
+                    "word": "Narrow",
+                    "part_of_speech": "v./adj.",
+                    "definition": "to limit or restrict; limited",
+                    "related_forms": "",
+                    "meaning_vi": "Thu hẹp"
+                },
+                {
+                    "word": "Pick up",
+                    "part_of_speech": "v.",
+                    "definition": "to take on passengers or freight",
+                    "related_forms": "",
+                    "meaning_vi": "Đón (ai đó)"
+                },
+                {
+                    "word": "Settle",
+                    "part_of_speech": "v.",
+                    "definition": "to make compensation for, to pay; to choose",
+                    "related_forms": "",
+                    "meaning_vi": "Thanh toán, chọn lựa"
+                }
+            ]
+        },
+        {
+            "lesson_number": 34,
+            "title_en": "Cooking as a career",
+            "title_vi": "Nghề nấu ăn",
+            "words": [
+                {
+                    "word": "Accustom to",
+                    "part_of_speech": "v.",
+                    "definition": "to become familiar with, to become used to",
+                    "related_forms": "",
+                    "meaning_vi": "Làm quen với"
+                },
+                {
+                    "word": "Apprentice",
+                    "part_of_speech": "n./v.",
+                    "definition": "a student worker in a chosen field",
+                    "related_forms": "Apprenticeship n.",
+                    "meaning_vi": "Người học việc, học nghề"
+                },
+                {
+                    "word": "Culinary",
+                    "part_of_speech": "adj.",
+                    "definition": "relating to the kitchen or cooking",
+                    "related_forms": "",
+                    "meaning_vi": "Thuộc về bếp núc, nấu nướng"
+                },
+                {
+                    "word": "Demanding",
+                    "part_of_speech": "adj.",
+                    "definition": "requiring much effort or attention",
+                    "related_forms": "",
+                    "meaning_vi": "Đòi hỏi khắt khe"
+                },
+                {
+                    "word": "Draw",
+                    "part_of_speech": "v.",
+                    "definition": "to cause to come by attracting",
+                    "related_forms": "",
+                    "meaning_vi": "Lôi kéo, thu hút"
+                },
+                {
+                    "word": "Incorporate",
+                    "part_of_speech": "v.",
+                    "definition": "to unite one thing with something else already in existence",
+                    "related_forms": "Incorporation n., incorporating gerund",
+                    "meaning_vi": "Sáp nhập, hợp nhất"
+                },
+                {
+                    "word": "Influx",
+                    "part_of_speech": "n.",
+                    "definition": "a flowing in",
+                    "related_forms": "",
+                    "meaning_vi": "Sự chảy vào, dòng người đổ vào"
+                },
+                {
+                    "word": "Method",
+                    "part_of_speech": "n.",
+                    "definition": "a procedure",
+                    "related_forms": "Methodology n., methodical adj.",
+                    "meaning_vi": "Phương pháp"
+                },
+                {
+                    "word": "Outlet",
+                    "part_of_speech": "n.",
+                    "definition": "a means of release or gratification, as for energies, drives, or desires",
+                    "related_forms": "",
+                    "meaning_vi": "Chỗ thoát ra, lối thoát"
+                },
+                {
+                    "word": "Profession",
+                    "part_of_speech": "n.",
+                    "definition": "an occupation requiring considerable training and specialized study",
+                    "related_forms": "Professional adj., professionally adv.",
+                    "meaning_vi": "Nghề nghiệp"
+                },
+                {
+                    "word": "Relinquish",
+                    "part_of_speech": "v.",
+                    "definition": "to let go; to surrender",
+                    "related_forms": "",
+                    "meaning_vi": "Từ bỏ"
+                },
+                {
+                    "word": "Theme",
+                    "part_of_speech": "n.",
+                    "definition": "an implicit or recurrent idea; a motif",
+                    "related_forms": "",
+                    "meaning_vi": "Đề tài, chủ đề"
+                }
+            ]
+        },
+        {
+            "lesson_number": 35,
+            "title_en": "Events",
+            "title_vi": "Sự kiện",
+            "words": [
+                {
+                    "word": "Assist",
+                    "part_of_speech": "v.",
+                    "definition": "to give help or support to",
+                    "related_forms": "Assistance n., assistant n.",
+                    "meaning_vi": "Giúp đỡ, trợ giúp"
+                },
+                {
+                    "word": "Coordinate",
+                    "part_of_speech": "v.",
+                    "definition": "to adjust or arrange parts to work together",
+                    "related_forms": "",
+                    "meaning_vi": "Sắp xếp, sắp đặt"
+                },
+                {
+                    "word": "Dimension",
+                    "part_of_speech": "n.",
+                    "definition": "a measure of width, height, or length",
+                    "related_forms": "",
+                    "meaning_vi": "Kích thước"
+                },
+                {
+                    "word": "Exact",
+                    "part_of_speech": "adj.",
+                    "definition": "characterized by accurate measurements or inferences",
+                    "related_forms": "",
+                    "meaning_vi": "Chính xác"
+                },
+                {
+                    "word": "General",
+                    "part_of_speech": "adj.",
+                    "definition": "involving only the main feature rather than precise details",
+                    "related_forms": "Generalize v., generally adv.",
+                    "meaning_vi": "Chung chung"
+                },
+                {
+                    "word": "Ideal",
+                    "part_of_speech": "adj.",
+                    "definition": "imaginary; existing as a perfect model",
+                    "related_forms": "Idealize v., ideally adv.",
+                    "meaning_vi": "Lý tưởng"
+                },
+                {
+                    "word": "Lead time",
+                    "part_of_speech": "n.",
+                    "definition": "the time between the initial stage of a project and the appearance of results",
+                    "related_forms": "",
+                    "meaning_vi": "Thời gian giữa lúc bắt đầu và lúc hoàn thành dự án"
+                },
+                {
+                    "word": "Plan",
+                    "part_of_speech": "n./v.",
+                    "definition": "a scheme for making something happen; to formulate a scheme",
+                    "related_forms": "",
+                    "meaning_vi": "Kế hoạch"
+                },
+                {
+                    "word": "Proximity",
+                    "part_of_speech": "n.",
+                    "definition": "the state, quality, sense, or fact of being near or next to; closeness",
+                    "related_forms": "",
+                    "meaning_vi": "Sự gần gũi"
+                },
+                {
+                    "word": "Regulation",
+                    "part_of_speech": "n.",
+                    "definition": "rules, laws, or controls",
+                    "related_forms": "Regulate v., regulatory adj.",
+                    "meaning_vi": "Quy tắc, điều lệ, sự điều chỉnh"
+                },
+                {
+                    "word": "Site",
+                    "part_of_speech": "n.",
+                    "definition": "a place or setting",
+                    "related_forms": "",
+                    "meaning_vi": "Chỗ, vị trí"
+                },
+                {
+                    "word": "Stage",
+                    "part_of_speech": "v.",
+                    "definition": "to exhibit or present",
+                    "related_forms": "",
+                    "meaning_vi": "Trình diễn, trưng bày"
+                }
+            ]
+        },
+        {
+            "lesson_number": 36,
+            "title_en": "General Travel",
+            "title_vi": "Du lịch tổng quan",
+            "words": [
+                {
+                    "word": "Agency",
+                    "part_of_speech": "n.",
+                    "definition": "an establishment engaged in doing business",
+                    "related_forms": "",
+                    "meaning_vi": "Đại lý"
+                },
+                {
+                    "word": "Announcement",
+                    "part_of_speech": "n.",
+                    "definition": "a public notification",
+                    "related_forms": "Announce v., announcer n.",
+                    "meaning_vi": "Thông cáo"
+                },
+                {
+                    "word": "Beverage",
+                    "part_of_speech": "n.",
+                    "definition": "a drink other than plain water",
+                    "related_forms": "",
+                    "meaning_vi": "Nước giải khát"
+                },
+                {
+                    "word": "Blanket",
+                    "part_of_speech": "n./v.",
+                    "definition": "a covering for keeping warm, especially during sleep; to cover uniformly",
+                    "related_forms": "",
+                    "meaning_vi": "Mền, chăn"
+                },
+                {
+                    "word": "Board",
+                    "part_of_speech": "v.",
+                    "definition": "to enter a boat, plane, or train; to furnish room and meals",
+                    "related_forms": "Onboard adj.",
+                    "meaning_vi": "Lên tàu"
+                },
+                {
+                    "word": "Claim",
+                    "part_of_speech": "v.",
+                    "definition": "to take as rightful; to retrieve",
+                    "related_forms": "",
+                    "meaning_vi": "Đòi, yêu cầu nhận lại"
+                },
+                {
+                    "word": "Delay",
+                    "part_of_speech": "v./n.",
+                    "definition": "to postpone until a later time; the period of time during which one is delayed",
+                    "related_forms": "",
+                    "meaning_vi": "Sự trì hoãn, chậm trễ"
+                },
+                {
+                    "word": "Embark",
+                    "part_of_speech": "v.",
+                    "definition": "to go onboard a flight or ship; to begin",
+                    "related_forms": "",
+                    "meaning_vi": "Lên tàu, bắt đầu"
+                },
+                {
+                    "word": "Itinerary",
+                    "part_of_speech": "n.",
+                    "definition": "a proposed route for a journey, showing dates and means of travel",
+                    "related_forms": "",
+                    "meaning_vi": "Sách hướng dẫn/ lộ trình du lịch"
+                },
+                {
+                    "word": "Prohibit",
+                    "part_of_speech": "v.",
+                    "definition": "to forbid by authority or to prevent",
+                    "related_forms": "",
+                    "meaning_vi": "Ngăn chặn, cấm"
+                },
+                {
+                    "word": "Valid",
+                    "part_of_speech": "adj.",
+                    "definition": "having legal efficacy or correctness",
+                    "related_forms": "Validate v., validation n.",
+                    "meaning_vi": "Hợp lệ, đúng đắn"
+                }
+            ]
+        },
+        {
+            "lesson_number": 37,
+            "title_en": "Airlines",
+            "title_vi": "Hàng không",
+            "words": [
+                {
+                    "word": "Deal with",
+                    "part_of_speech": "v.",
+                    "definition": "to attend to; to manage; to see to",
+                    "related_forms": "",
+                    "meaning_vi": "Giải quyết, xử lý"
+                },
+                {
+                    "word": "Destination",
+                    "part_of_speech": "n.",
+                    "definition": "the place to which one is going or directed",
+                    "related_forms": "",
+                    "meaning_vi": "Nơi đến"
+                },
+                {
+                    "word": "Distinguish",
+                    "part_of_speech": "v.",
+                    "definition": "to make noticeable or different",
+                    "related_forms": "Distinguishable adj., distinguishably adv.",
+                    "meaning_vi": "Nhận ra, phân biệt"
+                },
+                {
+                    "word": "Economical",
+                    "part_of_speech": "adj.",
+                    "definition": "intended to save money, time, or effort",
+                    "related_forms": "Economy n., economize v.",
+                    "meaning_vi": "Tiết kiệm"
+                },
+                {
+                    "word": "Equivalent",
+                    "part_of_speech": "adj.",
+                    "definition": "equal",
+                    "related_forms": "",
+                    "meaning_vi": "Tương đương, bằng nhau"
+                },
+                {
+                    "word": "Excursion",
+                    "part_of_speech": "n.",
+                    "definition": "a pleasure trip; a trip at a reduced fare",
+                    "related_forms": "",
+                    "meaning_vi": "Chuyến tham quan"
+                },
+                {
+                    "word": "Expensive",
+                    "part_of_speech": "adj.",
+                    "definition": "marked by high prices",
+                    "related_forms": "Expense n., expensively adv.",
+                    "meaning_vi": "Đắt tiền"
+                },
+                {
+                    "word": "Extend",
+                    "part_of_speech": "v.",
+                    "definition": "to make longer; to offer",
+                    "related_forms": "",
+                    "meaning_vi": "Kéo dài, gia hạn"
+                },
+                {
+                    "word": "Prospective",
+                    "part_of_speech": "adj.",
+                    "definition": "likely to become or be",
+                    "related_forms": "",
+                    "meaning_vi": "Về sau, sắp tới, tiềm năng"
+                },
+                {
+                    "word": "Situation",
+                    "part_of_speech": "n.",
+                    "definition": "the combination of circumstances at a given moment",
+                    "related_forms": "",
+                    "meaning_vi": "Tình huống, hoàn cảnh"
+                },
+                {
+                    "word": "Substantial",
+                    "part_of_speech": "adj.",
+                    "definition": "considerable in importance, value, degree, amount, or extent",
+                    "related_forms": "Substance n., substantially adv.",
+                    "meaning_vi": "Đáng kể, thực chất"
+                },
+                {
+                    "word": "System",
+                    "part_of_speech": "n.",
+                    "definition": "a functionally related group of elements",
+                    "related_forms": "",
+                    "meaning_vi": "Hệ thống"
+                }
+            ]
+        },
+        {
+            "lesson_number": 38,
+            "title_en": "Trains",
+            "title_vi": "Tàu hỏa",
+            "words": [
+                {
+                    "word": "Comprehensive",
+                    "part_of_speech": "adj.",
+                    "definition": "covering broadly; inclusive",
+                    "related_forms": "Comprehensiveness n., comprehensively adv.",
+                    "meaning_vi": "Bao gồm tất cả, toàn diện"
+                },
+                {
+                    "word": "Deluxe",
+                    "part_of_speech": "adj.",
+                    "definition": "noticeably luxurious",
+                    "related_forms": "",
+                    "meaning_vi": "Sang trọng"
+                },
+                {
+                    "word": "Directory",
+                    "part_of_speech": "n.",
+                    "definition": "a book or collection of information or directions",
+                    "related_forms": "",
+                    "meaning_vi": "Danh bạ"
+                },
+                {
+                    "word": "Duration",
+                    "part_of_speech": "n.",
+                    "definition": "the time during which something lasts",
+                    "related_forms": "",
+                    "meaning_vi": "Khoảng thời gian mà một việc tồn tại"
+                },
+                {
+                    "word": "Entitle",
+                    "part_of_speech": "v.",
+                    "definition": "to allow or qualify",
+                    "related_forms": "",
+                    "meaning_vi": "Cho quyền (làm gì)"
+                },
+                {
+                    "word": "Fare",
+                    "part_of_speech": "n.",
+                    "definition": "the money paid for transportation",
+                    "related_forms": "",
+                    "meaning_vi": "Tiền xe, tiền vé"
+                },
+                {
+                    "word": "Offset",
+                    "part_of_speech": "v.",
+                    "definition": "to counterbalance",
+                    "related_forms": "",
+                    "meaning_vi": "Đền bù, bù đắp"
+                },
+                {
+                    "word": "Operate",
+                    "part_of_speech": "v.",
+                    "definition": "to perform a function",
+                    "related_forms": "Operation n., operational adj.",
+                    "meaning_vi": "Hoạt động"
+                },
+                {
+                    "word": "Punctual",
+                    "part_of_speech": "adj.",
+                    "definition": "prompt",
+                    "related_forms": "Punctuality n., punctually adv.",
+                    "meaning_vi": "Đúng giờ"
+                },
+                {
+                    "word": "Relatively",
+                    "part_of_speech": "adv.",
+                    "definition": "somewhat",
+                    "related_forms": "",
+                    "meaning_vi": "Vừa phải, tương đối"
+                },
+                {
+                    "word": "Remainder",
+                    "part_of_speech": "n.",
+                    "definition": "the remaining part",
+                    "related_forms": "",
+                    "meaning_vi": "Phần còn lại"
+                },
+                {
+                    "word": "Remote",
+                    "part_of_speech": "adj.",
+                    "definition": "far removed",
+                    "related_forms": "Remoteness n., remotely adv.",
+                    "meaning_vi": "Xa xôi, cách biệt"
+                }
+            ]
+        },
+        {
+            "lesson_number": 39,
+            "title_en": "Hotels",
+            "title_vi": "Khách sạn",
+            "words": [
+                {
+                    "word": "Advance",
+                    "part_of_speech": "n.",
+                    "definition": "a move forward",
+                    "related_forms": "",
+                    "meaning_vi": "Sự tiến lên, tiến bộ"
+                },
+                {
+                    "word": "Chain",
+                    "part_of_speech": "n.",
+                    "definition": "a group of enterprises under a single control",
+                    "related_forms": "",
+                    "meaning_vi": "Chuỗi các công việc kinh doanh do một người làm chủ"
+                },
+                {
+                    "word": "Check in",
+                    "part_of_speech": "v.",
+                    "definition": "to register at a hotel; to report one's presence",
+                    "related_forms": "",
+                    "meaning_vi": "Đăng ký ở khách sạn"
+                },
+                {
+                    "word": "Confirm",
+                    "part_of_speech": "v.",
+                    "definition": "to validate",
+                    "related_forms": "Confirmation n., confirmed adj.",
+                    "meaning_vi": "Xác nhận"
+                },
+                {
+                    "word": "Expect",
+                    "part_of_speech": "v.",
+                    "definition": "to consider probable or reasonable",
+                    "related_forms": "Expectation n., expectant adj.",
+                    "meaning_vi": "Mong đợi"
+                },
+                {
+                    "word": "Housekeeper",
+                    "part_of_speech": "n.",
+                    "definition": "someone employed to do domestic work",
+                    "related_forms": "",
+                    "meaning_vi": "Quản gia"
+                },
+                {
+                    "word": "Notify",
+                    "part_of_speech": "v.",
+                    "definition": "to report",
+                    "related_forms": "",
+                    "meaning_vi": "Thông báo, cho biết"
+                },
+                {
+                    "word": "Preclude",
+                    "part_of_speech": "v.",
+                    "definition": "to make impossible; to rule out",
+                    "related_forms": "",
+                    "meaning_vi": "Ngăn cản"
+                },
+                {
+                    "word": "Quote",
+                    "part_of_speech": "v./n.",
+                    "definition": "to give exact information on; a quotation",
+                    "related_forms": "Quotation n., quotable adj.",
+                    "meaning_vi": "Trích dẫn, báo giá"
+                },
+                {
+                    "word": "Rate",
+                    "part_of_speech": "n.",
+                    "definition": "the payment or price according to a standard",
+                    "related_forms": "",
+                    "meaning_vi": "Giá (cả)"
+                },
+                {
+                    "word": "Reserve",
+                    "part_of_speech": "v.",
+                    "definition": "to set aside",
+                    "related_forms": "Reservation n., in reserve",
+                    "meaning_vi": "Để dành, đặt trước"
+                },
+                {
+                    "word": "Service",
+                    "part_of_speech": "n.",
+                    "definition": "useful functions",
+                    "related_forms": "",
+                    "meaning_vi": "Sự giúp ích, dịch vụ"
+                }
+            ]
+        },
+        {
+            "lesson_number": 40,
+            "title_en": "Car Rentals",
+            "title_vi": "Cho thuê xe",
+            "words": [
+                {
+                    "word": "Busy",
+                    "part_of_speech": "adj.",
+                    "definition": "engaged in activity",
+                    "related_forms": "",
+                    "meaning_vi": "Bận rộn"
+                },
+                {
+                    "word": "Coincide",
+                    "part_of_speech": "v.",
+                    "definition": "to happen at the same time",
+                    "related_forms": "Coincidence n., coincidentally adv.",
+                    "meaning_vi": "Xảy ra đồng thời, trùng hợp"
+                },
+                {
+                    "word": "Confusion",
+                    "part_of_speech": "n.",
+                    "definition": "a lack of clarity, order, or understanding",
+                    "related_forms": "",
+                    "meaning_vi": "Sự nhầm lẫn"
+                },
+                {
+                    "word": "Contact",
+                    "part_of_speech": "v.",
+                    "definition": "to get in touch with",
+                    "related_forms": "",
+                    "meaning_vi": "Liên lạc với ai"
+                },
+                {
+                    "word": "Disappoint",
+                    "part_of_speech": "v.",
+                    "definition": "to fail to satisfy the hope, desire, or expectation of",
+                    "related_forms": "",
+                    "meaning_vi": "Làm thất vọng"
+                },
+                {
+                    "word": "Intend",
+                    "part_of_speech": "v.",
+                    "definition": "to have in mind",
+                    "related_forms": "Intention n., intent adj.",
+                    "meaning_vi": "Định, dự định"
+                },
+                {
+                    "word": "License",
+                    "part_of_speech": "n.",
+                    "definition": "the legal permission to do or own a specified thing",
+                    "related_forms": "",
+                    "meaning_vi": "Giấy phép, đăng ký"
+                },
+                {
+                    "word": "Nervous",
+                    "part_of_speech": "adj.",
+                    "definition": "easily agitated or distressed; uneasy or apprehensive",
+                    "related_forms": "Nervousness n., nervously adv.",
+                    "meaning_vi": "Lo lắng, hồi hộp"
+                },
+                {
+                    "word": "Optional",
+                    "part_of_speech": "adj.",
+                    "definition": "not compulsory or automatic",
+                    "related_forms": "",
+                    "meaning_vi": "Không bắt buộc"
+                },
+                {
+                    "word": "Tempt",
+                    "part_of_speech": "v.",
+                    "definition": "to be inviting or attractive to",
+                    "related_forms": "Temptation n., tempting adj.",
+                    "meaning_vi": "Lôi cuốn"
+                },
+                {
+                    "word": "Thrill",
+                    "part_of_speech": "n.",
+                    "definition": "the source or cause of excitement or emotion",
+                    "related_forms": "",
+                    "meaning_vi": "Cái lôi cuốn, hấp dẫn, xúc động"
+                },
+                {
+                    "word": "Tier",
+                    "part_of_speech": "n.",
+                    "definition": "a rank or class",
+                    "related_forms": "",
+                    "meaning_vi": "Dãy, tầng, lớp"
+                }
+            ]
+        },
+        {
+            "lesson_number": 41,
+            "title_en": "Movies",
+            "title_vi": "Phim ảnh",
+            "words": [
+                {
+                    "word": "Attain",
+                    "part_of_speech": "v.",
+                    "definition": "to achieve",
+                    "related_forms": "Attainment n., attainable adj.",
+                    "meaning_vi": "Giành được, đạt được"
+                },
+                {
+                    "word": "Combine",
+                    "part_of_speech": "v.",
+                    "definition": "to come together",
+                    "related_forms": "",
+                    "meaning_vi": "Kết hợp, phối hợp"
+                },
+                {
+                    "word": "Continue",
+                    "part_of_speech": "v.",
+                    "definition": "to maintain without interruption",
+                    "related_forms": "Continuation n., continual adj.",
+                    "meaning_vi": "Tiếp tục"
+                },
+                {
+                    "word": "Description",
+                    "part_of_speech": "n.",
+                    "definition": "a representation in words or pictures",
+                    "related_forms": "Describe v., descriptive adj.",
+                    "meaning_vi": "Sự mô tả"
+                },
+                {
+                    "word": "Disperse",
+                    "part_of_speech": "v.",
+                    "definition": "to spread widely, to scatter",
+                    "related_forms": "",
+                    "meaning_vi": "Phân tán"
+                },
+                {
+                    "word": "Entertainment",
+                    "part_of_speech": "n.",
+                    "definition": "a diverting performance or activity",
+                    "related_forms": "Entertain v., entertaining adj.",
+                    "meaning_vi": "Sự giải trí"
+                },
+                {
+                    "word": "Influence",
+                    "part_of_speech": "v.",
+                    "definition": "to alter or affect",
+                    "related_forms": "",
+                    "meaning_vi": "Ảnh hưởng, tác động"
+                },
+                {
+                    "word": "Range",
+                    "part_of_speech": "n.",
+                    "definition": "the scope",
+                    "related_forms": "",
+                    "meaning_vi": "Phạm vi, trình độ"
+                },
+                {
+                    "word": "Release",
+                    "part_of_speech": "v.",
+                    "definition": "to make available to the public; to give permission for performance",
+                    "related_forms": "",
+                    "meaning_vi": "Phát hành"
+                },
+                {
+                    "word": "Represent",
+                    "part_of_speech": "v.",
+                    "definition": "to typify",
+                    "related_forms": "",
+                    "meaning_vi": "Đại diện cho"
+                },
+                {
+                    "word": "Separate",
+                    "part_of_speech": "adj.",
+                    "definition": "detached; kept apart",
+                    "related_forms": "",
+                    "meaning_vi": "Riêng biệt"
+                },
+                {
+                    "word": "Successive",
+                    "part_of_speech": "adj.",
+                    "definition": "following in order",
+                    "related_forms": "",
+                    "meaning_vi": "Lần lượt, liên tiếp"
+                }
+            ]
+        },
+        {
+            "lesson_number": 42,
+            "title_en": "Theater",
+            "title_vi": "Nhà hát",
+            "words": [
+                {
+                    "word": "Acting",
+                    "part_of_speech": "n.",
+                    "definition": "the series of events that form the plot of a story or play",
+                    "related_forms": "",
+                    "meaning_vi": "Diễn xuất"
+                },
+                {
+                    "word": "Approach",
+                    "part_of_speech": "v./n.",
+                    "definition": "to go near; to come close to in appearance or quality; a way or means of reaching something",
+                    "related_forms": "Approachable adj.",
+                    "meaning_vi": "Đến gần, lại gần"
+                },
+                {
+                    "word": "Audience",
+                    "part_of_speech": "n.",
+                    "definition": "the spectators at a performance",
+                    "related_forms": "",
+                    "meaning_vi": "Khán giả"
+                },
+                {
+                    "word": "Create",
+                    "part_of_speech": "v.",
+                    "definition": "to produce through artistic or imaginative effort",
+                    "related_forms": "Creation n., creative adj.",
+                    "meaning_vi": "Tạo ra, sáng tạo"
+                },
+                {
+                    "word": "Dialogue",
+                    "part_of_speech": "n.",
+                    "definition": "a conversation between two or more persons",
+                    "related_forms": "",
+                    "meaning_vi": "Đối thoại"
+                },
+                {
+                    "word": "Element",
+                    "part_of_speech": "n.",
+                    "definition": "fundamental or essential constituent",
+                    "related_forms": "",
+                    "meaning_vi": "Yếu tố, chi tiết"
+                },
+                {
+                    "word": "Experience",
+                    "part_of_speech": "n./v.",
+                    "definition": "an event or a series of events participated in or lived through",
+                    "related_forms": "Experienced adj.",
+                    "meaning_vi": "Kinh nghiệm"
+                },
+                {
+                    "word": "Occur",
+                    "part_of_speech": "v.",
+                    "definition": "to take place; to come about",
+                    "related_forms": "",
+                    "meaning_vi": "Xảy ra, xuất hiện"
+                },
+                {
+                    "word": "Perform",
+                    "part_of_speech": "v.",
+                    "definition": "to act before an audience, to give a public presentation of",
+                    "related_forms": "Performance n., performer n.",
+                    "meaning_vi": "Biểu diễn, trình diễn"
+                },
+                {
+                    "word": "Rehearse",
+                    "part_of_speech": "v.",
+                    "definition": "to practice in preparation for a public performance; to direct in rehearsal",
+                    "related_forms": "",
+                    "meaning_vi": "Diễn tập"
+                },
+                {
+                    "word": "Review",
+                    "part_of_speech": "n./v.",
+                    "definition": "a critical estimate of a work or performance; writing a criticism of a performance",
+                    "related_forms": "",
+                    "meaning_vi": "Sự phê bình, lời phê bình"
+                },
+                {
+                    "word": "Sold out",
+                    "part_of_speech": "adj./v.",
+                    "definition": "having all tickets or accommodations completely sold; to sell all the tickets",
+                    "related_forms": "",
+                    "meaning_vi": "Bán hết"
+                }
+            ]
+        },
+        {
+            "lesson_number": 43,
+            "title_en": "Music",
+            "title_vi": "Âm nhạc",
+            "words": [
+                {
+                    "word": "Available",
+                    "part_of_speech": "adj.",
+                    "definition": "ready for use; willing to serve",
+                    "related_forms": "",
+                    "meaning_vi": "Sẵn sàng để dùng"
+                },
+                {
+                    "word": "Broad",
+                    "part_of_speech": "adj.",
+                    "definition": "covering a wide scope",
+                    "related_forms": "",
+                    "meaning_vi": "Bao la, mênh mông"
+                },
+                {
+                    "word": "Category",
+                    "part_of_speech": "n.",
+                    "definition": "a division in a system of classification; a general class of ideas",
+                    "related_forms": "Categorize v., categorical adj.",
+                    "meaning_vi": "Hạng, loại"
+                },
+                {
+                    "word": "Disparate",
+                    "part_of_speech": "adj.",
+                    "definition": "fundamentally distinct or different",
+                    "related_forms": "",
+                    "meaning_vi": "Khác loại, hoàn toàn khác biệt"
+                },
+                {
+                    "word": "Divide",
+                    "part_of_speech": "v.",
+                    "definition": "to separate into parts",
+                    "related_forms": "",
+                    "meaning_vi": "Chia, phân ra"
+                },
+                {
+                    "word": "Favorite",
+                    "part_of_speech": "adj.",
+                    "definition": "preferred",
+                    "related_forms": "Favorable adj., favorably adv.",
+                    "meaning_vi": "Được yêu thích nhất"
+                },
+                {
+                    "word": "Instinct",
+                    "part_of_speech": "n.",
+                    "definition": "an inborn pattern that is a powerful motivation",
+                    "related_forms": "",
+                    "meaning_vi": "Bản năng"
+                },
+                {
+                    "word": "Preference",
+                    "part_of_speech": "n.",
+                    "definition": "someone or something liked over another or others",
+                    "related_forms": "Prefer v., preferential adj.",
+                    "meaning_vi": "Sở thích, sự thích hơn"
+                },
+                {
+                    "word": "Reason",
+                    "part_of_speech": "n.",
+                    "definition": "the basis or motive for an action; an underlying fact or cause",
+                    "related_forms": "",
+                    "meaning_vi": "Lý do"
+                },
+                {
+                    "word": "Relaxation",
+                    "part_of_speech": "n.",
+                    "definition": "the act of relaxing or the state of being relaxed; refreshment of body or mind",
+                    "related_forms": "Relax v., relaxed adj.",
+                    "meaning_vi": "Sự nghỉ ngơi"
+                },
+                {
+                    "word": "Taste",
+                    "part_of_speech": "n.",
+                    "definition": "the ability to discern what is excellent or appropriate",
+                    "related_forms": "",
+                    "meaning_vi": "Sự thưởng thức, khả năng thẩm định"
+                },
+                {
+                    "word": "Urge",
+                    "part_of_speech": "v./n.",
+                    "definition": "to advocate earnestly; a natural desire",
+                    "related_forms": "",
+                    "meaning_vi": "Thúc giục"
+                }
+            ]
+        },
+        {
+            "lesson_number": 44,
+            "title_en": "Museums",
+            "title_vi": "Bảo tàng",
+            "words": [
+                {
+                    "word": "Acquire",
+                    "part_of_speech": "v.",
+                    "definition": "to gain possession of; to get by one's own efforts",
+                    "related_forms": "",
+                    "meaning_vi": "Thu được, giành được"
+                },
+                {
+                    "word": "Admire",
+                    "part_of_speech": "v.",
+                    "definition": "to regard with pleasure; to have esteem or respect for",
+                    "related_forms": "",
+                    "meaning_vi": "Khâm phục, hâm mộ"
+                },
+                {
+                    "word": "Collection",
+                    "part_of_speech": "n.",
+                    "definition": "a group of objects or works to be seen, studied, or kept together",
+                    "related_forms": "Collect v., collector n.",
+                    "meaning_vi": "Bộ sưu tầm"
+                },
+                {
+                    "word": "Criticism",
+                    "part_of_speech": "n.",
+                    "definition": "an evaluation, especially of literary or other artistic works",
+                    "related_forms": "Criticize v., critic n.",
+                    "meaning_vi": "Lời phê bình"
+                },
+                {
+                    "word": "Express",
+                    "part_of_speech": "v.",
+                    "definition": "to give an opinion or depict emotion",
+                    "related_forms": "",
+                    "meaning_vi": "Bày tỏ"
+                },
+                {
+                    "word": "Fashion",
+                    "part_of_speech": "n.",
+                    "definition": "the prevailing style or custom",
+                    "related_forms": "",
+                    "meaning_vi": "Xu hướng thời trang"
+                },
+                {
+                    "word": "Leisure",
+                    "part_of_speech": "n.",
+                    "definition": "freedom from time-consuming duties; free time",
+                    "related_forms": "",
+                    "meaning_vi": "Thời gian rỗi"
+                },
+                {
+                    "word": "Respond",
+                    "part_of_speech": "v.",
+                    "definition": "to make a reply; to react",
+                    "related_forms": "Response n., responsive adj.",
+                    "meaning_vi": "Đáp lại, phản ứng lại"
+                },
+                {
+                    "word": "Schedule",
+                    "part_of_speech": "n./v.",
+                    "definition": "a list of times of events; to enter on a schedule",
+                    "related_forms": "",
+                    "meaning_vi": "Kế hoạch làm việc, thời gian biểu"
+                },
+                {
+                    "word": "Significant",
+                    "part_of_speech": "adj.",
+                    "definition": "meaningful; having a major effect; important",
+                    "related_forms": "",
+                    "meaning_vi": "Có ý nghĩa, quan trọng"
+                },
+                {
+                    "word": "Specialize",
+                    "part_of_speech": "v.",
+                    "definition": "to concentrate on a particular activity",
+                    "related_forms": "Specialist n., specialized adj.",
+                    "meaning_vi": "Chuyên môn hóa"
+                }
+            ]
+        },
+        {
+            "lesson_number": 45,
+            "title_en": "Media",
+            "title_vi": "Phương tiện truyền thông",
+            "words": [
+                {
+                    "word": "Assignment",
+                    "part_of_speech": "n./v.",
+                    "definition": "something, such as a task, that is assigned",
+                    "related_forms": "",
+                    "meaning_vi": "Nhiệm vụ, công việc"
+                },
+                {
+                    "word": "Choose",
+                    "part_of_speech": "v.",
+                    "definition": "to select one thing over another",
+                    "related_forms": "Choice n., choosy adj.",
+                    "meaning_vi": "Chọn lựa"
+                },
+                {
+                    "word": "Constant",
+                    "part_of_speech": "n.",
+                    "definition": "something that is unchanging or invariable",
+                    "related_forms": "",
+                    "meaning_vi": "Hằng số, điều không đổi"
+                },
+                {
+                    "word": "Constitute",
+                    "part_of_speech": "v.",
+                    "definition": "to be the elements or parts of",
+                    "related_forms": "",
+                    "meaning_vi": "Cấu thành, tạo thành"
+                },
+                {
+                    "word": "Decisive",
+                    "part_of_speech": "adj.",
+                    "definition": "characterized by decision and firmness",
+                    "related_forms": "",
+                    "meaning_vi": "Kiên quyết, dứt khoát"
+                },
+                {
+                    "word": "Disseminate",
+                    "part_of_speech": "v.",
+                    "definition": "to scatter widely; to distribute",
+                    "related_forms": "",
+                    "meaning_vi": "Truyền bá, phổ biến"
+                },
+                {
+                    "word": "Impact",
+                    "part_of_speech": "n.",
+                    "definition": "a strong, immediate impression",
+                    "related_forms": "",
+                    "meaning_vi": "Sự tác động, ảnh hưởng"
+                },
+                {
+                    "word": "In depth",
+                    "part_of_speech": "adj.",
+                    "definition": "in complete detail; thorough",
+                    "related_forms": "",
+                    "meaning_vi": "Tỉ mỉ, cẩn thận"
+                },
+                {
+                    "word": "Investigative",
+                    "part_of_speech": "adj.",
+                    "definition": "specializing in uncovering and reporting hidden information",
+                    "related_forms": "Investigation n., investigate v.",
+                    "meaning_vi": "Thuộc về điều tra"
+                },
+                {
+                    "word": "Link",
+                    "part_of_speech": "n.",
+                    "definition": "an association; a relationship",
+                    "related_forms": "",
+                    "meaning_vi": "Mối liên hệ"
+                },
+                {
+                    "word": "Subscribe",
+                    "part_of_speech": "v.",
+                    "definition": "to receive a periodical regularly on order",
+                    "related_forms": "Subscription n., subscribers n.",
+                    "meaning_vi": "Đặt mua báo, tạp chí"
+                },
+                {
+                    "word": "Thorough",
+                    "part_of_speech": "adj.",
+                    "definition": "exhaustively complete",
+                    "related_forms": "Thoroughness n., thoroughly adv.",
+                    "meaning_vi": "Kỹ lưỡng, thấu đáo"
+                }
+            ]
+        },
+        {
+            "lesson_number": 46,
+            "title_en": "Doctor's Office",
+            "title_vi": "Phòng khám",
+            "words": [
+                {
+                    "word": "Annual",
+                    "part_of_speech": "adj.",
+                    "definition": "yearly",
+                    "related_forms": "",
+                    "meaning_vi": "Xảy ra hàng năm"
+                },
+                {
+                    "word": "Appointment",
+                    "part_of_speech": "n.",
+                    "definition": "arrangements for a meeting; a position in a profession",
+                    "related_forms": "",
+                    "meaning_vi": "Cuộc hẹn"
+                },
+                {
+                    "word": "Assess",
+                    "part_of_speech": "v.",
+                    "definition": "to determine the value or rate of something",
+                    "related_forms": "Assessment n., assessable adj.",
+                    "meaning_vi": "Ước định, định giá"
+                },
+                {
+                    "word": "Diagnose",
+                    "part_of_speech": "v.",
+                    "definition": "to recognize a disease; to analyze the nature of something",
+                    "related_forms": "Diagnosis n., diagnostic adj.",
+                    "meaning_vi": "Tiến hành chẩn đoán"
+                },
+                {
+                    "word": "Effective",
+                    "part_of_speech": "adj.",
+                    "definition": "producing the desired effect; being in effect",
+                    "related_forms": "",
+                    "meaning_vi": "Có hiệu quả"
+                },
+                {
+                    "word": "Instrument",
+                    "part_of_speech": "n.",
+                    "definition": "a tool for precise work; the means whereby something is achieved",
+                    "related_forms": "",
+                    "meaning_vi": "Dụng cụ, công cụ"
+                },
+                {
+                    "word": "Manage",
+                    "part_of_speech": "v.",
+                    "definition": "to handle; to deal with; to guide",
+                    "related_forms": "",
+                    "meaning_vi": "Tìm cách xoay sở, quản lý"
+                },
+                {
+                    "word": "Prevent",
+                    "part_of_speech": "v.",
+                    "definition": "to keep from happening; to hinder",
+                    "related_forms": "Prevention n., preventive adj.",
+                    "meaning_vi": "Ngăn ngừa, tránh"
+                },
+                {
+                    "word": "Recommend",
+                    "part_of_speech": "v.",
+                    "definition": "to present as worthy; to endorse",
+                    "related_forms": "Recommendation n., recommendable adj.",
+                    "meaning_vi": "Đề nghị, giới thiệu"
+                },
+                {
+                    "word": "Record",
+                    "part_of_speech": "v./n.",
+                    "definition": "to set down in writing; an official copy of documents",
+                    "related_forms": "",
+                    "meaning_vi": "Ghi lại"
+                },
+                {
+                    "word": "Refer",
+                    "part_of_speech": "v.",
+                    "definition": "to direct for treatment or information; to mention",
+                    "related_forms": "",
+                    "meaning_vi": "Tham khảo, giới thiệu"
+                },
+                {
+                    "word": "Serious",
+                    "part_of_speech": "adj.",
+                    "definition": "weighty",
+                    "related_forms": "",
+                    "meaning_vi": "Nghiêm trọng"
+                }
+            ]
+        },
+        {
+            "lesson_number": 47,
+            "title_en": "Dentist's Office",
+            "title_vi": "Phòng khám răng",
+            "words": [
+                {
+                    "word": "Aware",
+                    "part_of_speech": "adj.",
+                    "definition": "having knowledge",
+                    "related_forms": "",
+                    "meaning_vi": "Có kiến thức về, ý thức được"
+                },
+                {
+                    "word": "Catch up",
+                    "part_of_speech": "v.",
+                    "definition": "to bring up to date",
+                    "related_forms": "",
+                    "meaning_vi": "Bắt kịp, cập nhật"
+                },
+                {
+                    "word": "Distraction",
+                    "part_of_speech": "n.",
+                    "definition": "the act of being turned away from the focus",
+                    "related_forms": "Distract v., distracted adj.",
+                    "meaning_vi": "Sự sao nhãng, đãng trí"
+                },
+                {
+                    "word": "Encouragement",
+                    "part_of_speech": "n.",
+                    "definition": "inspiration or support",
+                    "related_forms": "",
+                    "meaning_vi": "Khích lệ, động viên"
+                },
+                {
+                    "word": "Evident",
+                    "part_of_speech": "adj.",
+                    "definition": "easily seen or understood; obvious",
+                    "related_forms": "Evidence n., evidently adv.",
+                    "meaning_vi": "Hiển nhiên, rõ ràng"
+                },
+                {
+                    "word": "Habit",
+                    "part_of_speech": "n.",
+                    "definition": "a customary manner or practice",
+                    "related_forms": "Habitual adj., habitually adv.",
+                    "meaning_vi": "Thói quen, tập quán"
+                },
+                {
+                    "word": "Illuminate",
+                    "part_of_speech": "v.",
+                    "definition": "to provide or brighten with light",
+                    "related_forms": "",
+                    "meaning_vi": "Chiếu sáng, rọi sáng"
+                },
+                {
+                    "word": "Irritate",
+                    "part_of_speech": "v.",
+                    "definition": "to chafe or inflame, to bother",
+                    "related_forms": "Irritation n., irritable adj.",
+                    "meaning_vi": "Làm phát cáu, chọc tức"
+                },
+                {
+                    "word": "Overview",
+                    "part_of_speech": "n.",
+                    "definition": "a summary; a survey; a quick look",
+                    "related_forms": "",
+                    "meaning_vi": "Khái quát, tổng quan"
+                },
+                {
+                    "word": "Position",
+                    "part_of_speech": "n.",
+                    "definition": "the right or appropriate place",
+                    "related_forms": "",
+                    "meaning_vi": "Vị trí thích hợp"
+                },
+                {
+                    "word": "Regularly",
+                    "part_of_speech": "adv.",
+                    "definition": "occurring at fixed intervals",
+                    "related_forms": "",
+                    "meaning_vi": "Một cách đều đặn"
+                },
+                {
+                    "word": "Restore",
+                    "part_of_speech": "v.",
+                    "definition": "to bring back to an original condition",
+                    "related_forms": "",
+                    "meaning_vi": "Phục hồi"
+                }
+            ]
+        },
+        {
+            "lesson_number": 48,
+            "title_en": "Health Insurance",
+            "title_vi": "Bảo vệ sức khỏe",
+            "words": [
+                {
+                    "word": "Allow",
+                    "part_of_speech": "v.",
+                    "definition": "to let do or happen; to permit",
+                    "related_forms": "Allowance n., allowable adj.",
+                    "meaning_vi": "Đồng ý, cho phép"
+                },
+                {
+                    "word": "Alternative",
+                    "part_of_speech": "n.",
+                    "definition": "the choice between two mutually exclusive possibilities",
+                    "related_forms": "Alternate v., alternatively adv.",
+                    "meaning_vi": "Sự lựa chọn giữa hai hay nhiều khả năng"
+                },
+                {
+                    "word": "Aspect",
+                    "part_of_speech": "n.",
+                    "definition": "a feature, element; an appearance",
+                    "related_forms": "",
+                    "meaning_vi": "Diện mạo, khía cạnh"
+                },
+                {
+                    "word": "Concern",
+                    "part_of_speech": "v.",
+                    "definition": "to be of interest or importance to",
+                    "related_forms": "",
+                    "meaning_vi": "Bận tâm, lo lắng về"
+                },
+                {
+                    "word": "Emphasize",
+                    "part_of_speech": "v.",
+                    "definition": "to stress",
+                    "related_forms": "Emphasis n., emphatic adj.",
+                    "meaning_vi": "Nhấn mạnh"
+                },
+                {
+                    "word": "Incur",
+                    "part_of_speech": "v.",
+                    "definition": "to acquire or come into",
+                    "related_forms": "",
+                    "meaning_vi": "Gánh chịu, chịu lấy"
+                },
+                {
+                    "word": "Personnel",
+                    "part_of_speech": "n.",
+                    "definition": "a group of employees or workers",
+                    "related_forms": "",
+                    "meaning_vi": "Cán bộ nhân viên"
+                },
+                {
+                    "word": "Policy",
+                    "part_of_speech": "n.",
+                    "definition": "a set of rules and regulations",
+                    "related_forms": "",
+                    "meaning_vi": "Chính sách, những điều khoản"
+                },
+                {
+                    "word": "Portion",
+                    "part_of_speech": "n.",
+                    "definition": "a section or quantity within a larger thing; a part of a whole",
+                    "related_forms": "",
+                    "meaning_vi": "Phần chia, khẩu phần"
+                },
+                {
+                    "word": "Regardless",
+                    "part_of_speech": "adv.",
+                    "definition": "in spite of",
+                    "related_forms": "",
+                    "meaning_vi": "Bất chấp, không đếm xỉa"
+                },
+                {
+                    "word": "Salary",
+                    "part_of_speech": "n.",
+                    "definition": "a fixed compensation paid regularly for work done; one's pay",
+                    "related_forms": "",
+                    "meaning_vi": "Lương"
+                },
+                {
+                    "word": "Suitable",
+                    "part_of_speech": "adj.",
+                    "definition": "appropriate to a purpose or an occasion",
+                    "related_forms": "Suit v., suitably adv.",
+                    "meaning_vi": "Phù hợp, thích hợp"
+                }
+            ]
+        },
+        {
+            "lesson_number": 49,
+            "title_en": "Hospitals",
+            "title_vi": "Bệnh viện",
+            "words": [
+                {
+                    "word": "Admit",
+                    "part_of_speech": "v.",
+                    "definition": "to permit to enter",
+                    "related_forms": "Admittance n., admission n.",
+                    "meaning_vi": "Cho vào"
+                },
+                {
+                    "word": "Authorization",
+                    "part_of_speech": "n.",
+                    "definition": "the act of sanctioning",
+                    "related_forms": "",
+                    "meaning_vi": "Sự cấp phép, cho phép"
+                },
+                {
+                    "word": "Designate",
+                    "part_of_speech": "v.",
+                    "definition": "to indicate or specify",
+                    "related_forms": "Designation n., designator n.",
+                    "meaning_vi": "Được chỉ định"
+                },
+                {
+                    "word": "Escort",
+                    "part_of_speech": "n.",
+                    "definition": "a person accompanying another to guide or protect",
+                    "related_forms": "",
+                    "meaning_vi": "Vệ sĩ, đội hộ tống"
+                },
+                {
+                    "word": "Identify",
+                    "part_of_speech": "v.",
+                    "definition": "to ascertain the name or belongings of",
+                    "related_forms": "Identifiable adj., identification n.",
+                    "meaning_vi": "Nhận dạng, nhận biết"
+                },
+                {
+                    "word": "Missing",
+                    "part_of_speech": "n.",
+                    "definition": "an inner calling to pursue an activity or perform a service",
+                    "related_forms": "",
+                    "meaning_vi": "Mất tích, vắng mặt"
+                },
+                {
+                    "word": "Permit",
+                    "part_of_speech": "v.",
+                    "definition": "to allow",
+                    "related_forms": "Permissible adj., permission n.",
+                    "meaning_vi": "Cho phép"
+                },
+                {
+                    "word": "Pertinent",
+                    "part_of_speech": "adj.",
+                    "definition": "having relevance to the matter at hand",
+                    "related_forms": "",
+                    "meaning_vi": "Thích đáng, thích hợp"
+                },
+                {
+                    "word": "Procedure",
+                    "part_of_speech": "n.",
+                    "definition": "a series of steps taken to accomplish an end",
+                    "related_forms": "",
+                    "meaning_vi": "Thủ tục"
+                },
+                {
+                    "word": "Result",
+                    "part_of_speech": "n.",
+                    "definition": "an outcome",
+                    "related_forms": "",
+                    "meaning_vi": "Kết quả"
+                },
+                {
+                    "word": "Statement",
+                    "part_of_speech": "n.",
+                    "definition": "an accounting showing an amount due; a bill",
+                    "related_forms": "",
+                    "meaning_vi": "Sự trình bày, hóa đơn"
+                },
+                {
+                    "word": "Usual",
+                    "part_of_speech": "adj.",
+                    "definition": "ordinary, expected",
+                    "related_forms": "",
+                    "meaning_vi": "Thông thường"
+                }
+            ]
+        },
+        {
+            "lesson_number": 50,
+            "title_en": "Pharmacy",
+            "title_vi": "Dược phẩm",
+            "words": [
+                {
+                    "word": "Consult",
+                    "part_of_speech": "v.",
+                    "definition": "to seek advice or information of",
+                    "related_forms": "Consultation n., consultative adj.",
+                    "meaning_vi": "Hỏi ý kiến, tham khảo"
+                },
+                {
+                    "word": "Control",
+                    "part_of_speech": "v.",
+                    "definition": "to exercise authoritative or dominating influence",
+                    "related_forms": "",
+                    "meaning_vi": "Có quyền hành với ai, kiểm soát"
+                },
+                {
+                    "word": "Convenient",
+                    "part_of_speech": "adj.",
+                    "definition": "suited or favorable to one's purpose; easy to reach",
+                    "related_forms": "Convenience n., conveniently adv.",
+                    "meaning_vi": "Tiện lợi, thuận tiện"
+                },
+                {
+                    "word": "Detect",
+                    "part_of_speech": "v.",
+                    "definition": "to discover or ascertain",
+                    "related_forms": "Detection n., detectable adj.",
+                    "meaning_vi": "Phát hiện ra, khám phá"
+                },
+                {
+                    "word": "Factor",
+                    "part_of_speech": "n.",
+                    "definition": "a contribution to an accomplishment, a result, or a process",
+                    "related_forms": "",
+                    "meaning_vi": "Nhân tố"
+                },
+                {
+                    "word": "Interaction",
+                    "part_of_speech": "n.",
+                    "definition": "an influence; a mutual activity",
+                    "related_forms": "",
+                    "meaning_vi": "Sự ảnh hưởng lẫn nhau"
+                },
+                {
+                    "word": "Limit",
+                    "part_of_speech": "n.",
+                    "definition": "the point beyond which something cannot proceed",
+                    "related_forms": "",
+                    "meaning_vi": "Giới hạn"
+                },
+                {
+                    "word": "Monitor",
+                    "part_of_speech": "v.",
+                    "definition": "to keep track of",
+                    "related_forms": "",
+                    "meaning_vi": "Theo dõi, nắm được"
+                },
+                {
+                    "word": "Potential",
+                    "part_of_speech": "adj.",
+                    "definition": "capable of being but not yet in existence; possible",
+                    "related_forms": "",
+                    "meaning_vi": "Tiềm năng, tiềm tàng"
+                },
+                {
+                    "word": "Sample",
+                    "part_of_speech": "n.",
+                    "definition": "a portion, piece, or segment that is representative of a whole",
+                    "related_forms": "",
+                    "meaning_vi": "Mẫu, vật mẫu"
+                },
+                {
+                    "word": "Sense",
+                    "part_of_speech": "n.",
+                    "definition": "a judgment; an intellectual interpretation",
+                    "related_forms": "",
+                    "meaning_vi": "Khả năng phán đoán"
+                },
+                {
+                    "word": "Volunteer",
+                    "part_of_speech": "n./v.",
+                    "definition": "one who performs a service without pay; to perform as a volunteer",
+                    "related_forms": "Volunteerism n., voluntary adj.",
+                    "meaning_vi": "Người tình nguyện"
+                }
+            ]
+        }
+    ]
+}
