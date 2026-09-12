@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd frontend && pnpm install && pnpm run build",
+  "buildCommand": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build",
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {

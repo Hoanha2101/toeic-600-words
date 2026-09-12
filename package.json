@@ -2,8 +2,9 @@
   "name": "600-essential-words-toeic",
   "private": true,
   "version": "1.0.0",
+  "packageManager": "pnpm@10.34.5",
   "scripts": {
-    "build": "cd frontend && pnpm install && pnpm run build",
+    "build": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build",
     "dev": "cd frontend && pnpm run dev"
   }
 }
