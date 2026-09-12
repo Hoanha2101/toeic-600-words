@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "packageManager": "pnpm@10.34.5",
   "scripts": {
-    "build": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build",
+    "build": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build && cp -r dist ../backend/static_dist",
     "dev": "cd frontend && pnpm run dev"
   }
 }

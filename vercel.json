@@ -1,9 +1,9 @@
 {
-  "buildCommand": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build",
+  "buildCommand": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build && cp -r dist ../backend/static_dist",
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
-      "includeFiles": "{frontend/dist/**,data/**}"
+      "includeFiles": "{backend/static_dist/**,frontend/dist/**,data/**}"
     }
   },
   "rewrites": [

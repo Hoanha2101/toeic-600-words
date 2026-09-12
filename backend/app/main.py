@@ -89,9 +89,12 @@ mimetypes.add_type("image/svg+xml", ".svg")
 
 def find_dist_dir() -> Path:
     candidates = [
+        Path(__file__).resolve().parent.parent / "static_dist",
         Path(__file__).resolve().parent.parent.parent / "frontend" / "dist",
+        Path("backend/static_dist"),
         Path("frontend/dist"),
         Path("../frontend/dist"),
+        Path("/var/task/backend/static_dist"),
         Path("/var/task/frontend/dist"),
         Path(__file__).resolve().parent.parent / "dist",
     ]
