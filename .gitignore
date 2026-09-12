@@ -20,6 +20,8 @@ ENV/
 dist/
 build/
 frontend/dist/
+backend/static_dist/
+backend/data/
 .vercel/
 
 # Testing & Cache

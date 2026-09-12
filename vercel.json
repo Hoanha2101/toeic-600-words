@@ -1,22 +1,22 @@
 {
-  "buildCommand": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build && cp -r dist ../backend/static_dist",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
-      "includeFiles": "{backend/static_dist/**,frontend/dist/**,data/**}"
+      "includeFiles": "backend/**"
     }
   },
   "rewrites": [
-    {
-      "source": "/assets/(.*)",
-      "destination": "/api/index.py?__path=assets/$1"
-    },
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py?__path=api/$1"
     },
     {
-      "source": "/(.*)",
+      "source": "/assets/(.*)",
+      "destination": "/api/index.py?__path=assets/$1"
+    },
+    {
+      "source": "/((?!api/|assets/).*)",
       "destination": "/api/index.py?__path=$1"
     }
   ]
