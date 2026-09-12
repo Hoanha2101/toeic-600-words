@@ -73,10 +73,58 @@ app.include_router(tests.router, prefix="", include_in_schema=False)
 app.include_router(dashboard.router, prefix="", include_in_schema=False)
 
 
-@app.get("/")
-def root():
-    return {
-        "app": settings.PROJECT_NAME,
-        "docs": "/docs",
-        "api_prefix": settings.API_V1_STR,
-    }
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+def find_dist_dir() -> Path:
+    candidates = [
+        Path(__file__).resolve().parent.parent.parent / "frontend" / "dist",
+        Path("frontend/dist"),
+        Path("../frontend/dist"),
+    ]
+    for p in candidates:
+        if p.exists() and (p / "index.html").exists():
+            return p
+    return candidates[0]
+
+DIST_DIR = find_dist_dir()
+
+if DIST_DIR.exists() and (DIST_DIR / "index.html").exists():
+    assets_dir = DIST_DIR / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def favicon():
+        favicon_path = DIST_DIR / "favicon.ico"
+        if favicon_path.exists():
+            return FileResponse(str(favicon_path))
+        return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    @app.get("/index.html", include_in_schema=False)
+    async def serve_index_html():
+        return FileResponse(str(DIST_DIR / "index.html"))
+
+    @app.get("/", include_in_schema=False)
+    async def serve_root():
+        return FileResponse(str(DIST_DIR / "index.html"))
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_spa_fallback(full_path: str):
+        if full_path.startswith("api/") or full_path in ["api", "docs", "redoc", "openapi.json"]:
+            return JSONResponse(status_code=404, content={"detail": "Not Found"})
+
+        target_file = DIST_DIR / full_path
+        if target_file.is_file():
+            return FileResponse(str(target_file))
+
+        return FileResponse(str(DIST_DIR / "index.html"))
+else:
+    @app.get("/")
+    def root():
+        return {
+            "app": settings.PROJECT_NAME,
+            "docs": "/docs",
+            "api_prefix": settings.API_V1_STR,
+        }

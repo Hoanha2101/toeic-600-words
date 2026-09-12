@@ -1,6 +1,11 @@
 {
   "buildCommand": "cd frontend && npx --yes pnpm@10 install --registry=https://registry.npmjs.org/ && npx --yes pnpm@10 run build",
   "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{frontend/dist/**,data/**}"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -8,7 +13,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/api/index.py"
     }
   ]
 }
