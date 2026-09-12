@@ -46,10 +46,15 @@ app.add_middleware(
 
 @app.middleware("http")
 async def vercel_rewrite_path_middleware(request: Request, call_next):
-    matched_path = request.headers.get("x-matched-path")
-    if matched_path and matched_path != request.scope.get("path"):
-        path_only = matched_path.split("?")[0]
-        request.scope["path"] = path_only
+    path_param = request.query_params.get("__path")
+    if path_param is not None:
+        target_path = "/" + path_param.lstrip("/") if path_param else "/"
+        request.scope["path"] = target_path.split("?")[0]
+    else:
+        matched_path = request.headers.get("x-matched-path")
+        if matched_path and matched_path != request.scope.get("path"):
+            path_only = matched_path.split("?")[0]
+            request.scope["path"] = path_only
     return await call_next(request)
 
 # Register routers with /api prefix
@@ -73,15 +78,22 @@ app.include_router(tests.router, prefix="", include_in_schema=False)
 app.include_router(dashboard.router, prefix="", include_in_schema=False)
 
 
+import mimetypes
 from pathlib import Path
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+
+mimetypes.add_type("application/javascript", ".js")
+mimetypes.add_type("text/css", ".css")
+mimetypes.add_type("image/svg+xml", ".svg")
 
 def find_dist_dir() -> Path:
     candidates = [
         Path(__file__).resolve().parent.parent.parent / "frontend" / "dist",
         Path("frontend/dist"),
         Path("../frontend/dist"),
+        Path("/var/task/frontend/dist"),
+        Path(__file__).resolve().parent.parent / "dist",
     ]
     for p in candidates:
         if p.exists() and (p / "index.html").exists():
@@ -94,6 +106,14 @@ if DIST_DIR.exists() and (DIST_DIR / "index.html").exists():
     assets_dir = DIST_DIR / "assets"
     if assets_dir.exists():
         app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/assets/{asset_name:path}", include_in_schema=False)
+    async def serve_asset_explicit(asset_name: str):
+        file_path = (DIST_DIR / "assets") / asset_name
+        if file_path.is_file():
+            mime, _ = mimetypes.guess_type(str(file_path))
+            return FileResponse(str(file_path), media_type=mime or "application/octet-stream")
+        return JSONResponse(status_code=404, content={"detail": f"Asset {asset_name} not found"})
 
     @app.get("/favicon.ico", include_in_schema=False)
     async def favicon():
@@ -117,7 +137,8 @@ if DIST_DIR.exists() and (DIST_DIR / "index.html").exists():
 
         target_file = DIST_DIR / full_path
         if target_file.is_file():
-            return FileResponse(str(target_file))
+            mime, _ = mimetypes.guess_type(str(target_file))
+            return FileResponse(str(target_file), media_type=mime or "application/octet-stream")
 
         return FileResponse(str(DIST_DIR / "index.html"))
 else:

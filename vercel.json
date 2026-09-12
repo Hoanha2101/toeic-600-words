@@ -8,12 +8,16 @@
   },
   "rewrites": [
     {
+      "source": "/assets/(.*)",
+      "destination": "/api/index.py?__path=assets/$1"
+    },
+    {
       "source": "/api/(.*)",
-      "destination": "/api/index.py"
+      "destination": "/api/index.py?__path=api/$1"
     },
     {
       "source": "/(.*)",
-      "destination": "/api/index.py"
+      "destination": "/api/index.py?__path=$1"
     }
   ]
 }
