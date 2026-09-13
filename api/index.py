@@ -44,10 +44,13 @@ async def app(scope, receive, send):
         # 1. Resolve path from query string or headers if rewritten by Vercel
         qs = scope.get("query_string", b"").decode("utf-8")
         if "__path=" in qs:
+            filtered_qs = []
             for param in qs.split("&"):
                 if param.startswith("__path="):
                     path = "/" + unquote(param.split("=", 1)[1]).lstrip("/")
-                    break
+                elif param:
+                    filtered_qs.append(param)
+            scope["query_string"] = "&".join(filtered_qs).encode("utf-8")
         elif path in ("/api/index.py", "/api/index", "/api"):
             headers = dict(scope.get("headers", []))
             for h in (b"x-matched-path", b"x-forwarded-uri", b"x-original-uri"):
@@ -130,4 +133,20 @@ async def app(scope, receive, send):
         # 5. API routes: forward to FastAPI
         scope["path"] = clean_path
 
-    await fastapi_app(scope, receive, send)
+    try:
+        await fastapi_app(scope, receive, send)
+    except Exception as exc:
+        import traceback
+        import json
+        traceback.print_exc()
+        err_msg = json.dumps({"detail": f"Lỗi máy chủ nội bộ: {str(exc)}"}).encode("utf-8")
+        headers = [
+            (b"content-type", b"application/json"),
+            (b"access-control-allow-origin", b"*"),
+            (b"access-control-allow-credentials", b"true"),
+            (b"access-control-allow-headers", b"*"),
+            (b"access-control-allow-methods", b"*"),
+            (b"content-length", str(len(err_msg)).encode("utf-8")),
+        ]
+        await send({"type": "http.response.start", "status": 500, "headers": headers})
+        await send({"type": "http.response.body", "body": err_msg})

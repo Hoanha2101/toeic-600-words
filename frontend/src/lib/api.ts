@@ -24,11 +24,13 @@ export async function getAuthToken(): Promise<string | null> {
 export class ApiError extends Error {
   status: number;
   data: any;
+  isNetworkError: boolean;
 
-  constructor(status: number, message: string, data?: any) {
+  constructor(status: number, message: string, data?: any, isNetworkError: boolean = false) {
     super(message);
     this.status = status;
     this.data = data;
+    this.isNetworkError = isNetworkError;
     this.name = 'ApiError';
   }
 }
@@ -44,10 +46,21 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
   }
 
   const url = `${API_BASE_URL}${endpoint}`;
-  const response = await fetch(url, {
-    ...options,
-    headers,
-  });
+  let response: Response;
+
+  try {
+    response = await fetch(url, {
+      ...options,
+      headers,
+    });
+  } catch (netErr: any) {
+    console.error('API network fetch failure:', netErr);
+    const isOffline = typeof navigator !== 'undefined' && !navigator.onLine;
+    const msg = isOffline
+      ? 'Bạn đang mất kết nối Internet. Vui lòng kiểm tra WiFi/4G và thử lại.'
+      : 'Không thể kết nối đến máy chủ. Vui lòng kiểm tra đường truyền mạng hoặc thử lại.';
+    throw new ApiError(0, msg, { originalError: netErr?.message || String(netErr) }, true);
+  }
 
   if (!response.ok) {
     let errorDetail = response.statusText;
@@ -58,7 +71,7 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
     } catch {
       // not json
     }
-    throw new ApiError(response.status, errorDetail, data);
+    throw new ApiError(response.status, errorDetail, data, false);
   }
 
   // If 204 No Content

@@ -664,17 +664,45 @@ class MockRepository(BaseRepository):
 
     def submit_test(self, user_id: str, test_id: str, answers: List[dict]) -> dict:
         session = self.test_sessions.get(test_id)
-        if not session or session["user_id"] != user_id:
-            raise ValueError("Test session not found")
+        now = datetime.now(timezone.utc)
 
-        q_map = {q["word_id"]: q for q in session["questions_internal"]}
-        user_answer_map = {a["word_id"]: a["user_answer"].strip() for a in answers}
+        if not session or session.get("user_id") != user_id:
+            # Reconstruct session if missing or created in another instance
+            session = {
+                "id": test_id,
+                "user_id": user_id,
+                "test_type": "mixed",
+                "total_questions": len(answers),
+                "questions_internal": [],
+                "started_at": now,
+                "finished_at": None,
+                "score_percent": 0.0,
+                "correct_answers": 0,
+            }
+            for a in answers:
+                wid = a["word_id"]
+                w = self.words_by_id.get(wid)
+                if not w:
+                    continue
+                q_type = a.get("question_type") or "multiple_choice"
+                if q_type == "multiple_choice":
+                    correct_ans = w["meaning_vi"]
+                else:
+                    correct_ans = w["word"]
+                session["questions_internal"].append({
+                    "word_id": wid,
+                    "word": w["word"],
+                    "meaning_vi": w["meaning_vi"],
+                    "question_type": q_type,
+                    "correct_answer": correct_ans,
+                })
+            self.test_sessions[test_id] = session
+
+        user_answer_map = {a["word_id"]: str(a.get("user_answer", "")).strip() for a in answers}
 
         results = []
         correct_count = 0
         total = len(session["questions_internal"])
-
-        now = datetime.now(timezone.utc)
 
         for q in session["questions_internal"]:
             wid = q["word_id"]
@@ -682,6 +710,11 @@ class MockRepository(BaseRepository):
             correct_ans = q["correct_answer"].strip()
 
             is_correct = (u_ans.lower() == correct_ans.lower())
+            if not is_correct and q["word"].lower() == u_ans.lower():
+                is_correct = True
+            elif not is_correct and q["meaning_vi"].lower() == u_ans.lower():
+                is_correct = True
+
             if is_correct:
                 correct_count += 1
             else:
@@ -1657,55 +1690,72 @@ class SupabaseRepository(BaseRepository):
         }
 
     def submit_test(self, user_id: str, test_id: str, answers: List[dict]) -> dict:
+        user_id = ensure_valid_uuid(user_id)
+        now = datetime.now(timezone.utc)
         cached = getattr(self, "_cached_sessions", {}).get(test_id)
-        if not cached or cached["user_id"] != user_id:
-            # Reconstruct questions from words data if session was not in memory
-            raise ValueError("Test session expired or not found")
 
-        q_map = {q["word_id"]: q for q in cached["questions_internal"]}
-        user_answer_map = {a["word_id"]: a["user_answer"].strip() for a in answers}
+        if not cached:
+            # Reconstruct session if serverless instance was recycled or created elsewhere
+            session_db = None
+            try:
+                s_res = self.supabase.table("test_sessions").select("*").eq("id", test_id).execute()
+                if s_res.data:
+                    session_db = s_res.data[0]
+            except Exception as e:
+                print(f"⚠️ Query test_sessions warning: {e}")
+
+            test_type = session_db.get("test_type", "mixed") if session_db else "mixed"
+            started_at = session_db.get("started_at", now.isoformat()) if session_db else now.isoformat()
+
+            questions_internal = []
+            for a in answers:
+                wid = a["word_id"]
+                w = self.words_by_id.get(wid)
+                if not w:
+                    continue
+                q_type = a.get("question_type") or ("listening" if test_type == "listening" else "multiple_choice")
+                if q_type == "multiple_choice":
+                    correct_ans = w["meaning_vi"]
+                else:
+                    correct_ans = w["word"]
+                questions_internal.append({
+                    "word_id": wid,
+                    "word": w["word"],
+                    "meaning_vi": w["meaning_vi"],
+                    "question_type": q_type,
+                    "correct_answer": correct_ans,
+                })
+
+            cached = {
+                "questions_internal": questions_internal,
+                "test_type": test_type,
+                "user_id": user_id,
+                "started_at": started_at,
+            }
+
+        user_answer_map = {a["word_id"]: str(a.get("user_answer", "")).strip() for a in answers}
 
         results = []
         answers_to_insert = []
+        wrong_wids = []
         correct_count = 0
         total = len(cached["questions_internal"])
-        now = datetime.now(timezone.utc)
 
         for q in cached["questions_internal"]:
             wid = q["word_id"]
             u_ans = user_answer_map.get(wid, "").strip()
             correct_ans = q["correct_answer"].strip()
+
             is_correct = (u_ans.lower() == correct_ans.lower())
+            if not is_correct and q["word"].lower() == u_ans.lower():
+                is_correct = True
+            elif not is_correct and q["meaning_vi"].lower() == u_ans.lower():
+                is_correct = True
 
             if is_correct:
                 correct_count += 1
             else:
-                # Wrong: penalize in user_word_progress
-                try:
-                    res = self.supabase.table("user_word_progress").select("*").eq("user_id", user_id).eq("word_id", wid).execute()
-                    if res.data:
-                        cur = res.data[0]
-                        self.supabase.table("user_word_progress").update({
-                            "wrong_count": cur.get("wrong_count", 0) + 1,
-                            "due_date": now.isoformat(),
-                            "updated_at": now.isoformat(),
-                        }).eq("user_id", user_id).eq("word_id", wid).execute()
-                    else:
-                        self.supabase.table("user_word_progress").insert({
-                            "user_id": user_id,
-                            "word_id": wid,
-                            "status": "learning",
-                            "ease_factor": 2.3,
-                            "interval_days": 1.0,
-                            "repetitions": 0,
-                            "due_date": now.isoformat(),
-                            "correct_count": 0,
-                            "wrong_count": 1,
-                            "is_marked_known": False,
-                            "updated_at": now.isoformat(),
-                        }).execute()
-                except Exception:
-                    pass
+                wrong_wids.append(wid)
 
             results.append({
                 "word_id": wid,
@@ -1727,20 +1777,62 @@ class SupabaseRepository(BaseRepository):
                 "answered_at": now.isoformat(),
             })
 
+        # BATCH UPDATE WRONG WORDS (1 select + 1 upsert instead of 20 sequential network calls)
+        if wrong_wids:
+            try:
+                existing_res = self.supabase.table("user_word_progress").select("*").eq("user_id", user_id).in_("word_id", wrong_wids).execute()
+                existing_map = {r["word_id"]: r for r in (existing_res.data or [])}
+
+                uwp_upserts = []
+                for wid in wrong_wids:
+                    cur = existing_map.get(wid)
+                    if cur:
+                        uwp_upserts.append({
+                            "user_id": user_id,
+                            "word_id": wid,
+                            "status": "learning",
+                            "wrong_count": (cur.get("wrong_count") or 0) + 1,
+                            "due_date": now.isoformat(),
+                            "updated_at": now.isoformat(),
+                        })
+                    else:
+                        uwp_upserts.append({
+                            "user_id": user_id,
+                            "word_id": wid,
+                            "status": "learning",
+                            "ease_factor": 2.3,
+                            "interval_days": 1.0,
+                            "repetitions": 0,
+                            "due_date": now.isoformat(),
+                            "correct_count": 0,
+                            "wrong_count": 1,
+                            "is_marked_known": False,
+                            "updated_at": now.isoformat(),
+                        })
+
+                if uwp_upserts:
+                    self.supabase.table("user_word_progress").upsert(uwp_upserts, on_conflict="user_id,word_id").execute()
+            except Exception as e:
+                print(f"⚠️ Batch upsert user_word_progress warning: {e}")
+
         score_percent = round((correct_count / total) * 100, 1) if total > 0 else 0.0
 
         # Update test_session
         try:
-            self.supabase.table("test_sessions").update({
+            self.supabase.table("test_sessions").upsert({
+                "id": test_id,
+                "user_id": user_id,
+                "test_type": cached["test_type"],
+                "total_questions": total,
                 "correct_answers": correct_count,
                 "score_percent": score_percent,
                 "finished_at": now.isoformat(),
-            }).eq("id", test_id).execute()
+            }, on_conflict="id").execute()
 
             if answers_to_insert:
                 self.supabase.table("test_answers").insert(answers_to_insert).execute()
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"⚠️ Update test_sessions in DB warning: {e}")
 
         # Save to local mock sessions as fallback
         self._mock_sessions[test_id] = {
@@ -1754,7 +1846,16 @@ class SupabaseRepository(BaseRepository):
             "finished_at": now.isoformat(),
         }
 
-        self.update_user_state(user_id)
+        # Lightweight streak update without scanning all 598 words
+        try:
+            today = date.today()
+            self.supabase.table("user_state").upsert({
+                "user_id": user_id,
+                "last_active_at": now.isoformat(),
+                "last_streak_date": today.isoformat(),
+            }, on_conflict="user_id").execute()
+        except Exception:
+            pass
 
         return {
             "id": test_id,

@@ -40,7 +40,16 @@ def submit_test(
         result = repo.submit_test(current_user.user_id, test_id, answers)
         return result
     except ValueError as e:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+        print(f"⚠️ submit_test ValueError for test {test_id}: {e}")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"❌ submit_test unexpected error for test {test_id}: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Lỗi khi chấm điểm bài test: {str(e)}"
+        )
 
 
 @router.get("/tests/history", response_model=List[TestHistoryItem])

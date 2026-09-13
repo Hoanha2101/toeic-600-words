@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Send, AlertCircle } from 'lucide-react';
-import { apiClient } from '../lib/api';
+import { apiClient, ApiError } from '../lib/api';
 import { TestSession, TestResult } from '../types';
 import { QuizQuestion } from '../components/QuizQuestion';
 import { ProgressBar } from '../components/ProgressBar';
+import { ErrorBanner } from '../components/ErrorBanner';
 import { preloadAudio } from '../lib/audio';
 
 export const TestRunningPage: React.FC = () => {
@@ -17,7 +18,7 @@ export const TestRunningPage: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [submitError, setSubmitError] = useState<{ message: string; isNetwork: boolean } | null>(null);
 
   if (!session || !session.questions || session.questions.length === 0) {
     return (
@@ -67,12 +68,13 @@ export const TestRunningPage: React.FC = () => {
     }
 
     setIsSubmitting(true);
-    setErrorMsg('');
+    setSubmitError(null);
 
     try {
       const answersPayload = questions.map((q) => ({
         word_id: q.word_id,
         user_answer: answers[q.word_id] || '',
+        question_type: q.question_type,
       }));
 
       const result = await apiClient.post<TestResult>(`/api/tests/${session.id}/submit`, {
@@ -81,7 +83,17 @@ export const TestRunningPage: React.FC = () => {
 
       navigate(`/test/result/${session.id}`, { state: { result } });
     } catch (err: any) {
-      setErrorMsg(err.message || 'Không thể nộp bài thi. Vui lòng thử lại.');
+      const isNetwork = err instanceof ApiError ? err.isNetworkError : !navigator.onLine;
+      const errorText =
+        err?.message ||
+        (isNetwork
+          ? 'Không thể kết nối đến máy chủ. Vui lòng kiểm tra WiFi/4G và bấm Thử lại.'
+          : 'Hệ thống gặp sự cố khi chấm điểm. Vui lòng bấm Thử lại.');
+
+      setSubmitError({
+        message: errorText,
+        isNetwork,
+      });
       setIsSubmitting(false);
     }
   };
@@ -112,10 +124,15 @@ export const TestRunningPage: React.FC = () => {
         </button>
       </div>
 
-      {errorMsg && (
-        <div className="p-3 bg-red-50 dark:bg-red-950/40 text-red-700 dark:text-red-300 text-xs rounded-2xl border border-red-200 dark:border-red-900">
-          {errorMsg}
-        </div>
+      {/* Error State Banner with Retry */}
+      {submitError && (
+        <ErrorBanner
+          title={submitError.isNetwork ? 'Mất kết nối máy chủ' : 'Chưa thể nộp bài'}
+          message={submitError.message}
+          onRetry={handleSubmitTest}
+          isRetrying={isSubmitting}
+          isNetworkError={submitError.isNetwork}
+        />
       )}
 
       {/* Progress */}

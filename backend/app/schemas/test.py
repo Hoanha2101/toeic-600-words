@@ -33,6 +33,7 @@ class TestSessionResponse(BaseModel):
 class SubmitTestAnswer(BaseModel):
     word_id: int
     user_answer: str
+    question_type: Optional[str] = None
 
 
 class SubmitTestRequest(BaseModel):
