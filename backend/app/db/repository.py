@@ -1961,40 +1961,51 @@ class SupabaseRepository(BaseRepository):
         current_user_id = ensure_valid_uuid(current_user_id)
         sort_key = sort_by if sort_by in ("words_learned", "words_mastered", "avg_test_score", "streak_days", "total_study_seconds") else "words_learned"
 
-        rows = []
-        try:
-            res = self.supabase.table("leaderboard_view").select("*").order(sort_key, desc=True).limit(100).execute()
-            rows = res.data or []
-        except Exception:
-            pass
+        if not hasattr(self, "_leaderboard_cache"):
+            self._leaderboard_cache = {}
 
-        if not rows:
-            profiles = []
+        now_ts = datetime.now(timezone.utc).timestamp()
+        cache_entry = self._leaderboard_cache.get(sort_key)
+
+        if cache_entry and (now_ts - cache_entry["ts"] < 180):
+            rows = cache_entry["rows"]
+        else:
+            rows = []
             try:
-                p_res = self.supabase.table("profiles").select("id, display_name").limit(100).execute()
-                profiles = p_res.data or []
+                res = self.supabase.table("leaderboard_view").select("*").order(sort_key, desc=True).limit(100).execute()
+                rows = res.data or []
             except Exception:
                 pass
 
-            if not any(p["id"] == current_user_id for p in profiles):
-                profiles.append({"id": current_user_id, "display_name": "Bạn"})
+            if not rows:
+                profiles = []
+                try:
+                    p_res = self.supabase.table("profiles").select("id, display_name").limit(100).execute()
+                    profiles = p_res.data or []
+                except Exception:
+                    pass
 
-            for p in profiles:
-                uid = p["id"]
-                state_data = self.get_user_state(uid, p.get("display_name", ""))
-                summary = state_data["summary"]
-                tests = self.get_test_history(uid)
-                avg_score = round(sum(t.get("score_percent", 0.0) for t in tests) / len(tests), 1) if tests else 0.0
-                rows.append({
-                    "user_id": uid,
-                    "display_name": p.get("display_name") or "Học viên",
-                    "words_learned": summary["words_learned"] + summary["words_mastered"],
-                    "words_mastered": summary["words_mastered"],
-                    "avg_test_score": avg_score,
-                    "streak_days": state_data.get("streak_days", 0),
-                    "total_study_seconds": state_data.get("total_study_seconds", 0),
-                })
-            rows.sort(key=lambda x: (x.get(sort_key, 0), x.get("words_learned", 0)), reverse=True)
+                if not any(p["id"] == current_user_id for p in profiles):
+                    profiles.append({"id": current_user_id, "display_name": "Bạn"})
+
+                for p in profiles:
+                    uid = p["id"]
+                    state_data = self.get_user_state(uid, p.get("display_name", ""))
+                    summary = state_data["summary"]
+                    tests = self.get_test_history(uid)
+                    avg_score = round(sum(t.get("score_percent", 0.0) for t in tests) / len(tests), 1) if tests else 0.0
+                    rows.append({
+                        "user_id": uid,
+                        "display_name": p.get("display_name") or "Học viên",
+                        "words_learned": summary["words_learned"] + summary["words_mastered"],
+                        "words_mastered": summary["words_mastered"],
+                        "avg_test_score": avg_score,
+                        "streak_days": state_data.get("streak_days", 0),
+                        "total_study_seconds": state_data.get("total_study_seconds", 0),
+                    })
+                rows.sort(key=lambda x: (x.get(sort_key, 0), x.get("words_learned", 0)), reverse=True)
+
+            self._leaderboard_cache[sort_key] = {"ts": now_ts, "rows": rows}
 
         ranked_items = []
         my_rank_item = None

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { useVirtualizer } from '@tanstack/react-virtual';
 import {
   Search,
   CheckCircle2,
@@ -24,6 +25,8 @@ export const WordsBrowsePage: React.FC = () => {
   const [selectedStatus, setSelectedStatus] = useState<string>('');
   const [selectedWordIds, setSelectedWordIds] = useState<number[]>([]);
 
+  const parentRef = useRef<HTMLDivElement | null>(null);
+
   const { data, isLoading } = useQuery<{ total: number; words: Word[] }>({
     queryKey: ['words', user?.id, selectedLesson, selectedStatus, searchTerm],
     queryFn: () => {
@@ -35,9 +38,17 @@ export const WordsBrowsePage: React.FC = () => {
       return apiClient.get(`/api/words?${params.toString()}`);
     },
     enabled: !!user,
+    staleTime: 1000 * 60 * 5,
   });
 
   const words = data?.words || [];
+
+  const rowVirtualizer = useVirtualizer({
+    count: words.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => 54,
+    overscan: 10,
+  });
 
   const handleToggleSelectAll = () => {
     if (selectedWordIds.length === words.length && words.length > 0) {
@@ -65,6 +76,20 @@ export const WordsBrowsePage: React.FC = () => {
     );
   };
 
+  const statusStyles: Record<string, string> = {
+    new: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300',
+    learning: 'bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300',
+    learned: 'bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300',
+    mastered: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300',
+  };
+
+  const virtualItems = rowVirtualizer.getVirtualItems();
+  const paddingTop = virtualItems.length > 0 ? virtualItems[0].start : 0;
+  const paddingBottom =
+    virtualItems.length > 0
+      ? rowVirtualizer.getTotalSize() - virtualItems[virtualItems.length - 1].end
+      : 0;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       {/* Header */}
@@ -76,7 +101,7 @@ export const WordsBrowsePage: React.FC = () => {
           Toàn bộ 600 Từ vựng TOEIC
         </h1>
         <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Tra cứu, tìm kiếm nhanh và tùy chỉnh trạng thái đã thuộc hàng loạt.
+          Tra cứu, tìm kiếm nhanh và tùy chỉnh trạng thái đã thuộc hàng loạt (tối ưu mượt mà 60 FPS với Virtualization).
         </p>
       </div>
 
@@ -169,7 +194,7 @@ export const WordsBrowsePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Words Table / List */}
+      {/* Words Virtualized List */}
       {isLoading ? (
         <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 text-center animate-pulse">
           <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded w-1/4 mx-auto mb-4" />
@@ -180,10 +205,13 @@ export const WordsBrowsePage: React.FC = () => {
           Không tìm thấy từ vựng nào khớp với bộ lọc.
         </div>
       ) : (
-        <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-x-auto transition-colors">
+        <div
+          ref={parentRef}
+          className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-x-auto max-h-[600px] overflow-y-auto transition-colors"
+        >
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead>
-              <tr className="bg-slate-50 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 font-bold">
+            <thead className="sticky top-0 z-10 bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 font-bold shadow-sm">
+              <tr>
                 <th className="py-3.5 px-4 w-12 text-center">#</th>
                 <th className="py-3.5 px-4">Từ vựng (EN)</th>
                 <th className="py-3.5 px-4">Loại từ</th>
@@ -194,22 +222,22 @@ export const WordsBrowsePage: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 dark:divide-slate-700/60">
-              {words.map((w) => {
+              {paddingTop > 0 && (
+                <tr style={{ height: `${paddingTop}px` }}>
+                  <td colSpan={7} />
+                </tr>
+              )}
+              {virtualItems.map((virtualRow) => {
+                const w = words[virtualRow.index];
+                if (!w) return null;
                 const isSelected = selectedWordIds.includes(w.id);
                 const isKnown = w.is_marked_known || w.status === 'mastered';
-
-                const statusStyles: Record<string, string> = {
-                  new: 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300',
-                  learning: 'bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300',
-                  learned: 'bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300',
-                  mastered: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300',
-                };
 
                 return (
                   <tr
                     key={w.id}
                     className={cn(
-                      'hover:bg-slate-50 dark:hover:bg-slate-700/30 transition',
+                      'hover:bg-slate-50 dark:hover:bg-slate-700/30 transition h-[54px]',
                       isSelected ? 'bg-emerald-50/40 dark:bg-emerald-950/20' : ''
                     )}
                   >
@@ -275,6 +303,11 @@ export const WordsBrowsePage: React.FC = () => {
                   </tr>
                 );
               })}
+              {paddingBottom > 0 && (
+                <tr style={{ height: `${paddingBottom}px` }}>
+                  <td colSpan={7} />
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

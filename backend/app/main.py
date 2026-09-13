@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from app.core.config import settings
 from app.api import health, me, lessons, words, progress, review, tests, dashboard, leaderboard
 
@@ -13,9 +14,12 @@ app = FastAPI(
     title=settings.PROJECT_NAME,
     description="Backend API for 600 Essential Words for the TOEIC Learning App",
     version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
+    docs_url="/docs" if getattr(settings, "DOCS_ENABLED", True) else None,
+    redoc_url="/redoc" if getattr(settings, "DOCS_ENABLED", True) else None,
 )
+
+# GZip compression for responses > 1KB (reduces payload by ~70% on low-bandwidth/low-RAM servers)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # Global exception handler for Supabase PostgREST errors
 if PostgrestAPIError:

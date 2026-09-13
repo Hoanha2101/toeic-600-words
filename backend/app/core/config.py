@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     # App options
     CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173"
     MOCK_DB: bool = False
+    DOCS_ENABLED: bool = True
+    MAX_WORKERS: int = 2
     
     @property
     def cors_origins_list(self) -> List[str]:
