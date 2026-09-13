@@ -87,6 +87,14 @@ export interface UserStateResponse {
 
 export type Sm2Rating = 'again' | 'hard' | 'good' | 'easy';
 
+export interface OptionDetail {
+  text: string;
+  word?: string | null;
+  part_of_speech?: string | null;
+  meaning_vi?: string | null;
+  definition_en?: string | null;
+}
+
 export interface TestQuestion {
   question_index: number;
   word_id: number;
@@ -96,6 +104,7 @@ export interface TestQuestion {
   audio_word?: string | null;
   audio_word_id?: number | null;
   options?: string[] | null;
+  options_detail?: OptionDetail[] | null;
   blank_length?: number | null;
   hint?: string | null;
 }
@@ -111,6 +120,8 @@ export interface TestResultAnswer {
   word_id: number;
   word: string;
   meaning_vi: string;
+  part_of_speech?: string | null;
+  definition_en?: string | null;
   question_type: string;
   user_answer: string;
   correct_answer: string;

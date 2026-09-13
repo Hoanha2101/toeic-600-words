@@ -10,6 +10,14 @@ class CreateTestRequest(BaseModel):
     question_count: int = 10
 
 
+class OptionDetail(BaseModel):
+    text: str
+    word: Optional[str] = None
+    part_of_speech: Optional[str] = None
+    meaning_vi: Optional[str] = None
+    definition_en: Optional[str] = None
+
+
 class TestQuestion(BaseModel):
     question_index: int
     word_id: int
@@ -19,6 +27,7 @@ class TestQuestion(BaseModel):
     audio_word: Optional[str] = None
     audio_word_id: Optional[int] = None
     options: Optional[List[str]] = None
+    options_detail: Optional[List[OptionDetail]] = None
     blank_length: Optional[int] = None
     hint: Optional[str] = None
 
@@ -44,6 +53,8 @@ class TestResultAnswer(BaseModel):
     word_id: int
     word: str
     meaning_vi: str
+    part_of_speech: Optional[str] = None
+    definition_en: Optional[str] = None
     question_type: str
     user_answer: str
     correct_answer: str

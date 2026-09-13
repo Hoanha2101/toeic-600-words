@@ -578,6 +578,7 @@ class MockRepository(BaseRepository):
 
             # Distractors
             options = []
+            options_detail = []
             prompt = ""
             hint = None
             blank_length = None
@@ -586,45 +587,64 @@ class MockRepository(BaseRepository):
                 # Prompt: English word -> Options: Vietnamese meanings
                 prompt = w["word"]
                 correct = w["meaning_vi"]
-                distractors = random.sample(
-                    [m for m in all_meanings if m != correct],
-                    min(3, len(all_meanings) - 1),
+                distractor_words = random.sample(
+                    [other for other in self.words_data if other["id"] != w["id"] and other.get("meaning_vi") != correct],
+                    min(3, len(self.words_data) - 1),
                 )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
-            elif q_type == "reverse":
-                # Prompt: Vietnamese meaning -> Options: English words
-                prompt = w["meaning_vi"]
+                chosen = distractor_words + [w]
+                random.shuffle(chosen)
+                options = [cw["meaning_vi"] for cw in chosen]
+                options_detail = [
+                    {
+                        "text": cw["meaning_vi"],
+                        "word": cw["word"],
+                        "part_of_speech": cw.get("part_of_speech"),
+                        "meaning_vi": cw["meaning_vi"],
+                        "definition_en": cw.get("definition_en"),
+                    }
+                    for cw in chosen
+                ]
+            elif q_type in ("reverse", "listening"):
+                prompt = w["meaning_vi"] if q_type == "reverse" else "Nghe và chọn từ đúng:"
                 correct = w["word"]
-                distractors = random.sample(
-                    [ew for ew in all_words if ew.lower() != correct.lower()],
-                    min(3, len(all_words) - 1),
+                distractor_words = random.sample(
+                    [other for other in self.words_data if other["id"] != w["id"] and other["word"].lower() != correct.lower()],
+                    min(3, len(self.words_data) - 1),
                 )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
-            elif q_type == "listening":
-                # Listening: audio prompt (client speaks or plays audio_url)
-                prompt = "Nghe và chọn từ đúng:"
-                correct = w["word"]
-                distractors = random.sample(
-                    [ew for ew in all_words if ew.lower() != correct.lower()],
-                    min(3, len(all_words) - 1),
-                )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
+                chosen = distractor_words + [w]
+                random.shuffle(chosen)
+                options = [cw["word"] for cw in chosen]
+                options_detail = [
+                    {
+                        "text": cw["word"],
+                        "word": cw["word"],
+                        "part_of_speech": cw.get("part_of_speech"),
+                        "meaning_vi": cw["meaning_vi"],
+                        "definition_en": cw.get("definition_en"),
+                    }
+                    for cw in chosen
+                ]
             elif q_type == "fill_blank":
                 # Fill in the blank: Vietnamese meaning + word length
                 prompt = f"Nghĩa: {w['meaning_vi']} (Từ bắt đầu bằng chữ '{w['word'][0]}')"
                 correct = w["word"]
                 blank_length = len(w["word"])
                 hint = f"{w['word'][0]}{'_' * (len(w['word']) - 1)}"
+                options = None
+                options_detail = None
             else:
                 prompt = w["word"]
                 correct = w["meaning_vi"]
                 options = [w["meaning_vi"]]
+                options_detail = [
+                    {
+                        "text": w["meaning_vi"],
+                        "word": w["word"],
+                        "part_of_speech": w.get("part_of_speech"),
+                        "meaning_vi": w["meaning_vi"],
+                        "definition_en": w.get("definition_en"),
+                    }
+                ]
 
             # Question payload for user (does NOT disclose the correct answer)
             q_payload = {
@@ -636,6 +656,7 @@ class MockRepository(BaseRepository):
                 "audio_word": w["word"] if q_type == "listening" else None,
                 "audio_word_id": w["id"],
                 "options": options if options else None,
+                "options_detail": options_detail if options_detail else None,
                 "blank_length": blank_length,
                 "hint": hint,
             }
@@ -745,10 +766,13 @@ class MockRepository(BaseRepository):
                         "updated_at": now,
                     }
 
+            w_obj = self.words_by_id.get(wid, {})
             results.append({
                 "word_id": wid,
                 "word": q["word"],
                 "meaning_vi": q["meaning_vi"],
+                "part_of_speech": w_obj.get("part_of_speech"),
+                "definition_en": w_obj.get("definition_en"),
                 "question_type": q["question_type"],
                 "user_answer": u_ans,
                 "correct_answer": correct_ans,
@@ -1638,6 +1662,7 @@ class SupabaseRepository(BaseRepository):
         for idx, w in enumerate(selected_words):
             q_type = random.choice(available_types) if test_type == "mixed" else test_type
             options = []
+            options_detail = []
             prompt = ""
             hint = None
             blank_length = None
@@ -1645,42 +1670,63 @@ class SupabaseRepository(BaseRepository):
             if q_type == "multiple_choice":
                 prompt = w["word"]
                 correct = w["meaning_vi"]
-                distractors = random.sample(
-                    [m for m in all_meanings if m != correct],
-                    min(3, len(all_meanings) - 1),
+                distractor_words = random.sample(
+                    [other for other in self.words_data if other["id"] != w["id"] and other.get("meaning_vi") != correct],
+                    min(3, len(self.words_data) - 1),
                 )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
-            elif q_type == "reverse":
-                prompt = w["meaning_vi"]
+                chosen = distractor_words + [w]
+                random.shuffle(chosen)
+                options = [cw["meaning_vi"] for cw in chosen]
+                options_detail = [
+                    {
+                        "text": cw["meaning_vi"],
+                        "word": cw["word"],
+                        "part_of_speech": cw.get("part_of_speech"),
+                        "meaning_vi": cw["meaning_vi"],
+                        "definition_en": cw.get("definition_en"),
+                    }
+                    for cw in chosen
+                ]
+            elif q_type in ("reverse", "listening"):
+                prompt = w["meaning_vi"] if q_type == "reverse" else "Nghe và chọn từ đúng:"
                 correct = w["word"]
-                distractors = random.sample(
-                    [ew for ew in all_words if ew.lower() != correct.lower()],
-                    min(3, len(all_words) - 1),
+                distractor_words = random.sample(
+                    [other for other in self.words_data if other["id"] != w["id"] and other["word"].lower() != correct.lower()],
+                    min(3, len(self.words_data) - 1),
                 )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
-            elif q_type == "listening":
-                prompt = "Nghe và chọn từ đúng:"
-                correct = w["word"]
-                distractors = random.sample(
-                    [ew for ew in all_words if ew.lower() != correct.lower()],
-                    min(3, len(all_words) - 1),
-                )
-                opts = distractors + [correct]
-                random.shuffle(opts)
-                options = opts
+                chosen = distractor_words + [w]
+                random.shuffle(chosen)
+                options = [cw["word"] for cw in chosen]
+                options_detail = [
+                    {
+                        "text": cw["word"],
+                        "word": cw["word"],
+                        "part_of_speech": cw.get("part_of_speech"),
+                        "meaning_vi": cw["meaning_vi"],
+                        "definition_en": cw.get("definition_en"),
+                    }
+                    for cw in chosen
+                ]
             elif q_type == "fill_blank":
                 prompt = f"Nghĩa: {w['meaning_vi']} (Từ bắt đầu bằng chữ '{w['word'][0]}')"
                 correct = w["word"]
                 blank_length = len(w["word"])
                 hint = f"{w['word'][0]}{'_' * (len(w['word']) - 1)}"
+                options = None
+                options_detail = None
             else:
                 prompt = w["word"]
                 correct = w["meaning_vi"]
                 options = [w["meaning_vi"]]
+                options_detail = [
+                    {
+                        "text": w["meaning_vi"],
+                        "word": w["word"],
+                        "part_of_speech": w.get("part_of_speech"),
+                        "meaning_vi": w["meaning_vi"],
+                        "definition_en": w.get("definition_en"),
+                    }
+                ]
 
             q_payload = {
                 "question_index": idx,
@@ -1691,6 +1737,7 @@ class SupabaseRepository(BaseRepository):
                 "audio_word": w["word"] if q_type == "listening" else None,
                 "audio_word_id": w["id"],
                 "options": options if options else None,
+                "options_detail": options_detail if options_detail else None,
                 "blank_length": blank_length,
                 "hint": hint,
             }
@@ -1805,10 +1852,13 @@ class SupabaseRepository(BaseRepository):
             else:
                 wrong_wids.append(wid)
 
+            w_obj = self.words_by_id.get(wid, {})
             results.append({
                 "word_id": wid,
                 "word": q["word"],
                 "meaning_vi": q["meaning_vi"],
+                "part_of_speech": w_obj.get("part_of_speech"),
+                "definition_en": w_obj.get("definition_en"),
                 "question_type": q["question_type"],
                 "user_answer": u_ans,
                 "correct_answer": correct_ans,
