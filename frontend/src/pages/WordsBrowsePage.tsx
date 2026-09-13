@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import {
@@ -13,6 +13,7 @@ import { useWordProgress } from '../hooks/useWordProgress';
 import { useAuth } from '../hooks/useAuth';
 import { Word } from '../types';
 import { PronounceButton } from '../components/PronounceButton';
+import { ErrorBanner } from '../components/ErrorBanner';
 import { cn } from '../lib/utils';
 
 export const WordsBrowsePage: React.FC = () => {
@@ -21,24 +22,34 @@ export const WordsBrowsePage: React.FC = () => {
   const { markKnown, batchMark, isBatchMarking } = useWordProgress();
 
   const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
   const [selectedLesson, setSelectedLesson] = useState<string>('');
   const [selectedStatus, setSelectedStatus] = useState<string>('');
   const [selectedWordIds, setSelectedWordIds] = useState<number[]>([]);
 
   const parentRef = useRef<HTMLDivElement | null>(null);
 
-  const { data, isLoading } = useQuery<{ total: number; words: Word[] }>({
-    queryKey: ['words', user?.id, selectedLesson, selectedStatus, searchTerm],
+  // Debounce search input to avoid firing requests on every keystroke
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(searchTerm.trim());
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  const { data, isLoading, isError, error, refetch, isFetching } = useQuery<{ total: number; words: Word[] }>({
+    queryKey: ['words', user?.id, selectedLesson, selectedStatus, debouncedSearch],
     queryFn: () => {
       const params = new URLSearchParams();
       if (selectedLesson) params.set('lesson_id', selectedLesson);
       if (selectedStatus) params.set('status', selectedStatus);
-      if (searchTerm) params.set('search', searchTerm);
+      if (debouncedSearch) params.set('search', debouncedSearch);
       params.set('limit', '600');
       return apiClient.get(`/api/words?${params.toString()}`);
     },
     enabled: !!user,
     staleTime: 1000 * 60 * 5,
+    retry: 1,
   });
 
   const words = data?.words || [];
@@ -200,9 +211,18 @@ export const WordsBrowsePage: React.FC = () => {
           <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded w-1/4 mx-auto mb-4" />
           <div className="h-64 bg-slate-100 dark:bg-slate-700/50 rounded-2xl" />
         </div>
+      ) : isError ? (
+        <ErrorBanner
+          title="Không thể tải danh sách từ vựng"
+          message={error instanceof Error ? error.message : "Đã có lỗi xảy ra khi kết nối máy chủ. Vui lòng bấm Thử lại."}
+          onRetry={() => refetch()}
+          isRetrying={isFetching}
+          isNetworkError={Boolean(error && (error as any).isNetworkError)}
+        />
       ) : words.length === 0 ? (
         <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-12 text-center text-slate-500 dark:text-slate-400">
-          Không tìm thấy từ vựng nào khớp với bộ lọc.
+          <p className="font-bold text-base mb-1 text-slate-800 dark:text-slate-200">Không tìm thấy từ vựng nào khớp với bộ lọc</p>
+          <p className="text-xs text-slate-400">Thử xóa từ khóa tìm kiếm hoặc chọn lại bài học / trạng thái khác.</p>
         </div>
       ) : (
         <div

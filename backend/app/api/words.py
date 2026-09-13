@@ -9,22 +9,35 @@ router = APIRouter()
 
 @router.get("/words")
 def list_words(
-    lesson_id: Optional[int] = Query(None),
+    lesson_id: Optional[str] = Query(None),
     status: Optional[str] = Query(None),
     search: Optional[str] = Query(None),
-    limit: int = Query(50, ge=1, le=600),
+    limit: int = Query(600, ge=1, le=1000),
     offset: int = Query(0, ge=0),
     current_user: AuthUser = Depends(get_current_user),
 ):
+    parsed_lesson_id: Optional[int] = None
+    if lesson_id and str(lesson_id).strip().isdigit():
+        parsed_lesson_id = int(str(lesson_id).strip())
+
     repo = get_repository()
-    return repo.get_all_words(
-        user_id=current_user.user_id,
-        lesson_id=lesson_id,
-        status=status,
-        search=search,
-        limit=limit,
-        offset=offset,
-    )
+    try:
+        return repo.get_all_words(
+            user_id=current_user.user_id,
+            lesson_id=parsed_lesson_id,
+            status=status,
+            search=search,
+            limit=limit,
+            offset=offset,
+        )
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"❌ list_words error: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Lỗi khi tải danh sách từ: {str(e)}"
+        )
 
 
 @router.get("/words/{word_id}", response_model=WordResponse)

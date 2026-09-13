@@ -467,14 +467,22 @@ class MockRepository(BaseRepository):
         lesson_id: Optional[int] = None,
         status: Optional[str] = None,
         search: Optional[str] = None,
-        limit: int = 50,
+        limit: int = 600,
         offset: int = 0,
     ) -> dict:
+        target_lesson_ids = None
+        if lesson_id is not None:
+            matching_l = next((l for l in self.lessons_data if l["id"] == lesson_id or l.get("lesson_number") == lesson_id), None)
+            if matching_l:
+                target_lesson_ids = {matching_l["id"], matching_l.get("lesson_number")}
+            else:
+                target_lesson_ids = {lesson_id}
+
         matched = []
         search_lower = (search or "").strip().lower()
 
         for w in self.words_data:
-            if lesson_id is not None and w["lesson_id"] != lesson_id:
+            if target_lesson_ids is not None and w["lesson_id"] not in target_lesson_ids:
                 continue
 
             if search_lower:
@@ -1491,18 +1499,58 @@ class SupabaseRepository(BaseRepository):
         lesson_id: Optional[int] = None,
         status: Optional[str] = None,
         search: Optional[str] = None,
-        limit: int = 50,
+        limit: int = 600,
         offset: int = 0,
     ) -> dict:
-        # We can leverage base static words data and join with user progress
-        state_data = self.get_user_state(user_id)
-        prog_map = state_data["word_progress_map"]
+        user_id = ensure_valid_uuid(user_id)
+
+        # Fast direct query for user word progress instead of heavy full-state computation
+        prog_map = {}
+        try:
+            res = self.supabase.table("user_word_progress").select("word_id, status, ease_factor, interval_days, repetitions, due_date, is_marked_known, correct_count, wrong_count").eq("user_id", user_id).execute()
+            for p in (res.data or []):
+                prog_map[str(p["word_id"])] = {
+                    "word_id": p["word_id"],
+                    "status": p.get("status", "new"),
+                    "ease_factor": float(p.get("ease_factor", 2.5)),
+                    "interval_days": float(p.get("interval_days", 0.0)),
+                    "repetitions": int(p.get("repetitions", 0)),
+                    "due_date": p.get("due_date"),
+                    "is_marked_known": bool(p.get("is_marked_known", False)),
+                    "correct_count": int(p.get("correct_count", 0)),
+                    "wrong_count": int(p.get("wrong_count", 0)),
+                }
+        except Exception as e:
+            print(f"⚠️ Query user_word_progress in get_all_words: {e}")
+
+        # Merge mock progress if present
+        for (u_id, wid), p in self._mock_progress.items():
+            if u_id == user_id and str(wid) not in prog_map:
+                prog_map[str(wid)] = {
+                    "word_id": wid,
+                    "status": p.get("status", "new"),
+                    "ease_factor": float(p.get("ease_factor", 2.5)),
+                    "interval_days": float(p.get("interval_days", 0.0)),
+                    "repetitions": int(p.get("repetitions", 0)),
+                    "due_date": p.get("due_date"),
+                    "is_marked_known": bool(p.get("is_marked_known", False)),
+                    "correct_count": int(p.get("correct_count", 0)),
+                    "wrong_count": int(p.get("wrong_count", 0)),
+                }
+
+        target_lesson_ids = None
+        if lesson_id is not None:
+            matching_l = next((l for l in self.lessons_data if l["id"] == lesson_id or l.get("lesson_number") == lesson_id), None)
+            if matching_l:
+                target_lesson_ids = {matching_l["id"], matching_l.get("lesson_number")}
+            else:
+                target_lesson_ids = {lesson_id}
 
         matched = []
         search_lower = (search or "").strip().lower()
 
         for w in self.words_data:
-            if lesson_id is not None and w["lesson_id"] != lesson_id:
+            if target_lesson_ids is not None and w["lesson_id"] not in target_lesson_ids:
                 continue
 
             if search_lower:

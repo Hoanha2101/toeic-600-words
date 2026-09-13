@@ -45,6 +45,16 @@ def test_words_filter_and_search(client: TestClient):
     assert res_vi.status_code == 200
     assert res_vi.json()["total"] >= 1
 
+    # Safe handling of empty lesson_id string (does not throw 422)
+    res_empty_lesson = client.get("/api/words?lesson_id=&limit=600", headers=AUTH_HEADERS)
+    assert res_empty_lesson.status_code == 200
+    assert res_empty_lesson.json()["total"] == 598
+
+    # Limit up to 600 and 1000
+    res_600 = client.get("/api/words?limit=600", headers=AUTH_HEADERS)
+    assert res_600.status_code == 200
+    assert len(res_600.json()["words"]) == 598
+
 
 def test_cache_audio_url(client: TestClient):
     patch_res = client.patch(
