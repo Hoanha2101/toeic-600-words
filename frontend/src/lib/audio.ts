@@ -150,3 +150,44 @@ export async function playPronunciation(
     }
   }
 }
+
+/**
+ * Preload audio in background for upcoming word to eliminate delay when user clicks speaker
+ */
+export function preloadAudio(wordId: number, wordText: string, cachedAudioUrl?: string | null): void {
+  if (!wordText) return;
+  const cleanWord = wordText.trim();
+  const cacheKey = `${wordId}_${cleanWord.toLowerCase()}`;
+
+  if (cachedAudioUrl) {
+    memoryAudioCache.set(cacheKey, cachedAudioUrl);
+    const a = new Audio();
+    a.preload = 'auto';
+    a.src = cachedAudioUrl;
+    return;
+  }
+
+  if (memoryAudioCache.has(cacheKey)) {
+    return;
+  }
+
+  const firstWord = cleanWord.split(' ')[0].toLowerCase().replace(/[^a-z-]/g, '');
+  if (!firstWord) return;
+
+  fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${firstWord}`)
+    .then((r) => (r.ok ? r.json() : null))
+    .then((data) => {
+      if (Array.isArray(data) && data[0]?.phonetics) {
+        for (const p of data[0].phonetics) {
+          if (p.audio && p.audio.endsWith('.mp3')) {
+            memoryAudioCache.set(cacheKey, p.audio);
+            const a = new Audio();
+            a.preload = 'auto';
+            a.src = p.audio;
+            break;
+          }
+        }
+      }
+    })
+    .catch(() => {});
+}

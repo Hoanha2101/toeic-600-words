@@ -93,6 +93,8 @@ export interface TestQuestion {
   question_type: 'multiple_choice' | 'reverse' | 'listening' | 'fill_blank';
   prompt: string;
   audio_url?: string | null;
+  audio_word?: string | null;
+  audio_word_id?: number | null;
   options?: string[] | null;
   blank_length?: number | null;
   hint?: string | null;
@@ -158,4 +160,22 @@ export interface DashboardSummary {
     total_words: number;
     learned_words: number;
   }[];
+}
+
+export interface LeaderboardItem {
+  rank: number;
+  user_id: string;
+  display_name: string;
+  words_learned: number;
+  words_mastered: number;
+  avg_test_score: number;
+  streak_days: number;
+  total_study_seconds: number;
+  is_current_user: boolean;
+}
+
+export interface LeaderboardResponse {
+  sort_by: string;
+  items: LeaderboardItem[];
+  my_rank?: LeaderboardItem | null;
 }

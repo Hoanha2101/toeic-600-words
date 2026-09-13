@@ -625,6 +625,8 @@ class MockRepository(BaseRepository):
                 "question_type": q_type,
                 "prompt": prompt,
                 "audio_url": w.get("audio_url"),
+                "audio_word": w["word"] if q_type == "listening" else None,
+                "audio_word_id": w["id"],
                 "options": options if options else None,
                 "blank_length": blank_length,
                 "hint": hint,
@@ -801,6 +803,78 @@ class MockRepository(BaseRepository):
             "total_study_seconds": state_data["total_study_seconds"],
             "due_reviews_count": summary["due_reviews_count"],
             "urgent_lessons": urgent_lessons[:5],
+        }
+
+    def get_leaderboard(self, current_user_id: str, sort_by: str = "words_learned", limit: int = 50) -> dict:
+        users_map = {}
+        self._get_or_create_user_state(current_user_id)
+
+        sample_users = [
+            {"user_id": "00000000-0000-0000-0000-0000000000aa", "display_name": "Minh Anh", "words_learned": 180, "words_mastered": 95, "avg_test_score": 92.5, "streak_days": 14, "total_study_seconds": 12400},
+            {"user_id": "00000000-0000-0000-0000-0000000000bb", "display_name": "Tuấn Kiệt", "words_learned": 145, "words_mastered": 70, "avg_test_score": 88.0, "streak_days": 9, "total_study_seconds": 9600},
+            {"user_id": "00000000-0000-0000-0000-0000000000cc", "display_name": "Lan Phương", "words_learned": 110, "words_mastered": 50, "avg_test_score": 85.5, "streak_days": 6, "total_study_seconds": 7200},
+            {"user_id": "00000000-0000-0000-0000-0000000000dd", "display_name": "Hoàng Nam", "words_learned": 85, "words_mastered": 30, "avg_test_score": 80.0, "streak_days": 4, "total_study_seconds": 5400},
+        ]
+        for su in sample_users:
+            users_map[su["user_id"]] = dict(su)
+
+        for u_id, st in self.user_states.items():
+            state_data = self.get_user_state(u_id)
+            summary = state_data["summary"]
+            user_tests = [s for s in self.test_sessions.values() if s.get("user_id") == u_id and s.get("finished_at")]
+            avg_score = round(sum(s.get("score_percent", 0.0) for s in user_tests) / len(user_tests), 1) if user_tests else 0.0
+
+            users_map[u_id] = {
+                "user_id": u_id,
+                "display_name": st.get("display_name", "Học viên"),
+                "words_learned": summary["words_learned"] + summary["words_mastered"],
+                "words_mastered": summary["words_mastered"],
+                "avg_test_score": avg_score,
+                "streak_days": state_data.get("streak_days", 0),
+                "total_study_seconds": state_data.get("total_study_seconds", 0),
+            }
+
+        all_items = list(users_map.values())
+        sort_key = sort_by if sort_by in ("words_learned", "words_mastered", "avg_test_score", "streak_days", "total_study_seconds") else "words_learned"
+        all_items.sort(key=lambda x: (x.get(sort_key, 0), x.get("words_learned", 0)), reverse=True)
+
+        ranked_items = []
+        my_rank_item = None
+        for idx, item in enumerate(all_items, start=1):
+            is_me = (item["user_id"] == current_user_id)
+            leaderboard_item = {
+                "rank": idx,
+                "user_id": item["user_id"],
+                "display_name": item["display_name"],
+                "words_learned": item["words_learned"],
+                "words_mastered": item["words_mastered"],
+                "avg_test_score": item["avg_test_score"],
+                "streak_days": item["streak_days"],
+                "total_study_seconds": item["total_study_seconds"],
+                "is_current_user": is_me,
+            }
+            ranked_items.append(leaderboard_item)
+            if is_me:
+                my_rank_item = leaderboard_item
+
+        return {
+            "sort_by": sort_key,
+            "items": ranked_items[:limit],
+            "my_rank": my_rank_item,
+        }
+
+    def get_my_leaderboard_rank(self, current_user_id: str, sort_by: str = "words_learned") -> dict:
+        data = self.get_leaderboard(current_user_id, sort_by=sort_by, limit=100)
+        return data.get("my_rank") or {
+            "rank": 1,
+            "user_id": current_user_id,
+            "display_name": "Bạn",
+            "words_learned": 0,
+            "words_mastered": 0,
+            "avg_test_score": 0.0,
+            "streak_days": 0,
+            "total_study_seconds": 0,
+            "is_current_user": True,
         }
 
 
@@ -1533,6 +1607,8 @@ class SupabaseRepository(BaseRepository):
                 "question_type": q_type,
                 "prompt": prompt,
                 "audio_url": w.get("audio_url"),
+                "audio_word": w["word"] if q_type == "listening" else None,
+                "audio_word_id": w["id"],
                 "options": options if options else None,
                 "blank_length": blank_length,
                 "hint": hint,
@@ -1778,6 +1854,101 @@ class SupabaseRepository(BaseRepository):
             "total_study_seconds": state_data["total_study_seconds"],
             "due_reviews_count": summary["due_reviews_count"],
             "urgent_lessons": urgent_lessons[:5],
+        }
+
+    def get_leaderboard(self, current_user_id: str, sort_by: str = "words_learned", limit: int = 50) -> dict:
+        current_user_id = ensure_valid_uuid(current_user_id)
+        sort_key = sort_by if sort_by in ("words_learned", "words_mastered", "avg_test_score", "streak_days", "total_study_seconds") else "words_learned"
+
+        rows = []
+        try:
+            res = self.supabase.table("leaderboard_view").select("*").order(sort_key, desc=True).limit(100).execute()
+            rows = res.data or []
+        except Exception:
+            pass
+
+        if not rows:
+            profiles = []
+            try:
+                p_res = self.supabase.table("profiles").select("id, display_name").limit(100).execute()
+                profiles = p_res.data or []
+            except Exception:
+                pass
+
+            if not any(p["id"] == current_user_id for p in profiles):
+                profiles.append({"id": current_user_id, "display_name": "Bạn"})
+
+            for p in profiles:
+                uid = p["id"]
+                state_data = self.get_user_state(uid, p.get("display_name", ""))
+                summary = state_data["summary"]
+                tests = self.get_test_history(uid)
+                avg_score = round(sum(t.get("score_percent", 0.0) for t in tests) / len(tests), 1) if tests else 0.0
+                rows.append({
+                    "user_id": uid,
+                    "display_name": p.get("display_name") or "Học viên",
+                    "words_learned": summary["words_learned"] + summary["words_mastered"],
+                    "words_mastered": summary["words_mastered"],
+                    "avg_test_score": avg_score,
+                    "streak_days": state_data.get("streak_days", 0),
+                    "total_study_seconds": state_data.get("total_study_seconds", 0),
+                })
+            rows.sort(key=lambda x: (x.get(sort_key, 0), x.get("words_learned", 0)), reverse=True)
+
+        ranked_items = []
+        my_rank_item = None
+        for idx, item in enumerate(rows, start=1):
+            is_me = (item["user_id"] == current_user_id)
+            leaderboard_item = {
+                "rank": idx,
+                "user_id": item["user_id"],
+                "display_name": item.get("display_name") or "Học viên",
+                "words_learned": int(item.get("words_learned") or 0),
+                "words_mastered": int(item.get("words_mastered") or 0),
+                "avg_test_score": float(item.get("avg_test_score") or 0.0),
+                "streak_days": int(item.get("streak_days") or 0),
+                "total_study_seconds": int(item.get("total_study_seconds") or 0),
+                "is_current_user": is_me,
+            }
+            ranked_items.append(leaderboard_item)
+            if is_me:
+                my_rank_item = leaderboard_item
+
+        if not my_rank_item:
+            my_state = self.get_user_state(current_user_id)
+            my_summary = my_state["summary"]
+            my_tests = self.get_test_history(current_user_id)
+            my_avg = round(sum(t.get("score_percent", 0.0) for t in my_tests) / len(my_tests), 1) if my_tests else 0.0
+            my_rank_item = {
+                "rank": len(ranked_items) + 1,
+                "user_id": current_user_id,
+                "display_name": my_state.get("display_name") or "Bạn",
+                "words_learned": my_summary["words_learned"] + my_summary["words_mastered"],
+                "words_mastered": my_summary["words_mastered"],
+                "avg_test_score": my_avg,
+                "streak_days": my_state.get("streak_days", 0),
+                "total_study_seconds": my_state.get("total_study_seconds", 0),
+                "is_current_user": True,
+            }
+
+        return {
+            "sort_by": sort_key,
+            "items": ranked_items[:limit],
+            "my_rank": my_rank_item,
+        }
+
+    def get_my_leaderboard_rank(self, current_user_id: str, sort_by: str = "words_learned") -> dict:
+        data = self.get_leaderboard(current_user_id, sort_by=sort_by, limit=100)
+        return data.get("my_rank") or {
+            "rank": 1,
+            "user_id": current_user_id,
+            "display_name": "Bạn",
+            "words_learned": 0,
+            "words_mastered": 0,
+            "avg_test_score": 0.0,
+            "streak_days": 0,
+            "total_study_seconds": 0,
+            "is_current_user": True,
         }
 
 

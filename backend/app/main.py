@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api import health, me, lessons, words, progress, review, tests, dashboard
+from app.api import health, me, lessons, words, progress, review, tests, dashboard, leaderboard
 
 try:
     from postgrest.exceptions import APIError as PostgrestAPIError
@@ -44,6 +44,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+import time
+
+@app.middleware("http")
+async def measure_process_time(request: Request, call_next):
+    start = time.perf_counter()
+    response = await call_next(request)
+    duration_ms = (time.perf_counter() - start) * 1000
+    response.headers["X-Process-Time-Ms"] = f"{duration_ms:.2f}"
+    if duration_ms > 250:
+        print(f"⏱️ Request latency notice: {request.method} {request.url.path} took {duration_ms:.1f}ms")
+    return response
+
 # Register routers with /api prefix
 app.include_router(health.router, prefix=settings.API_V1_STR, tags=["Health"])
 app.include_router(me.router, prefix=settings.API_V1_STR, tags=["User State"])
@@ -53,6 +65,7 @@ app.include_router(progress.router, prefix=settings.API_V1_STR, tags=["Progress"
 app.include_router(review.router, prefix=settings.API_V1_STR, tags=["Review"])
 app.include_router(tests.router, prefix=settings.API_V1_STR, tags=["Tests"])
 app.include_router(dashboard.router, prefix=settings.API_V1_STR, tags=["Dashboard"])
+app.include_router(leaderboard.router, prefix=settings.API_V1_STR, tags=["Leaderboard"])
 
 # Fallback root routers (if Vercel or proxy strips /api prefix)
 app.include_router(health.router, prefix="", include_in_schema=False)
@@ -63,6 +76,7 @@ app.include_router(progress.router, prefix="", include_in_schema=False)
 app.include_router(review.router, prefix="", include_in_schema=False)
 app.include_router(tests.router, prefix="", include_in_schema=False)
 app.include_router(dashboard.router, prefix="", include_in_schema=False)
+app.include_router(leaderboard.router, prefix="", include_in_schema=False)
 
 
 import mimetypes

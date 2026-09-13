@@ -16,6 +16,8 @@ class TestQuestion(BaseModel):
     question_type: str
     prompt: str
     audio_url: Optional[str] = None
+    audio_word: Optional[str] = None
+    audio_word_id: Optional[int] = None
     options: Optional[List[str]] = None
     blank_length: Optional[int] = None
     hint: Optional[str] = None
