@@ -44,8 +44,8 @@
 │   │   │   ├── security.py         # Xác thực Supabase JWT Bearer token
 │   │   │   └── sm2.py              # Thuật toán Spaced Repetition (Again/Hard/Good/Easy)
 │   │   ├── db/
-│   │   │   ├── data_loader.py      # Đọc dữ liệu từ file JSON
-│   │   │   └── repository.py       # Tầng truy xuất dữ liệu (hỗ trợ cả Supabase & Mock offline)
+│   │   │   ├── data_loader.py      # Seed / Mock test data loader (chỉ dùng khi test offline)
+│   │   │   └── repository.py       # Tầng truy xuất dữ liệu (Query trực tiếp Supabase Postgres + TTL Cache, không đọc JSON)
 │   │   └── main.py                 # Khởi tạo FastAPI app, cấu hình CORS & routers
 │   ├── tests/
 │   │   ├── conftest.py             # Fixture TestClient

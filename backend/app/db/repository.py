@@ -4,7 +4,6 @@ from datetime import datetime, timezone, date, timedelta
 from typing import Dict, List, Optional, Any
 from app.core.config import settings
 from app.core.sm2 import calculate_sm2
-from app.db.data_loader import load_toeic_data
 
 try:
     from supabase import create_client, Client
@@ -24,58 +23,56 @@ def ensure_valid_uuid(uid: str) -> str:
 
 class BaseRepository:
     def __init__(self):
-        self.raw_data = load_toeic_data()
-        self._init_static_data()
-
-    def _init_static_data(self):
-        self.lessons_data = []
-        self.words_data = []
-        self.words_by_id = {}
-        self.words_by_lesson = {}
-
-        word_counter = 1
-        for lesson_idx, l in enumerate(self.raw_data.get("lessons", []), start=1):
-            lesson_num = int(l.get("lesson_number", lesson_idx))
-            lesson_id = lesson_num  # 1..50
-            lesson_obj = {
-                "id": lesson_id,
-                "lesson_number": lesson_num,
-                "title_en": l.get("title_en", "").strip(),
-                "title_vi": l.get("title_vi", "").strip(),
-            }
-            self.lessons_data.append(lesson_obj)
-            self.words_by_lesson[lesson_id] = []
-
-            for w in l.get("words", []):
-                w_obj = {
-                    "id": word_counter,
-                    "lesson_id": lesson_id,
-                    "word": w.get("word", "").strip(),
-                    "part_of_speech": (w.get("part_of_speech") or "").strip(),
-                    "definition_en": (w.get("definition") or "").strip(),
-                    "related_forms": (w.get("related_forms") or "").strip(),
-                    "meaning_vi": (w.get("meaning_vi") or "").strip(),
-                    "audio_url": None,
-                    "audio_url_uk": None,
-                }
-                self.words_data.append(w_obj)
-                self.words_by_id[word_counter] = w_obj
-                self.words_by_lesson[lesson_id].append(w_obj)
-                word_counter += 1
+        self.lessons_data: List[dict] = []
+        self.words_data: List[dict] = []
+        self.words_by_id: Dict[int, dict] = {}
+        self.words_by_lesson: Dict[int, List[dict]] = {}
 
 
 class MockRepository(BaseRepository):
     def __init__(self):
         super().__init__()
-        # In-memory storage per user
-        # user_id -> dict
+        self._init_mock_static_data()
         self.user_states: Dict[str, dict] = {}
-        # (user_id, word_id) -> dict
         self.user_word_progress: Dict[tuple, dict] = {}
-        # user_id -> list of test_sessions
         self.test_sessions: Dict[str, dict] = {}
-        # session_id -> list of test_answers
         self.test_answers: Dict[str, list] = {}
+
+    def _init_mock_static_data(self):
+        try:
+            from app.db.data_loader import load_toeic_data
+            raw_data = load_toeic_data()
+            word_counter = 1
+            for lesson_idx, l in enumerate(raw_data.get("lessons", []), start=1):
+                lesson_num = int(l.get("lesson_number", lesson_idx))
+                lesson_id = lesson_num  # 1..50
+                lesson_obj = {
+                    "id": lesson_id,
+                    "lesson_number": lesson_num,
+                    "title_en": l.get("title_en", "").strip(),
+                    "title_vi": l.get("title_vi", "").strip(),
+                }
+                self.lessons_data.append(lesson_obj)
+                self.words_by_lesson[lesson_id] = []
+
+                for w in l.get("words", []):
+                    w_obj = {
+                        "id": word_counter,
+                        "lesson_id": lesson_id,
+                        "word": w.get("word", "").strip(),
+                        "part_of_speech": (w.get("part_of_speech") or "").strip(),
+                        "definition_en": (w.get("definition") or "").strip(),
+                        "related_forms": (w.get("related_forms") or "").strip(),
+                        "meaning_vi": (w.get("meaning_vi") or "").strip(),
+                        "audio_url": None,
+                        "audio_url_uk": None,
+                    }
+                    self.words_data.append(w_obj)
+                    self.words_by_id[word_counter] = w_obj
+                    self.words_by_lesson[lesson_id].append(w_obj)
+                    word_counter += 1
+        except Exception as e:
+            print("⚠️ MockRepository: Could not initialize mock static data:", e)
 
     def _get_or_create_user_state(self, user_id: str, display_name: str = "") -> dict:
         if user_id not in self.user_states:
@@ -946,7 +943,8 @@ class MockRepository(BaseRepository):
 class SupabaseRepository(BaseRepository):
     """
     Connects directly to Supabase via supabase-py client using Service Role Key.
-    Provides identical methods to MockRepository, persisting all data to Supabase Postgres.
+    Queries lessons and words directly from Supabase Postgres, caching static data in-memory with TTL.
+    Never reads or references any JSON file in runtime.
     """
     def __init__(self, client: Client):
         super().__init__()
@@ -956,9 +954,15 @@ class SupabaseRepository(BaseRepository):
         self._mock_sessions: Dict[str, dict] = {}
         self._mock_answers: Dict[str, list] = {}
         self._cached_sessions: Dict[str, dict] = {}
+        self._static_cache_expiry: float = 0.0
+        self._static_cache_ttl: float = 7200.0  # 2 hours in-memory TTL
         self._sync_db_metadata()
 
-    def _sync_db_metadata(self):
+    def _sync_db_metadata(self, force: bool = False):
+        now_ts = datetime.now(timezone.utc).timestamp()
+        if not force and self.lessons_data and self.words_data and (now_ts < self._static_cache_expiry):
+            return
+
         try:
             db_lessons = self.supabase.table("lessons").select("*").order("lesson_number").execute()
             if db_lessons.data and len(db_lessons.data) > 0:
@@ -976,10 +980,25 @@ class SupabaseRepository(BaseRepository):
                         if lid not in self.words_by_lesson:
                             self.words_by_lesson[lid] = []
                         self.words_by_lesson[lid].append(w)
+
+                    self._static_cache_expiry = now_ts + self._static_cache_ttl
+                    print(f"📦 [Postgres Cache] Đã nạp trực tiếp {len(self.lessons_data)} bài & {len(self.words_data)} từ từ Supabase (TTL: {int(self._static_cache_ttl)}s). Không dùng JSON.")
         except Exception as e:
-            print("⚠️ Could not sync DB metadata:", e)
+            print("⚠️ Could not sync DB metadata from Supabase:", e)
+
+    def invalidate_static_cache(self) -> dict:
+        """Force refreshes static lessons and words cache directly from Supabase Postgres"""
+        self._static_cache_expiry = 0.0
+        self._sync_db_metadata(force=True)
+        return {
+            "status": "ok",
+            "message": "Đã làm mới cache từ Supabase Postgres thành công",
+            "lessons_count": len(self.lessons_data),
+            "words_count": len(self.words_data),
+        }
 
     def get_user_state(self, user_id: str, display_name: str = "") -> dict:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
 
         # Check user_state in Supabase
@@ -1208,6 +1227,7 @@ class SupabaseRepository(BaseRepository):
         return self.get_user_state(user_id)
 
     def get_lessons(self, user_id: str) -> List[dict]:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
         state_data = self.get_user_state(user_id)
         prog_by_lesson = {p["lesson_id"]: p for p in state_data["lessons_progress"]}
@@ -1232,6 +1252,7 @@ class SupabaseRepository(BaseRepository):
         return results
 
     def get_lesson_words(self, lesson_id: int, user_id: str) -> dict:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
         lesson = next((l for l in self.lessons_data if l["id"] == lesson_id or l["lesson_number"] == lesson_id), None)
         if not lesson:
@@ -1310,6 +1331,7 @@ class SupabaseRepository(BaseRepository):
         }
 
     def get_word(self, word_id: int, user_id: str) -> Optional[dict]:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
         w = self.words_by_id.get(word_id)
         if not w:
@@ -1526,6 +1548,7 @@ class SupabaseRepository(BaseRepository):
         limit: int = 600,
         offset: int = 0,
     ) -> dict:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
 
         # Fast direct query for user word progress instead of heavy full-state computation
@@ -1629,6 +1652,8 @@ class SupabaseRepository(BaseRepository):
         test_type: str = "mixed",
         question_count: int = 10,
     ) -> dict:
+        self._sync_db_metadata()
+        user_id = ensure_valid_uuid(user_id)
         pool: List[dict] = []
         if scope in ("lesson", "multi_lesson") and lesson_ids:
             pool = [w for w in self.words_data if w["lesson_id"] in lesson_ids]
@@ -1785,6 +1810,7 @@ class SupabaseRepository(BaseRepository):
         }
 
     def submit_test(self, user_id: str, test_id: str, answers: List[dict]) -> dict:
+        self._sync_db_metadata()
         user_id = ensure_valid_uuid(user_id)
         now = datetime.now(timezone.utc)
         cached = getattr(self, "_cached_sessions", {}).get(test_id)

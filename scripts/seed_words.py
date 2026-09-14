@@ -162,9 +162,36 @@ def seed_database(data: dict, dry_run: bool = False):
         print(f"  ✓ Lesson {lesson_num:2d}: '{title_en}' ({len(words_batch)} words)")
 
     print("=" * 60)
-    print(f"🎉 Seeding complete!")
-    print(f"   Lessons upserted: {lessons_upserted}/{total_lessons_in_file}")
-    print(f"   Words upserted:   {words_upserted}/{total_words_in_file}")
+    print("🔍 Kiểm tra đối chiếu tự động sau khi seed (Post-seed Verification)...")
+
+    # Verify lessons count
+    db_lessons_res = supabase.table("lessons").select("id, lesson_number", count="exact").execute()
+    db_lessons_count = db_lessons_res.count if db_lessons_res.count is not None else len(db_lessons_res.data)
+
+    # Verify words count
+    db_words_res = supabase.table("words").select("id", count="exact").limit(1000).execute()
+    db_words_count = db_words_res.count if db_words_res.count is not None else len(db_words_res.data)
+
+    print(f"   📊 Bảng 'lessons': {db_lessons_count}/50 bài học")
+    print(f"   📊 Bảng 'words':   {db_words_count}/598 từ vựng")
+
+    if db_lessons_count != 50:
+        raise RuntimeError(f"❌ Lệch dữ liệu bài học: Database có {db_lessons_count} lessons, yêu cầu chính xác 50 lessons!")
+
+    if db_words_count != 598:
+        raise RuntimeError(f"❌ Lệch dữ liệu từ vựng: Database có {db_words_count} words, yêu cầu chính xác 598 words!")
+
+    # Check that every lesson from 1 to 50 is present
+    existing_lesson_nums = {row["lesson_number"] for row in (db_lessons_res.data or [])}
+    missing_nums = set(range(1, 51)) - existing_lesson_nums
+    if missing_nums:
+        raise RuntimeError(f"❌ Thiếu các bài học số: {sorted(missing_nums)}")
+
+    print("=" * 60)
+    print(f"🎉 Seeding complete & verified 100%!")
+    print(f"   Lessons upserted & in DB: {db_lessons_count}/{total_lessons_in_file}")
+    print(f"   Words upserted & in DB:   {db_words_count}/{total_words_in_file}")
+    print("   Database schema and seed data are consistent and ready for runtime without JSON.")
     print("=" * 60)
 
 

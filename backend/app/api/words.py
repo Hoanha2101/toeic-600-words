@@ -60,3 +60,11 @@ def update_word_audio(
     if not res:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Word not found")
     return {"message": "Audio URL cached successfully", "audio_url": payload.audio_url}
+
+
+@router.post("/cache/invalidate")
+def invalidate_cache(current_user: AuthUser = Depends(get_current_user)):
+    repo = get_repository()
+    if hasattr(repo, "invalidate_static_cache"):
+        return repo.invalidate_static_cache()
+    return {"status": "ok", "message": "Cache invalidated"}
